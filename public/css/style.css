@@ -1,1 +1,50 @@
 /* Blank at the moment but have fun! */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.nav-link {
+    color: #8c39cc;
+}
+
+.navbar {
+    background-color: #ecd9fa;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    /* Change hero height here*/
+    height: 55vh;
+    overflow: hidden;
+    background-size: cover !important;
+    background: url(/assets/svg/blob-scene-haikei.svg) no-repeat center center scroll;
+}
+
+h1 {
+    z-index: 1;
+    font-style: normal;
+    font-weight: bold;
+    color: #ecd9fa;
+    font-size: 11vmin;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 40px;
+}
+
+#vanta {
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 58px;
+    width: 100%;
+    height: 55vh;
+}
