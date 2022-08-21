@@ -1,4 +1,4 @@
-// Home Page
+// Gallery Page 
 
 const router = require('express').Router();
 
@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
   try {
 
     // rendering the homepage 
-    res.render('homepage')
+    res.render('gallerypage')
   } catch (err) {
 
     // catching server errors 
