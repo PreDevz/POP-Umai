@@ -10,7 +10,7 @@ router.use('/', homeRoutes);
 router.use('/admin', adminRoutes);
 router.use('events', eventRoutes);
 router.use('/gallery', galleryRoutes);
-routes.use('/contact', contactRoutes);
-routes.use('/about', aboutRoutes);
+router.use('/contact', contactRoutes);
+router.use('/about', aboutRoutes);
 
 module.exports = router;
