@@ -14,6 +14,10 @@
     background-color: #ecd9fa;
 }
 
+#Logo {
+    z-index: 1;
+}
+
 .hero {
     display: flex;
     justify-content: center;
