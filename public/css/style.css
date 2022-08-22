@@ -1,4 +1,6 @@
-/* Blank at the moment but have fun! */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,11 +9,22 @@
 }
 
 .nav-link {
-    color: #8c39cc;
+    /* color: #8c39cc; */
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 30px;
+    color: azure;
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: #8c39cc;
+    font-weight: bold;
+}
+
+.nav-link :hover {
+    color: #44c7fe;
 }
 
 .navbar {
-    background-color: #ecd9fa;
+    background-color: #fff57c;
+
 }
 
 #Logo {
@@ -32,17 +45,60 @@
     background: url(/assets/svg/blob-scene-haikei.svg) no-repeat center center scroll;
 }
 
-h1 {
+h2 {
+    font-family: 'Alfa Slab One', cursive;
     z-index: 1;
     font-style: normal;
-    font-weight: bold;
-    color: #ecd9fa;
-    font-size: 11vmin;
+    color: #8c39cc;
+    font-size: 8vmin;
     letter-spacing: 0.03em;
     line-height: 1;
-    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
     margin-bottom: 40px;
+    text-align: center;
 }
+
+.aboutUs {
+    /* background-color: rgba(203, 200, 200, 0.889); */
+    padding: 100px;
+
+}
+
+#aboutBio {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    justify-content: center;
+}
+
+#aboutTag {
+    font-size: 20px;
+    max-width: 600px;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.events {
+    background-color: rgba(203, 200, 200, 0.889);
+    padding: 100px;
+}
+
+#eventTag {
+    font-size: 20px;
+    max-width: 600px;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.followUs {
+    text-align: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+
 
 #vanta {
     z-index: 0;
