@@ -9,22 +9,25 @@
 }
 
 .nav-link {
-    /* color: #8c39cc; */
+    color: #8c39cc;
     font-family: 'Alfa Slab One', cursive;
     font-size: 30px;
-    color: azure;
+    color: whitesmoke;
     -webkit-text-stroke-width: 0.7px;
     -webkit-text-stroke-color: #8c39cc;
     font-weight: bold;
 }
 
-.nav-link :hover {
-    color: #44c7fe;
+.nav-item :hover {
+    color: #ecd9fa;
+}
+
+.nav-item :focus {
+    color: #ecd9fa;
 }
 
 .navbar {
     background-color: #fff57c;
-
 }
 
 #Logo {
@@ -60,7 +63,10 @@ h2 {
 .aboutUs {
     /* background-color: rgba(203, 200, 200, 0.889); */
     padding: 100px;
-
+    width: 100%;
+    overflow: hidden;
+    background-size: cover !important;
+    background: url(/assets/svg/svg2.svg) no-repeat center center scroll;
 }
 
 #aboutBio {
@@ -80,7 +86,7 @@ h2 {
 }
 
 .events {
-    background-color: rgba(203, 200, 200, 0.889);
+    background-color: rgb(240, 240, 240);
     padding: 100px;
 }
 
@@ -98,13 +104,12 @@ h2 {
     padding: 100px;
 }
 
-
-
 #vanta {
     z-index: 0;
     position: absolute;
     left: 0;
-    top: 58px;
+    top: 77px;
     width: 100%;
     height: 55vh;
+    transition: opacity 2s ease-in-out;
 }
