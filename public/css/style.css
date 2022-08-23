@@ -12,7 +12,7 @@
 #logo-main {
     display: block;
     margin: 10px auto;
-    width: 140px;
+    width: 180px;
 }
 
 .mainNav {
@@ -164,6 +164,12 @@ h2 {
 
 .fa-brands {
     color: #965fcc;
+}
+
+.footerIcons {
+    text-decoration: none;
+    float: none;
+    list-style: none;
 }
 
 #vanta {
