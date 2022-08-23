@@ -308,6 +308,15 @@ h2 {
     }
 }
 
+@media screen and (max-width: 447px) {
+    #mascot {
+        display: none;
+    }
+
+    .right-half {
+        grid-column: 0;
+    }
+}
 @media screen and (max-width: 670px) {
     .events {
         padding: 20px;
@@ -317,13 +326,13 @@ h2 {
         max-width: 250px;
         padding: 10px;
         margin: auto;
-        font-size: 16px;
+        font-size: 15px;
     }
 
     #mascot {
         max-width: 250px;
         min-width: 90px;
-        margin: auto;
+        margin: auto
     }
 
     .right-half {
@@ -338,3 +347,4 @@ h2 {
         font-size: 16px;
     }
 }
+
