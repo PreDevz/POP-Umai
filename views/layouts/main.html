@@ -13,40 +13,28 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-md navbar-light">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <header role="banner">
+      <img id="logo-main" src="/public/assets/images/logo-art (2).png" alt="main logo">
+      <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+          </div>          
+            <ul class="mainNav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
+    
+      <section class="hero" role="img" aria-label="Image Description">
+        <img id="smile" src="/public/assets/images/OC_eye smile.png" alt="POP smile">
+      </section>
 
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link mx-2" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="/events">Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="/gallery">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="/about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="/contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div id="vanta"></div>
-    <section class="hero" role="img" aria-label="Image Description">
-      <img id="Logo" src="/assets/images/qt=q_95.webp" alt="POP Umai Logo">
-    </section>
-  </header>
   <main>
     <section class="aboutUs">
       <h2>About Us</h2>
@@ -64,13 +52,14 @@
         <p id="eventTag">Love anime and food? Then you'll love us! Stop by one of our local pop-up cafes and taste some
           of
           our anime-inspired meals and desserts. Current anime theme is Demon Slayer</p>
+          <div class="text-box">
+            <a href="/events" class="btn btn-white btn-        animate">View Events</a>
+          </div>
       </div>
       <div class="right-half">
-        <img id="sampleAmai" src="/assets/images/Amai_Odayaka_FULL.webp" alt="sample image">
+        <img id="mascot" src="/public/assets/images/commission without bg.png" alt="popMascot">
       </div>
-      <div class="text-box">
-        <a href="/events" class="btn btn-white btn-        animate">View Events</a>
-      </div>
+
     </section>
 
     <section class="followUs">

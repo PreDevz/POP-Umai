@@ -8,27 +8,57 @@
     scroll-behavior: smooth;
 }
 
-.nav-link {
-    color: #8c39cc;
+
+#logo-main {
+    display: block;
+    margin: 10px auto;
+    width: 140px;
+}
+
+.mainNav {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.mainNav li {
+    display: inline-block;
+    float: none;
+    margin: 0 10px;
+    /* box-shadow: 0 2px 0px 0px rgb(0 0 0 / 25%); */
+}
+
+.mainNav a {
+    display: inline-block;
     font-family: 'Alfa Slab One', cursive;
-    font-size: 30px;
+    font-size: 18px;
     color: whitesmoke;
     -webkit-text-stroke-width: 0.7px;
-    -webkit-text-stroke-color: #8c39cc;
+    -webkit-text-stroke-color: #262626;
+    text-decoration: none;
     font-weight: bold;
 }
 
-.nav-item :hover {
-    color: #ecd9fa;
+.mainNav a:hover {    
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: #965fcc;
 }
 
-.nav-item :focus {
-    color: #ecd9fa;
+.mainNav:focus {
+
+    color: #965fcc;
 }
 
 .navbar {
-    background-color: #fff57c;
-}
+    background-color: white;
+} */
+
+
+
 
 #Logo {
     z-index: 1;
@@ -42,17 +72,22 @@
     text-align: center;
     width: 100%;
     /* Change hero height here*/
-    height: 55vh;
+    height: 70vh;
     overflow: hidden;
     background-size: cover !important;
-    background: url(/assets/svg/blob-scene-haikei.svg) no-repeat center center scroll;
+    background: url(/public/assets/svg/hero.svg) no-repeat center center scroll;
+}
+
+#smile {
+    max-width: 400px;
+    vertical-align: middle;
 }
 
 h2 {
     font-family: 'Alfa Slab One', cursive;
     z-index: 1;
     font-style: normal;
-    color: #8c39cc;
+    color: #965fcc;
     font-size: 8vmin;
     letter-spacing: 0.03em;
     line-height: 1;
@@ -66,13 +101,13 @@ h2 {
     width: 100%;
     overflow: hidden;
     background-size: cover !important;
-    background: url(/assets/svg/svg2.svg) no-repeat center center scroll;
+    background: url(/public/assets/svg/aboutMe.svg) no-repeat center 65%;
 }
 
 #aboutBio {
     font-family: 'Alfa Slab One', cursive;
     font-size: 25px;
-    color: black;
+    color: #262626;
     text-align: center;
     justify-content: center;
 }
@@ -88,11 +123,12 @@ h2 {
 .events {
     display: grid;
     background-color: rgb(240, 240, 240);
-    padding: 100px;
+    padding: 45px;
 }
 
 .left-half {
     grid-column: 1;
+    align-self: center;
 }
 
 .right-half {
@@ -107,10 +143,10 @@ h2 {
     margin: auto;
 }
 
-#sampleAmai {
-    display: flex;
-    max-width: 300px;
-    max-height: 300px;
+#mascot {
+    max-width: 500px;
+    max-height: 500px;
+    margin: auto;
 }
 
 .followUs {
@@ -129,7 +165,7 @@ h2 {
 }
 
 .fa-brands {
-    color: #8c39cc
+    color: #965fcc;
 }
 
 #vanta {
@@ -145,6 +181,7 @@ h2 {
 .text-box {
     display: flex;
     justify-content: center;
+    padding: 20px;
 }
 
 .btn:link,
