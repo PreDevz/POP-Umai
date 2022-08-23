@@ -13,27 +13,27 @@
 </head>
 
 <body>
-    <header role="banner">
-      <img id="logo-main" src="/public/assets/images/logo-art (2).png" alt="main logo">
-      <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-          </div>          
-            <ul class="mainNav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">Events</a></li>
-              <li><a href="#">Gallery</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-        </div><!-- /.container-fluid -->
-      </nav>
-    </header>
-    
-      <section class="hero" role="img" aria-label="Image Description">
-        <img id="smile" src="/public/assets/images/OC_eye smile.png" alt="POP smile">
-      </section>
+  <header role="banner">
+    <img id="logo-main" src="/public/assets/images/logo-art (2).png" alt="main logo">
+    <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+        </div>
+        <ul class="mainNav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#sub-title">Contact</a></li>
+        </ul>
+      </div><!-- /.container-fluid -->
+    </nav>
+  </header>
+
+  <section class="hero" role="img" aria-label="Image Description">
+    <img id="smile" src="/public/assets/images/OC_eye smile.png" alt="POP smile">
+  </section>
 
   <main>
     <section class="aboutUs">
@@ -52,9 +52,9 @@
         <p id="eventTag">Love anime and food? Then you'll love us! Stop by one of our local pop-up cafes and taste some
           of
           our anime-inspired meals and desserts. Current anime theme is Demon Slayer</p>
-          <div class="text-box">
-            <a href="/events" class="btn btn-white btn-        animate">View Events</a>
-          </div>
+        <div class="text-box">
+          <a href="/events" class="btn btn-white btn-        animate">View Events</a>
+        </div>
       </div>
       <div class="right-half">
         <img id="mascot" src="/public/assets/images/commission without bg.png" alt="popMascot">
@@ -88,7 +88,31 @@
       </ul>
     </section>
 
-
+    <section class="inquiries">
+      <h2>Have questions or concerns?</h2>
+      <div class="container">
+        <p id="sub-title">Send us a message!</p>
+        <form action="">
+          <!-- User's Options  -->
+          <select class="questions-input">
+            <option value="business">Business Inquiries</option>
+            <option value="question">General Questions</option>
+          </select>
+          <!-- User's Name  -->
+          <input class="questions-input" type="text" id="contactName" placeholder="Name" />
+          <!-- User's Email  -->
+          <input class="questions-input" type="email" id="contactEmail" placeholder="Email" />
+          <!-- User's Message  -->
+          <textarea class="questions-input" id="contactMessage" placeholder="Message"></textarea>
+          <div class="btn-container">
+            <!-- Send button   -->
+            <button class="event-btn" id="contactSend">
+              <a id="formBtn" href="#">SEND</a>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
   <!-- Social Media Icons -->
   <script src="https://kit.fontawesome.com/66e9768e1c.js" crossorigin="anonymous"></script>
