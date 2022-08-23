@@ -43,7 +43,7 @@
     font-weight: bold;
 }
 
-.mainNav a:hover {    
+.mainNav a:hover {
     -webkit-text-stroke-width: 0.7px;
     -webkit-text-stroke-color: #965fcc;
 }
@@ -55,12 +55,9 @@
 
 .navbar {
     background-color: white;
-} */
+}
 
-
-
-
-#Logo {
+*/ #Logo {
     z-index: 1;
 }
 
@@ -133,6 +130,7 @@ h2 {
 
 .right-half {
     grid-column: 2;
+    justify-content: center;
 }
 
 #eventTag {
@@ -161,7 +159,7 @@ h2 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 0.5em;
+    gap: 1.5em;
 }
 
 .fa-brands {
@@ -231,6 +229,67 @@ h2 {
     animation-fill-mode: backwards;
 }
 
+.container {
+    max-width: 1080px;
+}
+
+.inquiries {
+    background-color: rgb(240, 240, 240);
+    padding: 4rem 2.8rem 2.8rem 2.8rem;
+}
+
+#sub-title {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.inquiries form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.questions-input {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid rgb(240, 240, 240);
+    outline: none;
+}
+
+#contactMessage {
+    resize: none;
+    min-height: 140px;
+}
+
+.inquiries .btn-container {
+    padding: 0;
+}
+
+.inquiries .btn-container button {
+    padding: 0.5rem;
+}
+
+#contactSend {
+    transition: all 0.3s ease;
+    background-color: #965fcc;
+    border-radius: 10px;
+}
+
+#formBtn {
+    color: #fff;
+    text-decoration: none;
+}
+
+#contactSend:hover {
+    background-color: #1db2e8;
+}
+
+.inquiries form #contactSend {
+    width: 100%;
+}
+
+
 @keyframes moveInBottom {
     0% {
         opacity: 0;
@@ -252,15 +311,24 @@ h2 {
         max-width: 250px;
         padding: 10px;
         margin: auto;
+        font-size: 16px;
     }
 
-    #sampleAmai {
-        max-width: 200px;
+    #mascot {
+        max-width: 250px;
         min-width: 90px;
         margin: auto;
     }
 
     .right-half {
         margin-top: 100px;
+    }
+
+    #smile {
+        width: 230px;
+    }
+
+    #aboutTag {
+        font-size: 16px;
     }
 }
