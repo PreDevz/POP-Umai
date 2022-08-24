@@ -1,1 +1,350 @@
-/* Blank at the moment but have fun! */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+#logo-main {
+    display: block;
+    margin: 10px auto;
+    width: 180px;
+}
+
+.mainNav {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.mainNav li {
+    display: inline-block;
+    float: none;
+    margin: 0 10px;
+    /* box-shadow: 0 2px 0px 0px rgb(0 0 0 / 25%); */
+}
+
+.mainNav a {
+    display: inline-block;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 18px;
+    color: whitesmoke;
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: #262626;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mainNav a:hover {
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: #965fcc;
+}
+
+.mainNav:focus {
+
+    color: #965fcc;
+}
+
+.navbar {
+    background-color: white;
+}
+
+*/ #Logo {
+    z-index: 1;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    /* Change hero height here*/
+    height: 70vh;
+    overflow: hidden;
+    background-size: cover !important;
+    background: url(/assets/svg/hero.svg) no-repeat center center scroll;
+}
+
+#smile {
+    max-width: 400px;
+    vertical-align: middle;
+}
+
+h2 {
+    font-family: 'Alfa Slab One', cursive;
+    z-index: 1;
+    font-style: normal;
+    color: #965fcc;
+    font-size: 8vmin;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.aboutUs {
+    /* background-color: rgba(203, 200, 200, 0.889); */
+    padding: 100px;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover !important;
+    background: url(/assets/svg/aboutMe.svg) no-repeat center 65%;
+}
+
+#aboutBio {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 25px;
+    color: #262626;
+    text-align: center;
+    justify-content: center;
+}
+
+#aboutTag {
+    font-size: 20px;
+    max-width: 600px;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.events {
+    display: grid;
+    background-color: rgb(240, 240, 240);
+    padding: 45px;
+}
+
+.left-half {
+    grid-column: 1;
+    align-self: center;
+}
+
+.right-half {
+    grid-column: 2;
+    justify-content: center;
+}
+
+#eventTag {
+    font-size: 20px;
+    max-width: 600px;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+#mascot {
+    max-width: 500px;
+    max-height: 500px;
+    margin: auto;
+}
+
+.followUs {
+    text-align: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+.icons {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.fa-brands {
+    color: #965fcc;
+}
+
+.footerIcons {
+    text-decoration: none;
+    float: none;
+    list-style: none;
+}
+
+#vanta {
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 77px;
+    width: 100%;
+    height: 55vh;
+    transition: opacity 2s ease-in-out;
+}
+
+.text-box {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 100px;
+    transition: all .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+.container {
+    max-width: 1080px;
+}
+
+.inquiries {
+    background-color: rgb(240, 240, 240);
+    padding: 4rem 2.8rem 2.8rem 2.8rem;
+}
+
+#sub-title {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.inquiries form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.questions-input {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid rgb(240, 240, 240);
+    outline: none;
+}
+
+#contactMessage {
+    resize: none;
+    min-height: 140px;
+}
+
+.inquiries .btn-container {
+    padding: 0;
+}
+
+.inquiries .btn-container button {
+    padding: 0.5rem;
+}
+
+#contactSend {
+    transition: all 0.3s ease;
+    background-color: #965fcc;
+    border-radius: 10px;
+}
+
+#formBtn {
+    color: #fff;
+    text-decoration: none;
+}
+
+#contactSend:hover {
+    background-color: #1db2e8;
+}
+
+.inquiries form #contactSend {
+    width: 100%;
+}
+
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 447px) {
+    #mascot {
+        display: none;
+    }
+
+    .right-half {
+        grid-column: 0;
+    }
+}
+@media screen and (max-width: 670px) {
+    .events {
+        padding: 20px;
+    }
+
+    #eventTag {
+        max-width: 250px;
+        padding: 10px;
+        margin: auto;
+        font-size: 15px;
+    }
+
+    #mascot {
+        max-width: 250px;
+        min-width: 90px;
+        margin: auto
+    }
+
+    .right-half {
+        margin-top: 100px;
+    }
+
+    #smile {
+        width: 230px;
+    }
+
+    #aboutTag {
+        font-size: 16px;
+    }
+}
+
