@@ -72,7 +72,7 @@
     height: 70vh;
     overflow: hidden;
     background-size: cover !important;
-    background: url(/public/assets/svg/hero.svg) no-repeat center center scroll;
+    background: url(/assets/svg/hero.svg) no-repeat center center scroll;
 }
 
 #smile {
@@ -98,7 +98,7 @@ h2 {
     width: 100%;
     overflow: hidden;
     background-size: cover !important;
-    background: url(/public/assets/svg/aboutMe.svg) no-repeat center 65%;
+    background: url(/assets/svg/aboutMe.svg) no-repeat center 65%;
 }
 
 #aboutBio {
