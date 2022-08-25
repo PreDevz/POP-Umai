@@ -3,7 +3,7 @@
 const auth = require('../utils/auth');
 const router = require('express').Router();
 const session = require('express-session');
-const { Admin } = require('../models');
+const { Admin } = require('../models/admin.js');
 
 // Admin login 
 router.get('/', async (req, res) => {
