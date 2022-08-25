@@ -11,7 +11,8 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const sess = {
-  secret: 'Super secret secret',
+  secret: 'victoria secret',
+
   // cookie 
   cookie: {
     maxAge: 180000,
@@ -21,6 +22,7 @@ const sess = {
   },
   resave: false,
   saveUninitialized: true,
+  
   //  session store
   store: new SequelizeStore({
     db: sequelize,
