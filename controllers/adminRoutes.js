@@ -1,11 +1,11 @@
 // Administration Page
 
-const auth = require('../utils/auth')
+const auth = require('../utils/auth');
 const router = require('express').Router();
-const { Admin } = require('../models');
 const session = require('express-session');
+const { Admin } = require('../models');
 
-// admin login 
+// Admin login 
 router.get('/', async (req, res) => {
   try {
 
@@ -19,9 +19,17 @@ router.get('/', async (req, res) => {
 });
 
 // admin login check 
-router.post('/login', async (req, res) => {
+router.post('/', async (req, res) => {
+
+  // Ex POST req: 
+  // {
+  //   "name": "Henry",
+  //   "email": "henry123@gmail.com",
+  //   "password": "password123"
+  // }
   
   try {
+
     // check the database for user that matches email 
     const adminData = await Admin.findOne({
       where:
@@ -41,17 +49,18 @@ router.post('/login', async (req, res) => {
       req.session.user_id = adminData.id;
       req.session.logged_in = true;
       
-      res.json({ user: adminData, message: 'logged in!' });
+      res
+        .json({ user: adminData, message: 'logged in!' });
     });
   } catch (err) {
 
     // catching server errors 
-    res.status(500).json({ message: "Server Error", error: err })
+    res.status(500).json({ message: "Can't login, Server Error", error: err })
   }
 
 })
 
-// admin dashboard 
+// Admin dashboard 
 router.get('/dashboard', auth, async (req, res) => {
   try {
 
@@ -70,7 +79,7 @@ router.post('/logout', (req, res) => {
 
     // if there is a session, destory it 
     req.session.destroy(() => {
-      res.status(200).end();
+      res.status(200).json({message: "Session destroyed!"}).end();
     });
   } else {
 
