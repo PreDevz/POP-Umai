@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Placeholder Name!",
+    "description": "lorem ipsum...",
+    "event_date": "8/29/22",
+    "event_time": "1PM - 8PM",
+    "venue": "Anaheim Convention Center",
+    "location": "Anaheim, CA",
+    "is_upcoming": true
+  }
+]
