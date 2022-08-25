@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
   try {
 
     // rendering the homepage 
-    res.render('eventspage')
+    res.render('events')
   } catch (err) {
 
     // catching server errors 
