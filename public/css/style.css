@@ -295,6 +295,21 @@ h2 {
     width: 100%;
 }
 
+/* Events page css styling */
+.event-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.event-container h3.year {
+    font-size: 40px;
+    text-align: center;
+    border-bottom: 1px solid #262626;
+}
+
+.event-container .oneEvent {
+    
+}
 
 @keyframes moveInBottom {
     0% {
