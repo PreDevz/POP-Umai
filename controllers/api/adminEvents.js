@@ -4,6 +4,44 @@ const auth = require('../../utils/auth');
 const router = require('express').Router();
 const Event = require('../../models/event');
 
+// find one event
+router.get('/:id', async (req, res) => {
+
+  try {
+    // get user's input ID 
+    const pramId = req.params.id;
+    const eventData = await Event.findOne({
+      where:
+        { id: pramId }
+    });
+
+    // check if there is a id in database
+    if (!eventData) {
+      res
+        .status(404)
+        .json({
+          message: 'No event found with that ID'
+        })
+      
+      return;
+    }
+
+    // once event matches user's input, send back that event data 
+    res
+      .status(200)
+      .json(eventData)
+    
+  } catch (err) {
+
+    // catching server errors 
+    res
+      .status(500)
+      .json({
+      message: "Server Error"
+    })
+  }
+})
+
 // add event 
 router.post('/', async (req, res) => {
   
@@ -40,44 +78,19 @@ router.post('/', async (req, res) => {
 
     // catching server errors 
     console.log(err);
-    res.status(500).json(err);
+    
+    res
+      .status(500)
+      .json(err);
   }
 })
 
-// find one event
-router.get('/:id', async (req, res) => {
+// update Event 
+router.put('/:id', async (req, res) => {
 
   try {
-    // get user's input ID 
-    const pramId = req.params.id;
-    const eventData = await Event.findOne({
-      where:
-        { id: pramId }
-    });
 
-    // check if there is a id in database
-    if (!eventData) {
-      res
-        .status(404)
-        .json({
-          message: 'No event found with that ID'
-        })
-      
-      return;
-    }
-
-    // once event matches user's input, send back that event data 
-    res
-      .status(200)
-      .json(eventData)
-    
   } catch (err) {
 
-    // catching server errors 
-    res
-      .status(500)
-      .json({
-      message: "Server Error"
-    })
   }
 })
