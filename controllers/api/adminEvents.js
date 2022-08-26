@@ -5,7 +5,8 @@ const router = require('express').Router();
 const Event = require('../../models/event');
 
 // add event 
-router.get('post', async (req, res) => {
+router.post('/', async (req, res) => {
+  
   try {
     
     // get users info from body 
@@ -43,7 +44,7 @@ router.get('post', async (req, res) => {
   }
 })
 
-//  find one event
+// find one event
 router.get('/:id', async (req, res) => {
 
   try {
@@ -61,7 +62,15 @@ router.get('/:id', async (req, res) => {
         .json({
           message: 'No event found with that ID'
         })
+      
+      return;
     }
+
+    // once event matches user's input, send back that event data 
+    res
+      .status(200)
+      .json(eventData)
+    
   } catch (err) {
 
     // catching server errors 
