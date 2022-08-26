@@ -295,6 +295,44 @@ h2 {
     width: 100%;
 }
 
+/* About Me Page */
+#aboutTitle {
+    font-size: 35px;
+    font-family: 'Alfa Slab One', cursive;
+    color: #965fcc;
+    text-align: center;
+    padding: 35px;
+}
+
+.aboutPage {
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.aboutPage p{
+    font-size: 15px;
+}
+
+#mascot2 {
+    max-width: 400px;
+    max-height: 00px;
+    margin: auto;
+}
+
+.about-left {
+    grid-column: 1;
+    align-self: center;
+}
+
+.about-right {
+    grid-column: 2;
+    justify-content: center;
+}
+
+
+
+
 
 @keyframes moveInBottom {
     0% {
