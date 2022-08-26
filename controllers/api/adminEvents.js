@@ -4,7 +4,7 @@ const auth = require('../../utils/auth');
 const router = require('express').Router();
 const Event = require('../../models/event');
 
-// find one event
+// Find Event by ID
 router.get('/:id', async (req, res) => {
 
   try {
@@ -42,7 +42,7 @@ router.get('/:id', async (req, res) => {
   }
 })
 
-// add event 
+// Add Event 
 router.post('/', async (req, res) => {
   
   try {
@@ -85,7 +85,7 @@ router.post('/', async (req, res) => {
   }
 })
 
-// update Event 
+// Ppdate Event by ID
 router.put('/:id', async (req, res) => {
 
   try {
@@ -151,5 +151,48 @@ router.put('/:id', async (req, res) => {
         message: "Server Error..."
       }) 
 
+  }
+})
+
+// Delete Event by ID 
+router.delete('/:id', async (req, res) => {
+
+  try {
+
+    // get ID in parameter 
+    const eventId = req.params.id;
+
+    // delete event if ID matches event ID in databse 
+    const deletedEvent = Event.destroy({
+      where: {
+        id: eventId
+      }
+    })
+
+    // check if there even is an ID that matches Event in database 
+    if (!deletedEvent) {
+
+      res
+        .status(404)
+        .json({
+          message: "No Event that matches that ID"
+        })
+      
+      return;
+    }
+
+    res
+      .status(200)
+      .json(
+        deletedEvent
+      )
+  } catch (err) {
+
+    // catching server errors 
+    res
+      .status(500)
+      .json({
+        message: "Opps, couldn't delete event, Server Error..."
+      })
   }
 })
