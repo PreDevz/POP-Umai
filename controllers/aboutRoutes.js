@@ -10,7 +10,9 @@ router.get('/', async (req, res) => {
   } catch (err) {
 
     // catching server errors 
-    res.status(500).json(err);
+    res
+      .status(500)
+      .json(err);
   }
 });
 

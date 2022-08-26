@@ -17,7 +17,6 @@ router.get('post', async (req, res) => {
     const location = req.body.location;
     const upcoming = req.body.is_upcoming;
 
-
     // create new event with users info 
     const event = await Event.create({
       name: name,
@@ -47,15 +46,29 @@ router.get('post', async (req, res) => {
 //  find one event
 router.get('/:id', async (req, res) => {
 
-  // get user's input ID 
-  const pramId = req.params.id;
-  const eventData = await Event.findOne({
-    where:
-      { id: pramId}
-  });
+  try {
+    // get user's input ID 
+    const pramId = req.params.id;
+    const eventData = await Event.findOne({
+      where:
+        { id: pramId }
+    });
 
-  // check if there is a id in database
-  if (!eventData) {
-    res.status(404).json({message: 'No event found with that ID'})
+    // check if there is a id in database
+    if (!eventData) {
+      res
+        .status(404)
+        .json({
+          message: 'No event found with that ID'
+        })
+    }
+  } catch (err) {
+
+    // catching server errors 
+    res
+      .status(500)
+      .json({
+      message: "Server Error"
+    })
   }
 })
