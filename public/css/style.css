@@ -316,8 +316,9 @@ h2 {
 
 #mascot2 {
     max-width: 400px;
-    max-height: 00px;
+    max-height: 400px;
     margin: auto;
+    justify-content: right;
 }
 
 .about-left {
@@ -327,7 +328,7 @@ h2 {
 
 .about-right {
     grid-column: 2;
-    justify-content: center;
+    justify-content: right;
 }
 
 
