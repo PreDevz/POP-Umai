@@ -310,7 +310,7 @@ h2 {
     margin: 0 auto;
 }
 
-.event-container h3.year {
+.event-container h3.event_headline {
     font-size: 40px;
     text-align: center;
     border-bottom: 1px solid #262626;
@@ -371,6 +371,10 @@ h2 {
 .oneEvent .event-right .event-timing {
     height: 20px;
     padding-right: 8px;
+}
+
+.oneEvent .event-right .event-place {
+    text-align: center;
 }
 
 /* Button */
