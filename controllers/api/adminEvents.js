@@ -122,8 +122,10 @@ router.put('/:id', async (req, res) => {
       }
     )
 
-    // check if the event ID is in database 
-    if (event[0]) {
+    // if event doesn't exist in database 
+    if (!event[0]) {
+
+      // send back a 404 
       res
         .status(404)
         .json({
