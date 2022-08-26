@@ -78,7 +78,7 @@ router.post('/', async (req, res) => {
 
     // catching server errors 
     console.log(err);
-    
+
     res
       .status(500)
       .json(err);
@@ -90,7 +90,64 @@ router.put('/:id', async (req, res) => {
 
   try {
 
+    // get data from user to update an event 
+    const eventId = req.params.id;
+    const name = req.body.name;
+    const desc = req.body.description;
+    const date = req.body.event_date;
+    const time = req.body.event_time;
+    const venue = req.body.venue;
+    const location = req.body.location;
+    const upcoming = req.body.is_upcoming;
+
+    // updating in database 
+    const event = await Event.update(
+      {
+
+      // new event data 
+      name: name,
+      description: desc,
+      event_date: date,
+      event_time: time,
+      venue: venue,
+      location: location,
+      is_upcoming: upcoming
+      },
+      {
+
+        // after getting data, find where to update 
+        where: {
+          id: eventId,
+        }
+      }
+    )
+
+    // check if the event ID is in database 
+    if (event[0]) {
+      res
+        .status(404)
+        .json({
+          message: "No event that matches that ID"
+        })
+      
+      return;
+    }
+
+    // if there is a event, send back 200 and the event that's updated
+    res
+      .status(200)
+      .json({
+        event
+      })
+
   } catch (err) {
+
+   // catching server errors
+    res
+      .status(500)
+      .json({
+        message: "Server Error..."
+      }) 
 
   }
 })
