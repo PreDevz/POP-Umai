@@ -50,12 +50,16 @@ router.post('/', async (req, res) => {
       req.session.logged_in = true;
       
       res
-        .json({ user: adminData, message: 'logged in!' });
+        .json({
+           message: `logged in! Welcome ${adminData.name}`
+        });
     });
   } catch (err) {
 
     // catching server errors 
-    res.status(500).json({ message: "Can't login, Server Error", error: err })
+    res.status(500).json({
+      message: "Can't login, Server Error", error: err
+    })
   }
 
 })
