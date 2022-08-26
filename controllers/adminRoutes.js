@@ -78,7 +78,7 @@ router.get('/dashboard', auth, async (req, res) => {
 });
 
 // Logout 
-router.post('/logout', (req, res) => {
+router.post('/logout', async (req, res) => {
   if (req.session.loggedIn) {
 
     // if there is a session, destory it 

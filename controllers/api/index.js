@@ -1,4 +1,4 @@
-// Admin Dashboard events routes 
+// importing APIs 
 
 const router = require('express').Router();
 
