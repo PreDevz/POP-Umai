@@ -43,3 +43,19 @@ router.get('post', async (req, res) => {
     res.status(500).json(err);
   }
 })
+
+//  find one event
+router.get('/:id', async (req, res) => {
+
+  // get user's input ID 
+  const pramId = req.params.id;
+  const eventData = await Event.findOne({
+    where:
+      { id: pramId}
+  });
+
+  // check if there is a id in database
+  if (!eventData) {
+    res.status(404).json({message: 'No event found with that ID'})
+  }
+})
