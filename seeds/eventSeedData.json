@@ -1,0 +1,191 @@
+[
+  {
+    "name": "Ronin Expo",
+    "description": "We'll be serving delicious anime themed food at Ronin Expo. Theme TBD",
+    "event_date": "6/11/21",
+    "event_time": "11am - 9pm",
+    "venue": "JACCC",
+    "location": "Los Angeles, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "Anime Impulse 2022",
+    "description": "Our first anime convention! Come pick up an anime themed cookie & drink.",
+    "event_date": "1/15/22 - 1/16/22",
+    "event_time": "10am - 8pm",
+    "venue": "",
+    "location": "Pomona, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "Riverside Lunar Festival",
+    "description": "Doing our first ever anime themed pop-up! Stop by our Demon Slayer booth & grab a Hashira Bento.",
+    "event_date": "1/29/22 - 1/30/22",
+    "event_time": "11am - 8pm",
+    "venue": "",
+    "location": "Downtown Riverside, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "Valentine's Day at the Galleria at Tyler",
+    "description": "We invite you to grab a treat for you & your otaku sweetheart. We'll be selling cookies & other desserts at the Galleria at Tyler Mall at space 6510.",
+    "event_date": "2/12/22",
+    "event_time": "11am - 8pm",
+    "venue": "Galleria at Tyler Mall",
+    "location": "Riverside, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "Eastvale Lunar Festival",
+    "description": "Stop by our Demon Slayer inspired booth and pick up your Hashira Bento Box! It will definitely have you saying 'UMAI!'",
+    "event_date": "2/19/22 - 2/20/22",
+    "event_time": "11am - 8pm",
+    "venue": "Citrus Event Venue",
+    "location": "Eastvale, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "Senpai Saturday Himawarii Event",
+    "description": "Join us at the Himawarii 2nd Year Anniversary Event",
+    "event_date": "3/5/22",
+    "event_time": "3pm - 8pm",
+    "venue": "Kawaii Motorsports",
+    "location": "Orange, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "Galleria at Tyler",
+    "description": "We're back again, selling our classic and new anime-themed desserts to the local Riverside anime community. You can find us at space 6510 at the Galleria at Tyler Mall.",
+    "event_date": "3/19/22",
+    "event_time": "11am - 8pm",
+    "venue": "Galleria at Tyler",
+    "location": "Riverside, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "Anifest 2022",
+    "description": "Anime con goers be sure to take a bite of our tasty fish tacos and a few delicious desserts. Find us at Food Booth Vendor - G11",
+    "event_date": "4/2/22",
+    "event_time": "10am - 7pm",
+    "venue": "Civic Center Dr",
+    "location": "Torrance, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "popKULT Anime Social",
+    "description": "Come join us for our first event with popKULT at Cravings by 99 Ranch Market. Lots of anime and food!",
+    "event_date": "4/23/22",
+    "event_time": "11am - 8pm",
+    "venue": "Cravings by 99 Ranch Market",
+    "location": "Chino, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "Boba Bear Anime Night",
+    "description": "Join us for Boba Bear's first anime night!",
+    "event_date": "4/24/22",
+    "event_time": "4pm - 8pm",
+    "venue": "Boba Bear",
+    "location": "Rowland Heights, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "Galleria at Tyler",
+    "description": "We're back again, selling classic and new anime-themed desserts to the local Riverside anime community. You can find us at space 6510 at the Galleria at Tyler Mall.",
+    "event_date": "5/21/22",
+    "event_time": "11am - 8pm",
+    "venue": "Galleria at Tyler",
+    "location": "Riverside, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "Night in Teyvat",
+    "description": "In collaboration with Little Eastern Cafe, Pop Umai will be hosting their first pop up event in a restaurant. Theme is Genshin Impact. Enjoy a meal surrounded by some of your favorite characters. ",
+    "event_date": "5/28/22",
+    "event_time": "4pm - 8:30pm",
+    "venue": "Little Eastern Cafe",
+    "location": "Eastvale, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "BizBaz @New Motion Brewery",
+    "description": "Join us for our first time at San Diego! Food, games, drinks and lots of fun at this cool event",
+    "event_date": "5/29/22",
+    "event_time": "12pm - 7pm",
+    "venue": "8655 Production Ave Ste A",
+    "location": "San Diego, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "909 Open Market",
+    "description": "Join us for our first event at the 909 Open Market in Downtown Pomona. Bringing our anime treats and some delicious taiyaki",
+    "event_date": "7/23/22",
+    "event_time": "6pm - 10pm",
+    "venue": "",
+    "location": "Downton Pomona, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "Back to Teyvat",
+    "description": "We're back! Pop Umai is collaborating with Little Eastern Cafe to host our popular Genshin Impact fan event. Enjoy a delicious meal surrounded by some of your favorite characters and grab some merch from our vendors.  You don't want to miss out on this fun event!",
+    "event_date": "7/30/22 - 7/31/22",
+    "event_time": "2pm - 8pm",
+    "venue": "Little Eastern Cafe",
+    "location": "Eastvale, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "Bearology Bake Sale",
+    "description": "Join us for the Bearology Pasedena Bake sale!",
+    "event_date": "8/6/22",
+    "event_time": "12pm - 5pm",
+    "venue": "Bearology Pasadena",
+    "location": "Pasadena, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "Ronin Expo",
+    "description": "We'll be serving delicious anime themed food at Ronin Expo. Theme TBD",
+    "event_date": "8/13/22",
+    "event_time": "11am - 9pm",
+    "venue": "JACCC",
+    "location": "Los Angeles, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "Galleria at Tyler",
+    "description": "We're back again, selling classic and new anime-themed desserts to the local Riverside anime community. You can find us at space 6510 at the Galleria at Tyler Mall.",
+    "event_date": "8/20/22",
+    "event_time": "11am - 8pm",
+    "venue": "Galleria at Tyler Mall",
+    "location": "Riverside, CA",
+    "is_upcoming": false
+  },
+  {
+    "name": "ANIME Impulse OC",
+    "description": "We're back for Anime Impulse but this time catch us at OC. A bunch of new treats since last time so you don't miss us!",
+    "event_date": "9/3 - 9/4/22",
+    "event_time": "11am - 8pm",
+    "venue": "OC Fair & Event Center",
+    "location": "Costa Mesa, CA",
+    "is_upcoming": true
+  },
+  {
+    "name": "AniMarketplace",
+    "description": "Catch us at the AniMarketplace in JACCC. We're so excited to meet the Los Angeles community once again!",
+    "event_date": "9/24/22",
+    "event_time": "11am - 8pm",
+    "venue": "OC Fair & Event Center",
+    "location": "Costa Mesa, CA",
+    "is_upcoming": true
+  },
+  {
+    "name": "AVOX: Actors Voice Over Experience",
+    "description": "Enjoy engaging with the English cast of so many of your favorite shows with an anime themed treat. Booth info coming soon.",
+    "event_date": "TBA - SPRING 2023",
+    "event_time": "9:30am - 7pm",
+    "venue": "Pasadena Convention Center",
+    "location": "Pasadena, CA",
+    "is_upcoming": true
+  }
+]

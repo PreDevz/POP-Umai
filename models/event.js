@@ -1,5 +1,5 @@
 // Model for events to the website will go hereconst { Model, DataTypes } = require('sequelize');
-const { DataTypes } = require('sequelize/types');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Event extends Model {}
