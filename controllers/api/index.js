@@ -2,12 +2,12 @@
 
 const router = require('express').Router();
 
-const adminVerify = require('./adminRoutes')
+const admin = require('./admin');
 const adminEvents = require('./adminEvents');
 
 // Admin Dashboard Controller
 // Events API 
-router.use('/verify', adminVerify)
-router.use('/event', adminEvents);
+router.use('/admin', admin);
+router.use('/admin-event', adminEvents);
 
 module.exports = router;
