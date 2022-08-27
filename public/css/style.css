@@ -337,6 +337,11 @@ h2 {
     display: flex;
 }
 
+.our-story-title {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 25px;
+    color: #262626;
+}
 
 
 @keyframes moveInBottom {
@@ -388,6 +393,16 @@ h2 {
 
     #aboutTag {
         font-size: 16px;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    #mascot2 {
+        max-width: 325px;
+        max-height: 325px;
+        padding-left: 3vh;
     }
 }
 
