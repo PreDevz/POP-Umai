@@ -160,7 +160,7 @@ h2 {
 .icons {
     list-style: none;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1.5em;
@@ -300,6 +300,10 @@ h2 {
     width: 100%;
 }
 
+#social-media-container {
+    display: flex;
+}
+
 /* About Me Page */
 #aboutTitle {
     font-size: 35px;
@@ -371,6 +375,20 @@ h2 {
     }
 }
 @media screen and (max-width: 670px) {
+
+    .icons {
+        flex-direction: row;
+        padding-left: 0;
+    }
+
+    #social-media-container {
+        flex-direction: column;
+    }
+
+    .twitter-timeline {
+        width: 350px !important;
+    }
+
     .events {
         padding: 20px;
     }
