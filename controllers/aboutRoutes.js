@@ -1,12 +1,12 @@
-// About Page 
+// About Page
 
-const router = require('express').Router();
+const router = require("express").Router();
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
-
-    // rendering the homepage 
-    res.render('aboutpage')
+    
+    // rendering the homepage
+    res.render("about");
   } catch (err) {
 
     // catching server errors 

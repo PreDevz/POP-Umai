@@ -12,10 +12,13 @@ router.get('/', async (req, res) => {
 
     // rendering the homepage with data
     res
-      .render('events', {
+      .render
+      (
+        'events',
+        {
       eventsData,
       loggedIn: req.session.loggedIn,
-    })
+      })
   } catch (err) {
 
     // catching server errors 
