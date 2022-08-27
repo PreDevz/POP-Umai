@@ -1,19 +1,14 @@
-// Cookies Page 
+// Cookies Page
 
-const router = require('express').Router();
+const router = require("express").Router();
 
-router.get('/', async (req, res) => {
-  
+router.get("/", async (req, res) => {
   try {
-
-    // rendering the homepage 
-    res.render('cookiespage')
+    // rendering the homepage
+    res.render("cookies");
   } catch (err) {
-
-    // catching server errors 
-    res
-      .status(500)
-      .json(err);
+    // catching server errors
+    res.status(500).json(err);
   }
 });
 

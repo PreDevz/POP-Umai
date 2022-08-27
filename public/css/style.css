@@ -148,10 +148,48 @@ h2 {
     margin: auto;
 }
 
+.homeCookie-container {
+    padding: 45px;
+    display: flex;
+}
+
+.cookies {
+    display: grid;
+    background-color: white;
+    padding: 45px;
+}
+
+.left-cookie {
+    grid-column: 1;
+    align-self: center;
+}
+
+.right-cookie {
+    grid-column: 2;
+    justify-content: center;
+}
+
+#cookieTag {
+    font-size: 20px;
+    max-width: 600px;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+#homecookie {
+    max-width: 300px;
+    max-height: 300px;
+    margin: auto;
+}
+
+
+
 .followUs {
     text-align: center;
     justify-content: center;
     padding: 100px;
+    background-color: rgb(240, 240, 240);
 }
 
 .icons {
@@ -241,7 +279,7 @@ h2 {
 }
 
 .inquiries {
-    background-color: rgb(240, 240, 240);
+    background-color: white;
     padding: 4rem 2.8rem 2.8rem 2.8rem;
 }
 
@@ -343,6 +381,34 @@ h2 {
     font-size: 25px;
     color: #262626;
 }
+
+/* Cookies Page */
+#cookieTitle {
+    font-size: 35px;
+    font-family: 'Alfa Slab One', cursive;
+    color: #965fcc;
+    text-align: center;
+    padding: 35px;
+}
+
+h5 {
+    font-size: 25px;
+    font-family: 'Alfa Slab One', cursive;
+    color: #262626;
+    text-align: center;
+    padding: 35px;
+    background-color: rgb(240, 240, 240);
+}
+
+#cookiePage p{
+    font-size: 15px;
+    font-family: 'Alfa Slab One', cursive;
+    color: #262626;
+    text-align: center;
+    padding: 35px;
+}
+
+
 
 
 @keyframes moveInBottom {
