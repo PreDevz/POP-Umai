@@ -154,6 +154,12 @@ h2 {
     padding: 100px;
 }
 
+.followUs ul {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
 .icons {
     list-style: none;
     display: flex;
@@ -281,6 +287,8 @@ h2 {
     transition: all 0.3s ease;
     background-color: #965fcc;
     border-radius: 10px;
+    outline: none;
+    border: none;
 }
 
 #formBtn {
@@ -344,7 +352,80 @@ h2 {
     color: #262626;
 }
 
+/* Events page css styling */
+.event-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
+.event-container h3.event_headline {
+    font-size: 40px;
+    text-align: center;
+    border-bottom: 1px solid #262626;
+}
+
+.event-container .oneEvent {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    display: flex;
+    border-radius: 8px;
+    margin: 32px 0;
+}
+
+.oneEvent .event-left {
+    background-color: #965fcc;
+    min-width: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 8px 48px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 9px 0 0 8px;
+}
+
+.oneEvent .event-left .month {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.oneEvent .event-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 24px;
+}
+
+.oneEvent .event-right h3.event-title {
+    font-size: 24px;
+    margin: 14px 0 10px 0;
+    color: #262626;
+    text-transform: uppercase;
+}
+
+.oneEvent .event-right .event-timing {
+    background: #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    padding: 8px;
+    border-radius: 16px;
+    margin: 14px 0;
+    font-size: 14px;
+    color: #fff;
+}
+
+.oneEvent .event-right .event-timing {
+    height: 20px;
+    padding-right: 8px;
+}
+
+.oneEvent .event-right .event-place {
+    text-align: center;
+}
+
+/* Button */
 @keyframes moveInBottom {
     0% {
         opacity: 0;
@@ -357,6 +438,7 @@ h2 {
     }
 }
 
+/* mascott event right half */
 @media screen and (max-width: 447px) {
     #mascot {
         display: none;
@@ -366,6 +448,8 @@ h2 {
         grid-column: 0;
     }
 }
+
+/* homepage */
 @media screen and (max-width: 670px) {
     .events {
         padding: 20px;
@@ -407,3 +491,24 @@ h2 {
     }
 }
 
+/* events  */
+@media screen and (max-width: 550px) {
+    .oneEvent {
+        flex-direction: column;
+    }
+
+    .oneEvent .event-left {
+        padding: 0;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .oneEvent .event-left .event-date .date,
+    .oneEvent .event-left .event-date.month {
+        display: inline-block;
+        font-size: 24px;
+    }
+
+    .oneEvent .event-left .event-date {
+        padding: 10px 0;
+    }
+}
