@@ -3,6 +3,7 @@
 const router = require("express").Router();
 
 router.get("/", async (req, res) => {
+  
   try {
 
     // rendering the homepage
@@ -10,7 +11,9 @@ router.get("/", async (req, res) => {
   } catch (err) {
 
     // catching server errors
-    res.status(500).send(err);
+    res
+      .status(500)
+      .send(err);
   }
 });
 
