@@ -296,6 +296,54 @@ h2 {
     width: 100%;
 }
 
+/* About Me Page */
+#aboutTitle {
+    font-size: 35px;
+    font-family: 'Alfa Slab One', cursive;
+    color: #965fcc;
+    text-align: center;
+    padding: 35px;
+}
+
+.aboutPage {
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.aboutPage p{
+    font-size: 15px;
+}
+
+#mascot2 {
+    max-width: 400px;
+    max-height: 400px;
+    margin: auto;
+    justify-content: right;
+}
+
+.about-left {
+    grid-column: 1;
+    align-self: center;
+}
+
+.about-right {
+    grid-column: 2;
+    justify-content: right;
+}
+
+.about-container {
+    background-color: rgb(240, 240, 240);
+    padding: 45px;
+    display: flex;
+}
+
+.our-story-title {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 25px;
+    color: #262626;
+}
+
 
 @keyframes moveInBottom {
     0% {
@@ -346,6 +394,16 @@ h2 {
 
     #aboutTag {
         font-size: 16px;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    #mascot2 {
+        max-width: 325px;
+        max-height: 325px;
+        padding-left: 3vh;
     }
 }
 
