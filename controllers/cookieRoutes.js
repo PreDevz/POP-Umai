@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   try {
 
     // rendering the homepage 
-    res.render('cookiespage')
+    res.render('cookies')
   } catch (err) {
 
     // catching server errors 
