@@ -46,7 +46,7 @@ router.post('/login', async (req, res) => {
       
       res
         .json({
-           message: `logged in! Welcome ${adminData.name}`
+           message: `logged in!`
         });
     });
   } catch (err) {

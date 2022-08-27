@@ -8,7 +8,7 @@ const contactRoutes = require('./contactRoutes');
 const dashboardRoutes = require('./dashboardRoutes');
 
 // Import API folder
-const apiRoutes = require('./api')
+const apiRoutes = require('./api');
 
 // use page routes 
 router.use('/', homeRoutes);
@@ -19,7 +19,7 @@ router.use('/contact-us', contactRoutes);
 router.use('/dashboard', dashboardRoutes);
 
 // use api routes 
-router.use('/api', apiRoutes)
+router.use('/api', apiRoutes);
 
 // if they go anywhere else  
 router.use((req, res) => {

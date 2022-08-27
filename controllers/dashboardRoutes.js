@@ -2,7 +2,6 @@
 
 const auth = require('../utils/auth');
 const router = require('express').Router();
-const session = require('express-session');
 const Event = require('../models/event');
 
 // Admin Dashboard 

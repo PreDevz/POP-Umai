@@ -2,8 +2,8 @@
 
 const router = require('express').Router();
 
-const admin = require('./admin');
 const adminEvents = require('./adminEvents');
+const admin = require('./admin');
 
 // Admin Dashboard Controller
 // Events API 

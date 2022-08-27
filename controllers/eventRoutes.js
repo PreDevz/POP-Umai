@@ -1,7 +1,7 @@
 // Events Page 
 
 const router = require('express').Router();
-const Event = require('../models/Event');
+const Event = require('../models/event');
 
 router.get('/', async (req, res) => {
 
