@@ -331,7 +331,11 @@ h2 {
     justify-content: right;
 }
 
-
+.about-container {
+    background-color: rgb(240, 240, 240);
+    padding: 45px;
+    display: flex;
+}
 
 
 
