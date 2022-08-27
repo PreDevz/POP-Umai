@@ -1,6 +1,5 @@
 // Admin Dashboard events routes
 
-const auth = require('../../utils/auth');
 const router = require('express').Router();
 const Event = require('../../models/event');
 

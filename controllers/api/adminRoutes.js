@@ -1,26 +1,11 @@
-// Administration Page
+// Admin Asset Routes 
 
-const auth = require('../utils/auth');
 const router = require('express').Router();
 const session = require('express-session');
-const { Admin } = require('../models/admin.js');
-
-// Admin login 
-router.get('/', async (req, res) => {
-  
-  try {
-
-    // rendering the homepage 
-    res.render('login')
-  } catch (err) {
-
-    // catching server errors 
-    res.status(500).json(err);
-  }
-});
+const Admin = require('../models/admin.js');
 
 // admin login check 
-router.post('/', async (req, res) => {
+router.post('/login', async (req, res) => {
 
   // Ex POST req: 
   // {
@@ -38,7 +23,8 @@ router.post('/', async (req, res) => {
     });
 
     // check database for password if matches
-    const isValidPassword = await adminData.checkPassword(req.body.password);
+    const pass = req.body.password;
+    const isValidPassword = await adminData.checkPassword(pass);
 
     // if it doesn't match send back 400 status code
     if (!isValidPassword) {
@@ -74,23 +60,6 @@ router.post('/', async (req, res) => {
 
 })
 
-// Admin dashboard 
-router.get('/dashboard', auth, async (req, res) => {
-  try {
-
-    // rendering the homepage 
-    res.render('dashboard')
-  } catch (err) {
-
-    // catching server errors 
-    res
-      .status(500)
-      .json({
-        message: err
-      });
-  }
-});
-
 // Logout 
 router.post('/logout', async (req, res) => {
 
@@ -114,5 +83,3 @@ router.post('/logout', async (req, res) => {
       .end();
   }
 });
-
-module.exports = router;
