@@ -16,7 +16,7 @@ router.use('/about', aboutRoutes);
 router.use('/events', eventRoutes);
 router.use('/cookies', cookieRoutes);
 router.use('/contact-us', contactRoutes);
-router.use('/admin-dashboard', dashboardRoutes);
+router.use('/dashboard', dashboardRoutes);
 
 // use api routes 
 router.use('/api', apiRoutes)

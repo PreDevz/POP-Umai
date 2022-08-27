@@ -72,7 +72,7 @@ router.post('/logout', async (req, res) => {
       res
         .status(200)
         .json({
-          message: "Session destroyed!"
+          message: "Session destroyed, User logged out!"
         })
         .end();
     });

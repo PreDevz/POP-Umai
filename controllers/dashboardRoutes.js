@@ -3,14 +3,17 @@
 const auth = require('../utils/auth');
 const router = require('express').Router();
 const session = require('express-session');
-
+const Event = require('../models/event');
 
 // Admin Dashboard 
 router.get('/', auth, async (req, res) => {
 
   try {
 
-    res.render('dashboard')
+    // get all events from database 
+    const allEvents = await Event.findAll()
+
+    res.render('dashboard', { allEvents })
   } catch (err) {
 
     // catching server errors 
