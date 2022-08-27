@@ -1,6 +1,8 @@
 // Admin Dashboard events routes
 
 const router = require('express').Router();
+
+// import Event Model 
 const Event = require('../../models/event');
 
 // Find Event by ID

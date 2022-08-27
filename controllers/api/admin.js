@@ -1,10 +1,11 @@
 // Admin Asset Routes 
 
 const router = require('express').Router();
-const session = require('express-session');
-const Admin = require('../models/admin.js');
 
-// admin login check 
+// import Admin Model 
+const Admin = require('../../models/admin');
+
+// Login Admin
 router.post('/login', async (req, res) => {
 
   // Ex POST req: 
@@ -60,7 +61,7 @@ router.post('/login', async (req, res) => {
 
 })
 
-// Logout 
+// Logout Admin
 router.post('/logout', async (req, res) => {
 
   // checked if their logged in 
@@ -83,3 +84,5 @@ router.post('/logout', async (req, res) => {
       .end();
   }
 });
+
+module.exports = router;
