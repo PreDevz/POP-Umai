@@ -14,13 +14,18 @@ router.get('/', async (req, res) => {
           .json(err)
       });
 
-    const event = eventsData.get({ plain: true });
+    // loop through each event to serialize it 
+    const events = eventsData.map((event) => {
+      event.get(
+        { plain: true }
+      )
+    });
 
     // rendering the Events page with all Events
     res.render(
         'events',
         {
-      event,
+      events,
       loggedIn: req.session.loggedIn,
       })
   } catch (err) {

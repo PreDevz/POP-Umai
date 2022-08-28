@@ -16,7 +16,12 @@ router.get('/', auth, async (req, res) => {
           .json(err)
       });
 
-    const events = allEvents.get({ plain: true });
+    // loop through each event to serialize it 
+    const events = eventsData.map((event) => {
+      event.get(
+        { plain: true }
+      )
+    });
 
     // rendering the Dashboard page with all Events
     res.render(
