@@ -119,19 +119,11 @@ h2 {
 }
 
 .events {
-    display: grid;
+    display: flex;
     background-color: rgb(240, 240, 240);
     padding: 45px;
-}
-
-.left-half {
-    grid-column: 1;
-    align-self: center;
-}
-
-.right-half {
-    grid-column: 2;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 #eventTag {
@@ -151,7 +143,7 @@ h2 {
 .followUs {
     text-align: center;
     justify-content: center;
-    padding: 100px;
+    padding: 100px 45px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -330,15 +322,6 @@ h2 {
     justify-content: right;
 }
 
-.about-left {
-    grid-column: 1;
-    align-self: center;
-}
-
-.about-right {
-    grid-column: 2;
-    justify-content: right;
-}
 
 .about-container {
     background-color: rgb(240, 240, 240);
@@ -370,11 +353,17 @@ h2 {
         display: none;
     }
 
-    .right-half {
-        grid-column: 0;
-    }
 }
 @media screen and (max-width: 670px) {
+
+    /* Homepage */
+    .hero {
+        height: 50vh;
+    }
+
+    .aboutUs {
+        padding: 100px 45px;
+    }
 
     .icons {
         flex-direction: row;
@@ -390,24 +379,18 @@ h2 {
     }
 
     .events {
-        padding: 20px;
-    }
-
-    #eventTag {
-        max-width: 250px;
-        padding: 10px;
-        margin: auto;
-        font-size: 15px;
+        justify-content: center;
+        padding: 100px 45px;
     }
 
     #mascot {
-        max-width: 250px;
-        min-width: 90px;
-        margin: auto
+        display: none;
     }
 
-    .right-half {
-        margin-top: 100px;
+    #eventTag {
+        padding: 10px;
+        margin: auto;
+        font-size: 16px;
     }
 
     #smile {
