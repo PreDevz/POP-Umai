@@ -9,13 +9,15 @@ router.get('/', async (req, res) => {
 
     // retrieve all events from database
     const eventsData = await Event.findAll()
+      .catch((err) => {
+        res
+          .json(err)
+      });
 
     const event = eventsData.get({ plain: true });
 
-    // rendering the homepage with data
-    res
-      .render
-      (
+    // rendering the Events page with all Events
+    res.render(
         'events',
         {
       event,
