@@ -13,11 +13,13 @@ const adminSeed = require('./adminData.json')
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
+  // store Events 
   await Event.bulkCreate(eventSeed, {
     individualHooks: true,
     returning: true,
   });
 
+  // store Admin 
   await Admin.bulkCreate(adminSeed, {
     individualHooks: true,
     returning: true,
