@@ -2,7 +2,7 @@
 // import .env 
 require('dotenv').config();
 
-// admin info 
+// exporting admin info with .env vars
 module.exports = [
   {
     "name": process.env.ADMIN_NAME,

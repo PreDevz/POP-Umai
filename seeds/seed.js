@@ -1,11 +1,11 @@
-// Will seed events database
+// Will seed imported Contents
 const sequelize = require('../config/connection');
 
 // Import Models 
 const Event = require('../models/Event');
 const Admin = require('../models/Admin');
 
-// import Seeds 
+// Import Seeds 
 const eventSeed = require('./eventSeed.json');
 const adminSeed = require('./adminSeed');
 
@@ -16,13 +16,13 @@ const helper = require('../utils/helper');
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  // store Events 
+  // seed in Events 
   await Event.bulkCreate(eventSeed, {
     individualHooks: true,
     returning: true,
   });
 
-  // store Admin 
+  // seed in Admin 
   await Admin.bulkCreate(adminSeed, {
     individualHooks: true,
     returning: true,
