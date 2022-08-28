@@ -7,8 +7,11 @@ const Admin = require('../models/Admin');
 
 // import Seeds 
 const eventSeed = require('./eventSeed.json');
-const adminSeed = require('./adminSeed.json')
+const adminSeed = require('./adminSeed');
 
+// import helpers 
+const helper = require('../utils/helper');
+  
 // Add seeds data in database 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
