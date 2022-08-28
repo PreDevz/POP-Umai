@@ -10,10 +10,12 @@
         "ecmaVersion": "latest"
     },
     "rules": {
+        // warns user when quotes are single 
         "quotes": [
-            "error",
+            "warn",
             "double"
         ],
+        // code must end with semi colon 
         "semi": [
             "error",
             "always"
