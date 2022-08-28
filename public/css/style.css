@@ -296,6 +296,19 @@ h2 {
     display: flex;
 }
 
+/* Footer */
+.footer-icon-container {
+    margin-top: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+}
+
+.me-4 {
+    margin: 0 !important;
+}
+
 /* About Me Page */
 #aboutTitle {
     font-size: 35px;
@@ -358,7 +371,7 @@ h2 {
 
     /* Homepage */
     .hero {
-        height: 50vh;
+        height: 55vh;
     }
 
     .aboutUs {
