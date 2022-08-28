@@ -1,12 +1,12 @@
 // Admin Asset Routes 
 
-const router = require('express').Router();
+const router = require("express").Router();
 
 // import Admin Model 
-const Admin = require('../../models/admin');
+const Admin = require("../../models/admin");
 
 // Login Admin
-router.post('/login', async (req, res) => {
+router.post("/login", async (req, res) => {
 
   // Ex POST req: 
   // {
@@ -32,7 +32,7 @@ router.post('/login', async (req, res) => {
       res
         .status(400)
         .json({
-          message: 'Wrong Email or Password'
+          message: "Wrong Email or Password"
         });
       
       return;
@@ -46,7 +46,7 @@ router.post('/login', async (req, res) => {
       
       res
         .json({
-           message: `logged in!`
+           message: "logged in!"
         });
     });
   } catch (err) {
@@ -56,13 +56,13 @@ router.post('/login', async (req, res) => {
       .status(500)
       .json({
       message: "Can't login, Server Error", error: err
-    })
+    });
   }
 
-})
+});
 
 // Logout Admin
-router.post('/logout', async (req, res) => {
+router.post("/logout", async (req, res) => {
 
   // checked if their logged in 
   if (req.session.loggedIn) {

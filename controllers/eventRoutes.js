@@ -1,14 +1,14 @@
 // Events Page 
 
-const router = require('express').Router();
-const Event = require('../models/event');
+const router = require("express").Router();
+const Event = require("../models/event");
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
 
   try {
 
     // retrieve all events from database
-    const eventsData = await Event.findAll()
+    const eventsData = await Event.findAll();
 
     const event = eventsData.get({ plain: true });
 
@@ -16,11 +16,11 @@ router.get('/', async (req, res) => {
     res
       .render
       (
-        'events',
+        "events",
         {
       event,
       loggedIn: req.session.loggedIn,
-      })
+      });
   } catch (err) {
 
     // catching server errors 
