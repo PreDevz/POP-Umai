@@ -33,6 +33,18 @@ router.get('/:id', auth, async (req, res) => {
       .status(200)
       .json(eventData)
     
+    // revive Admin session 
+    req.session.save(() => {
+        
+      req.session.user_id = adminData.id;
+      req.session.logged_in = true;
+      
+      res
+        .json({
+           message: `Admin still logged in`
+        });
+      })
+    
   } catch (err) {
 
     // catching server errors 
@@ -69,12 +81,17 @@ router.post('/', auth, async (req, res) => {
       is_upcoming: upcoming
     });
 
-    // new session 
+    // revive Admin session 
     req.session.save(() => {
-      req.session.loggedIn = true;
-
-      res.status(200).json(event);
-    });
+        
+      req.session.user_id = adminData.id;
+      req.session.logged_in = true;
+      
+      res
+        .json({
+           message: `Admin still logged in`
+        });
+      })
 
   } catch (err) {
 
@@ -143,6 +160,18 @@ router.put('/:id', auth, async (req, res) => {
       .json({
         event
       })
+    
+    // revive Admin session 
+    req.session.save(() => {
+    
+      req.session.user_id = adminData.id;
+      req.session.logged_in = true;
+      
+      res
+        .json({
+            message: `Admin still logged in`
+        });
+      })
 
   } catch (err) {
 
@@ -187,7 +216,20 @@ router.delete('/:id', auth, async (req, res) => {
       .status(200)
       .json(
         deletedEvent
-      )
+    )
+    
+    // revive Admin session 
+    req.session.save(() => {
+    
+      req.session.user_id = adminData.id;
+      req.session.logged_in = true;
+      
+      res
+        .json({
+            message: `Admin still logged in`
+        });
+    })
+    
   } catch (err) {
 
     // catching server errors 
