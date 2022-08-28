@@ -400,12 +400,24 @@ h5 {
     background-color: rgb(240, 240, 240);
 }
 
+.cookiePage {
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item {
+    max-width: 300px;
+    max-width: 300px;
+    align-items: center;
+}
+
 #cookiePage p{
     font-size: 15px;
     font-family: 'Alfa Slab One', cursive;
     color: #262626;
     text-align: center;
     padding: 35px;
+    justify-content: center;
 }
 
 
