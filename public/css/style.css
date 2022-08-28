@@ -277,6 +277,14 @@ h2 {
     transition: all 0.3s ease;
     background-color: #965fcc;
     border-radius: 10px;
+    width: 50% !important;
+    border: none;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #formBtn {
@@ -307,6 +315,10 @@ h2 {
 
 .me-4 {
     margin: 0 !important;
+}
+
+footer i {
+    font-size: 25px;
 }
 
 /* About Me Page */
@@ -422,6 +434,10 @@ h2 {
         max-width: 325px;
         max-height: 325px;
         padding-left: 3vh;
+    }
+
+    #contactSend {
+        width: 100% !important;
     }
 }
 
