@@ -67,28 +67,26 @@
     </section>
 
 
-    <section class="inquiries">
-      <h2>Have questions or concerns?</h2>
-      <div class="container">
-        <p id="sub-title">Send us a message!</p>
-        <form action="">
-          <!-- User's Options  -->
-          <select class="questions-input">
-            <option value="business">Business Inquiries</option>
-            <option value="question">General Questions</option>
-          </select>
-          <!-- User's Name  -->
-          <input class="questions-input" type="text" id="contactName" placeholder="Name" />
-          <!-- User's Email  -->
-          <input class="questions-input" type="email" id="contactEmail" placeholder="Email" />
-          <!-- User's Message  -->
-          <textarea class="questions-input" id="contactMessage" placeholder="Message"></textarea>
-          <div class="btn-container">
-            <!-- Send button   -->
-            <button class="event-btn" id="contactSend">
-              <a id="formBtn" href="#">SEND</a>
-            </button>
-          </div>
-        </form>
-      </div>
-    </section>
+<section class="inquiries">
+  <h2>Have questions or concerns?</h2>
+  <div class="container">
+    <p>Send us a message!</p>
+    <form id="contact-form">
+      <select class="questions-input">
+        <option value="business">Business Inquiries</option>
+        <option value="question">General Questions</option>
+        <option value="cookies">Cookie Inquiries</option>
+      </select>
+
+      <input class="questions-input" type="text" name="from_name" placeholder="Name" id="from_name">
+
+      <input class="questions-input" type="email" name="to_name" id="contactEmail" placeholder="Email" />
+
+      <textarea class="questions-input" type="text" name="message" id="message" placeholder="Message"></textarea>
+
+      <button type="submit" class="event-btn" id="contactSend" value="send">
+        <p>SEND</p>
+      </button>
+    </form>
+  </div>
+</section>
