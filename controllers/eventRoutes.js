@@ -9,16 +9,23 @@ router.get('/', async (req, res) => {
 
     // retrieve all events from database
     const eventsData = await Event.findAll()
+      .catch((err) => {
+        res
+          .json(err)
+      });
 
-    const event = eventsData.get({ plain: true });
+    // loop through each event to serialize it 
+    const events = eventsData.map((event) => {
+      event.get(
+        { plain: true }
+      )
+    });
 
-    // rendering the homepage with data
-    res
-      .render
-      (
+    // rendering the Events page with all Events
+    res.render(
         'events',
         {
-      event,
+      events,
       loggedIn: req.session.loggedIn,
       })
   } catch (err) {

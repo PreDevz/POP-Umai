@@ -1,13 +1,19 @@
-// importing APIs 
-
+// Admin Dashboard Controller
+ 
 const router = require('express').Router();
 
-const adminEvents = require('./adminEvents');
+// importing APIs 
 const admin = require('./admin');
+const adminEvents = require('./adminEvents');
+const adminReviews = require('./adminReviews');
 
-// Admin Dashboard Controller
-// Events API 
-router.use('/admin', admin);
-router.use('/admin-event', adminEvents);
+// Using APIs
+
+// Admin routes 
+router.use('/admin', admin); 
+// Admin Event routes 
+router.use('/admin-event', adminEvents); 
+// Admin Review routes
+router.use('/admin-review', adminReviews); 
 
 module.exports = router;

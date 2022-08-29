@@ -9,10 +9,26 @@ router.get('/', auth, async (req, res) => {
 
   try {
 
-    // get all events from database 
-    const allEvents = await Event.findAll()
+    // retrieve all events from database
+    const eventsData = await Event.findAll()
+      .catch((err) => {
+        res
+          .json(err)
+      });
 
-    res.render('dashboard', { allEvents })
+    // loop through each event to serialize it 
+    const events = eventsData.map((event) => {
+      event.get(
+        { plain: true }
+      )
+    });
+
+    // rendering the Dashboard page with all Events
+    res.render(
+      'dashboard',
+      {
+        events
+      })
   } catch (err) {
 
     // catching server errors 
