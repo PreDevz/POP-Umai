@@ -279,6 +279,9 @@ h2 {
     border-radius: 10px;
     width: 50% !important;
     border: none;
+    color: #fff;
+    align-self: center;
+    text-align: center;
 }
 
 .btn-container {
