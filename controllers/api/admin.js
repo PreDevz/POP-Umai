@@ -88,7 +88,7 @@ router.post('/login', async (req, res) => {
 router.post('/logout', async (req, res) => {
 
   // checked if their logged in 
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
 
     // if there is a session, destory it 
     req.session.destroy(() => {
