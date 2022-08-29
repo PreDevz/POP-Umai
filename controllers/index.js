@@ -22,8 +22,8 @@ router.use('/dashboard', dashboardRoutes);
 router.use('/api', apiRoutes);
 
 // if they go anywhere else  
-router.use((req, res) => {
-  res.send("<h1>Uh oh... wrong route!</h1>")
-});
+// router.use((req, res) => {
+//   res.send("<h1>Uh oh... wrong route!</h1>")
+// });
 
 module.exports = router;

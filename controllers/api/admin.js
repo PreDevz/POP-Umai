@@ -18,10 +18,22 @@ router.post('/login', async (req, res) => {
   try {
 
     // check the database for user that matches email 
+    const adminEmail = req.body.email;
     const adminData = await Admin.findOne({
       where:
-        { email: req.body.email }
+        { email: adminEmail }
     });
+
+    // check if Admin exist in databse 
+    if (!adminData) {
+      res
+        .status(400)
+        .json({
+          message: "Incorrect Email"
+        })
+
+      return;
+    }
 
     // check database for password if matches
     const pass = req.body.password;
@@ -32,7 +44,7 @@ router.post('/login', async (req, res) => {
       res
         .status(400)
         .json({
-          message: 'Wrong Email or Password'
+          message: 'Wrong Password'
         });
       
       return;
@@ -46,6 +58,7 @@ router.post('/login', async (req, res) => {
       
       res
         .json({
+          user: adminData,
            message: `logged in!`
         });
     });
@@ -76,6 +89,10 @@ router.post('/logout', async (req, res) => {
         })
         .end();
     });
+
+    res.json({
+      message: 'logged out!'
+    })
   } else {
 
     // if there's no session, send back 404 
