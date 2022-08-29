@@ -10,12 +10,13 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Creating Session
 const sess = {
   secret: "victoria secret",
 
   // cookie 
   cookie: {
-    maxAge: 180000,
+    maxAge: 180000, // 15 Mins
     httpOnly: true,
     secure: false,
     sameSite: "strict",
@@ -23,7 +24,7 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   
-  //  session store
+  //  Session store
   store: new SequelizeStore({
     db: sequelize,
   }),
@@ -42,6 +43,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 
-sequelize.sync({ force: true }).then(() => {
-  app.listen(PORT, () => console.log(`Now listening on http://localhost:${PORT} `));
+sequelize.sync({ force: false })
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`Now listening on http://localhost:${PORT} `)
+    });
 });
