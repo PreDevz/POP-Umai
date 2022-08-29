@@ -3,15 +3,17 @@
 const router = require('express').Router();
 
 // importing APIs 
+const admin = require('./admin');
 const adminEvents = require('./adminEvents');
 const adminReviews = require('./adminReviews');
-const admin = require('./admin');
 
-// Event APIs 
-router.use('/admin', admin);
-router.use('/admin-event', adminEvents);
+// Using APIs
 
-// Review APIs
-router.use('/admin-review', adminEvents);
+// Admin routes 
+router.use('/admin', admin); 
+// Admin Event routes 
+router.use('/admin-event', adminEvents); 
+// Admin Review routes
+router.use('/admin-review', adminReviews); 
 
 module.exports = router;

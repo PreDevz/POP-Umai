@@ -104,7 +104,7 @@ router.post('/', auth, async (req, res) => {
   }
 })
 
-// Ppdate Event by ID
+// Update Event by ID
 router.put('/:id', auth, async (req, res) => {
 
   try {

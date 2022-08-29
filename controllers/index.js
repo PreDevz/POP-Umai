@@ -23,7 +23,7 @@ router.use('/api', apiRoutes);
 
 // if they go anywhere else  
 router.use((req, res) => {
-  res.send(`<h1>Uh oh... wrong route!</h1> \n Maybe check the method you are using.`)
+  res.send(`<h1>Uh oh... wrong route!</h1> 😔 \n Maybe check the method you are using.`)
 });
 
 module.exports = router;
