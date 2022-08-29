@@ -59,10 +59,16 @@ router.post('/login', async (req, res) => {
       req.session.user_id = adminData.id;
       req.session.logged_in = true;
       
+      const { id, name, email } = adminData
+
       res
         .json({
-          admin: adminData,
-           message: `logged in!`
+          admin: {
+            id,
+            name,
+            email
+          },
+           message: `Hello ${adminData.name}, you're logged in!`
         });
     });
     
