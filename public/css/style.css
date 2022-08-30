@@ -1,6 +1,7 @@
+/* Importing a font from Google Fonts. */
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
-
+/* A CSS reset. It is used to make sure that all browsers are using the same default styling. */
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +9,14 @@
     scroll-behavior: smooth;
 }
 
-
+/* Setting the width of the logo to 180px. */
 #logo-main {
     display: block;
     margin: 10px auto;
     width: 180px;
 }
 
+/* Setting the mainNav attributes */
 .mainNav {
     width: 100%;
     text-align: center;
@@ -26,6 +28,7 @@
     gap: 2px 12px;
 }
 
+/* setting navbar li styling */
 .mainNav li {
     display: inline-block;
     float: none;
@@ -33,6 +36,7 @@
     /* box-shadow: 0 2px 0px 0px rgb(0 0 0 / 25%); */
 }
 
+/* mainNav a href attributes */
 .mainNav a {
     display: inline-block;
     font-family: 'Alfa Slab One', cursive;
@@ -44,24 +48,28 @@
     font-weight: bold;
 }
 
+/* mainNav a href hover afftect */
 .mainNav a:hover {
     -webkit-text-stroke-width: 0.7px;
     -webkit-text-stroke-color: #965fcc;
 }
 
+/* mainNav when focused on attributes */
 .mainNav:focus {
-
     color: #965fcc;
 }
 
+/* navbar styling */
 .navbar {
     background-color: white;
 }
 
-*/ #Logo {
+/* logo z=index */
+#Logo {
     z-index: 1;
 }
 
+/* hero section styling */
 .hero {
     display: flex;
     justify-content: center;
@@ -76,11 +84,13 @@
     background: url(/assets/svg/hero.svg) no-repeat center center scroll;
 }
 
+/* Logo head in hero */
 #smile {
     max-width: 400px;
     vertical-align: middle;
 }
 
+/* h2 styling */
 h2 {
     font-family: 'Alfa Slab One', cursive;
     z-index: 1;
@@ -93,6 +103,7 @@ h2 {
     text-align: center;
 }
 
+/* aboutUs section styling */
 .aboutUs {
     /* background-color: rgba(203, 200, 200, 0.889); */
     padding: 100px;
@@ -102,6 +113,7 @@ h2 {
     background: url(/assets/svg/aboutMe.svg) no-repeat center 65%;
 }
 
+/* aboutUs bio styling */
 #aboutBio {
     font-family: 'Alfa Slab One', cursive;
     font-size: 25px;
@@ -110,6 +122,7 @@ h2 {
     justify-content: center;
 }
 
+/* aboutUs tag styling */
 #aboutTag {
     font-size: 20px;
     max-width: 600px;
@@ -118,6 +131,7 @@ h2 {
     margin: auto;
 }
 
+/* events styling */
 .events {
     display: flex;
     background-color: rgb(240, 240, 240);
@@ -126,6 +140,7 @@ h2 {
     justify-content: space-evenly;
 }
 
+/* events tag styling */
 #eventTag {
     font-size: 20px;
     max-width: 600px;
@@ -134,12 +149,14 @@ h2 {
     margin: auto;
 }
 
+/* events mascot attributes */
 #mascot {
     max-width: 500px;
     max-height: 500px;
     margin: auto;
 }
 
+/* follow us styling for container */
 .followUs {
     text-align: center;
     justify-content: center;
@@ -149,6 +166,7 @@ h2 {
     align-items: center;
 }
 
+/* follow us icons styling */
 .icons {
     list-style: none;
     display: flex;
@@ -159,32 +177,27 @@ h2 {
     margin-top: 20px;
 }
 
+/* icons color */
 .fa-brands {
     color: #965fcc;
 }
 
+/* footer icons styling  */
 .footerIcons {
     text-decoration: none;
     float: none;
     list-style: none;
 }
 
-#vanta {
-    z-index: 0;
-    position: absolute;
-    left: 0;
-    top: 77px;
-    width: 100%;
-    height: 55vh;
-    transition: opacity 2s ease-in-out;
-}
 
+/* text box styling */
 .text-box {
     display: flex;
     justify-content: center;
     padding: 20px;
 }
 
+/* main button effects */
 .btn:link,
 .btn:visited {
     text-transform: uppercase;
@@ -194,21 +207,25 @@ h2 {
     transition: all .2s;
 }
 
+/* main button on hover */
 .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* main button when active */
 .btn:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* button on dark background */
 .btn-white {
     background-color: #fff;
     color: #777;
 }
 
+/* after clicking button styling */
 .btn::after {
     content: "";
     height: 100%;
@@ -218,34 +235,41 @@ h2 {
     transition: all .4s;
 }
 
+/* after styling */
 .btn-white::after {
     background-color: #fff;
 }
 
+/* button hover styling after  */
 .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
 }
 
+/* buttons animation */
 .btn-animated {
     animation: moveInBottom 5s ease-out;
     animation-fill-mode: backwards;
 }
 
+/* container */
 .container {
     max-width: 1080px;
 }
 
+/* form inquiries */
 .inquiries {
     background-color: rgb(240, 240, 240);
     padding: 4rem 2.8rem 2.8rem 2.8rem;
 }
 
+/* form subtitle */
 #sub-title {
     font-size: 1.3rem;
     text-align: center;
 }
 
+/* form styling */
 .inquiries form {
     display: flex;
     flex-direction: column;
@@ -253,6 +277,7 @@ h2 {
     gap: 1rem;
 }
 
+/* questions input styling */
 .questions-input {
     padding: 0.5rem;
     border-radius: 8px;
@@ -260,19 +285,23 @@ h2 {
     outline: none;
 }
 
+/* form message styling */
 #contactMessage {
     resize: none;
     min-height: 140px;
 }
 
+/* form styling */
 .inquiries .btn-container {
     padding: 0;
 }
 
+/* form styling button */
 .inquiries .btn-container button {
     padding: 0.5rem;
 }
 
+/* send button styling */
 #contactSend {
     transition: all 0.3s ease;
     background-color: #965fcc;
@@ -284,25 +313,30 @@ h2 {
     text-align: center;
 }
 
+/* form button container */
 .btn-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* form button styling */
 #formBtn {
     color: #fff;
     text-decoration: none;
 }
 
+/* form button on hover styling */
 #contactSend:hover {
     background-color: #1db2e8;
 }
 
+/* form width */
 .inquiries form #contactSend {
     width: 100%;
 }
 
+/* scontainer for social media */
 #social-media-container {
     display: flex;
 }
@@ -316,10 +350,12 @@ h2 {
     gap: 5vh;
 }
 
+/* footer icons  */
 .me-4 {
     margin: 0 !important;
 }
 
+/* footer I tag */
 footer i {
     font-size: 25px;
 }
@@ -333,16 +369,19 @@ footer i {
     padding: 35px;
 }
 
+/* about page styling */
 .aboutPage {
     text-align: center;
     justify-content: center;
     padding: 20px;
 }
 
-.aboutPage p{
+/* about page p tag styling */
+.aboutPage p {
     font-size: 15px;
 }
 
+/* second mascott styling */
 #mascot2 {
     max-width: 400px;
     max-height: 400px;
@@ -350,20 +389,21 @@ footer i {
     justify-content: right;
 }
 
-
+/* about container styling */
 .about-container {
     background-color: rgb(240, 240, 240);
     padding: 45px;
     display: flex;
 }
 
+/* about us story styling */
 .our-story-title {
     font-family: 'Alfa Slab One', cursive;
     font-size: 25px;
     color: #262626;
 }
 
-
+/* keyfram for button */
 @keyframes moveInBottom {
     0% {
         opacity: 0;
@@ -376,12 +416,15 @@ footer i {
     }
 }
 
+/* media queries for mascott*/
 @media screen and (max-width: 447px) {
     #mascot {
         display: none;
     }
 
 }
+
+/* media queries for throught whole page */
 @media screen and (max-width: 670px) {
 
     /* Homepage */
@@ -443,4 +486,3 @@ footer i {
         width: 100% !important;
     }
 }
-
