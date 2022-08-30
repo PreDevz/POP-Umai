@@ -1,590 +1,587 @@
 /* Importing a font from Google Fonts. */
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
-/* A CSS reset. It is used to make sure that all browsers are using the same default styling. */
+/* root colors  */
+:root {
+	--purple-clr: #965fcc;
+	--blue-clr: #1db2e8;
+	--dark-clr: #262626;
+	--shaded-gray: rgb(240, 240, 240);
+}
+
+/* A CSS reset */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
-/* Setting the width of the logo to 180px. */
-#logo-main {
-    display: block;
-    margin: 10px auto;
-    width: 180px;
-}
-
-/* Setting the mainNav attributes */
-.mainNav {
-    width: 100%;
-    text-align: center;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    gap: 2px 12px;
-}
-
-/* setting navbar li styling */
-.mainNav li {
-    display: inline-block;
-    float: none;
-    margin: 0 10px;
-    /* box-shadow: 0 2px 0px 0px rgb(0 0 0 / 25%); */
-}
-
-/* mainNav a href attributes */
-.mainNav a {
-    display: inline-block;
-    font-family: 'Alfa Slab One', cursive;
-    font-size: 18px;
-    color: whitesmoke;
-    -webkit-text-stroke-width: 0.7px;
-    -webkit-text-stroke-color: #262626;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* mainNav a href hover afftect */
-.mainNav a:hover {
-    -webkit-text-stroke-width: 0.7px;
-    -webkit-text-stroke-color: #965fcc;
-}
-
-/* mainNav when focused on attributes */
-.mainNav:focus {
-    color: #965fcc;
+/* Globals */
+.container {
+	max-width: 1080px;
 }
 
 /* navbar styling */
+
+#logo-main {
+	display: block;
+	margin: 10px auto;
+	width: 180px;
+}
+
+.mainNav {
+	width: 100%;
+	text-align: center;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+	gap: 2px 12px;
+}
+
+.mainNav li {
+	display: inline-block;
+	float: none;
+	margin: 0 10px;
+	/* box-shadow: 0 2px 0px 0px rgb(0 0 0 / 25%); */
+}
+
+.mainNav a {
+	display: inline-block;
+	font-family: 'Alfa Slab One', cursive;
+	font-size: 18px;
+	color: whitesmoke;
+	-webkit-text-stroke-width: 0.7px;
+	-webkit-text-stroke-color: #262626;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.mainNav a:hover {
+	-webkit-text-stroke-width: 0.7px;
+	-webkit-text-stroke-color: var(--purple-clr);
+}
+
+.mainNav:focus {
+	color: var(--purple-clr);
+}
+
 .navbar {
-    background-color: white;
+	background-color: white;
 }
 
-/* logo z=index */
 #Logo {
-    z-index: 1;
+	z-index: 1;
 }
 
-/* hero section styling */
+/* Hero Section */
+
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    /* Change hero height here*/
-    height: 70vh;
-    overflow: hidden;
-    background-size: cover !important;
-    background: url(/assets/svg/hero.svg) no-repeat center center scroll;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	width: 100%;
+	/* Change hero height here*/
+	height: 70vh;
+	overflow: hidden;
+	background-size: cover !important;
+	background: url(/assets/svg/hero.svg) no-repeat center center scroll;
 }
 
-/* Logo head in hero */
 #smile {
-    max-width: 400px;
-    vertical-align: middle;
+	max-width: 400px;
+	vertical-align: middle;
 }
 
-/* h2 styling */
 h2 {
-    font-family: 'Alfa Slab One', cursive;
-    z-index: 1;
-    font-style: normal;
-    color: #965fcc;
-    font-size: 8vmin;
-    letter-spacing: 0.03em;
-    line-height: 1;
-    margin-bottom: 40px;
-    text-align: center;
+	font-family: 'Alfa Slab One', cursive;
+	z-index: 1;
+	font-style: normal;
+	color: var(--purple-clr);
+	font-size: 8vmin;
+	letter-spacing: 0.03em;
+	line-height: 1;
+	margin-bottom: 40px;
+	text-align: center;
 }
 
-/* aboutUs section styling */
+/* About Us Section */
+
 .aboutUs {
-    /* background-color: rgba(203, 200, 200, 0.889); */
-    padding: 100px;
-    width: 100%;
-    overflow: hidden;
-    background-size: cover !important;
-    background: url(/assets/svg/aboutMe.svg) no-repeat center 65%;
+	/* background-color: rgba(203, 200, 200, 0.889); */
+	padding: 100px;
+	width: 100%;
+	overflow: hidden;
+	background-size: cover !important;
+	background: url(/assets/svg/aboutMe.svg) no-repeat center 65%;
 }
 
-/* aboutUs bio styling */
 #aboutBio {
-    font-family: 'Alfa Slab One', cursive;
-    font-size: 25px;
-    color: #262626;
-    text-align: center;
-    justify-content: center;
+	font-family: 'Alfa Slab One', cursive;
+	font-size: 25px;
+	color: #262626;
+	text-align: center;
+	justify-content: center;
 }
 
-/* aboutUs tag styling */
 #aboutTag {
-    font-size: 20px;
-    max-width: 600px;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
+	font-size: 20px;
+	max-width: 600px;
+	justify-content: center;
+	text-align: center;
+	margin: auto;
 }
 
-/* events styling */
+/* Events Section  */
+
 .events {
-    display: flex;
-    background-color: rgb(240, 240, 240);
-    padding: 45px;
-    align-items: center;
-    justify-content: space-evenly;
+	display: flex;
+	background-color: rgb(240, 240, 240);
+	padding: 45px;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
-/* events tag styling */
 #eventTag {
-    font-size: 20px;
-    max-width: 600px;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
+	font-size: 20px;
+	max-width: 600px;
+	justify-content: center;
+	text-align: center;
+	margin: auto;
 }
 
-/* events mascot attributes */
 #mascot {
-    max-width: 500px;
-    max-height: 500px;
-    margin: auto;
+	max-width: 500px;
+	max-height: 500px;
+	margin: auto;
 }
 
-/* follow us styling for container */
+/* Follow Us Section  */
+
 .followUs {
-    text-align: center;
-    justify-content: center;
-    padding: 100px 45px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	text-align: center;
+	justify-content: center;
+	padding: 100px 45px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .followUs ul {
-    display: flex;
-    justify-content: center;
-    padding: 0px;
+	display: flex;
+	justify-content: center;
+	padding: 0px;
 }
 
 .icons {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5em;
-    margin-top: 20px;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5em;
+	margin-top: 20px;
 }
 
-/* icons color */
 .fa-brands {
-    color: #965fcc;
+	color: var(--purple-clr);
 }
 
-/* footer icons styling  */
+/* Footer Section  */
+
 .footerIcons {
-    text-decoration: none;
-    float: none;
-    list-style: none;
+	text-decoration: none;
+	float: none;
+	list-style: none;
 }
 
-
-/* text box styling */
 .text-box {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
 }
 
-/* main button effects */
 .btn:link,
 .btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 15px 40px;
-    border-radius: 100px;
-    transition: all .2s;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 15px 40px;
+	border-radius: 100px;
+	transition: all 0.2s;
 }
 
 /* main button on hover */
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	transform: translateY(-3px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* main button when active */
 .btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	transform: translateY(-1px);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* button on dark background */
 .btn-white {
-    background-color: #fff;
-    color: #777;
+	background-color: #fff;
+	color: #777;
 }
 
 /* after clicking button styling */
 .btn::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    z-index: -1;
-    transition: all .4s;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 100px;
+	z-index: -1;
+	transition: all 0.4s;
 }
 
 /* after styling */
 .btn-white::after {
-    background-color: #fff;
+	background-color: #fff;
 }
 
 /* button hover styling after  */
 .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
+	transform: scaleX(1.4) scaleY(1.6);
+	opacity: 0;
 }
 
 /* buttons animation */
 .btn-animated {
-    animation: moveInBottom 5s ease-out;
-    animation-fill-mode: backwards;
-}
-
-/* container */
-.container {
-    max-width: 1080px;
+	animation: moveInBottom 5s ease-out;
+	animation-fill-mode: backwards;
 }
 
 /* form inquiries */
 .inquiries {
-    background-color: rgb(240, 240, 240);
-    padding: 4rem 2.8rem 2.8rem 2.8rem;
+	background-color: rgb(240, 240, 240);
+	padding: 4rem 2.8rem 2.8rem 2.8rem;
 }
 
 /* form subtitle */
 #sub-title {
-    font-size: 1.3rem;
-    text-align: center;
+	font-size: 1.3rem;
+	text-align: center;
 }
 
 /* form styling */
 .inquiries form {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	gap: 1rem;
 }
 
 /* questions input styling */
 .questions-input {
-    padding: 0.5rem;
-    border-radius: 8px;
-    border: 1px solid rgb(240, 240, 240);
-    outline: none;
+	padding: 0.5rem;
+	border-radius: 8px;
+	border: 1px solid rgb(240, 240, 240);
+	outline: none;
 }
 
 /* form message styling */
 #contactMessage {
-    resize: none;
-    min-height: 140px;
+	resize: none;
+	min-height: 140px;
 }
 
 /* form styling */
 .inquiries .btn-container {
-    padding: 0;
+	padding: 0;
 }
 
 /* form styling button */
 .inquiries .btn-container button {
-    padding: 0.5rem;
+	padding: 0.5rem;
 }
 
 /* send button styling */
 #contactSend {
-    transition: all 0.3s ease;
-    background-color: #965fcc;
-    border-radius: 10px;
-    width: 50% !important;
-    border: none;
-    color: #fff;
-    align-self: center;
-    text-align: center;
+	transition: all 0.3s ease;
+	background-color: var(--purple-clr);
+	border-radius: 10px;
+	width: 50% !important;
+	border: none;
+	color: #fff;
+	align-self: center;
+	text-align: center;
 }
 
 /* form button container */
 .btn-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    outline: none;
-    border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	outline: none;
+	border: none;
 }
 
 /* form button styling */
 #formBtn {
-    color: #fff;
-    text-decoration: none;
+	color: #fff;
+	text-decoration: none;
 }
 
 /* form button on hover styling */
 #contactSend:hover {
-    background-color: #1db2e8;
+	background-color: #1db2e8;
 }
 
 /* form width */
 .inquiries form #contactSend {
-    width: 100%;
+	width: 100%;
 }
 
 /* scontainer for social media */
 #social-media-container {
-    display: flex;
+	display: flex;
 }
 
 /* Footer */
 .footer-icon-container {
-    margin-top: 3vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5vh;
+	margin-top: 3vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5vh;
 }
 
 /* footer icons  */
 .me-4 {
-    margin: 0 !important;
+	margin: 0 !important;
 }
 
 /* footer I tag */
 footer i {
-    font-size: 25px;
+	font-size: 25px;
 }
 
 /* About Me Page */
 #aboutTitle {
-    font-size: 35px;
-    font-family: 'Alfa Slab One', cursive;
-    color: #965fcc;
-    text-align: center;
-    padding: 35px;
+	font-size: 35px;
+	font-family: 'Alfa Slab One', cursive;
+	color: var(--purple-clr);
+	text-align: center;
+	padding: 35px;
 }
 
 /* about page styling */
 .aboutPage {
-    text-align: center;
-    justify-content: center;
-    padding: 20px;
+	text-align: center;
+	justify-content: center;
+	padding: 20px;
 }
 
 /* about page p tag styling */
 .aboutPage p {
-    font-size: 15px;
+	font-size: 15px;
 }
 
 /* second mascott styling */
 #mascot2 {
-    max-width: 400px;
-    max-height: 400px;
-    margin: auto;
-    justify-content: right;
+	max-width: 400px;
+	max-height: 400px;
+	margin: auto;
+	justify-content: right;
 }
 
 /* about container styling */
 .about-container {
-    background-color: rgb(240, 240, 240);
-    padding: 45px;
-    display: flex;
+	background-color: rgb(240, 240, 240);
+	padding: 45px;
+	display: flex;
 }
 
 /* about us story styling */
 .our-story-title {
-    font-family: 'Alfa Slab One', cursive;
-    font-size: 25px;
-    color: #262626;
+	font-family: 'Alfa Slab One', cursive;
+	font-size: 25px;
+	color: #262626;
 }
 
-/* Events page css styling */
+/* Events Page Section */
+
 .event-container {
-    max-width: 800px;
-    margin: 0 auto;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 3rem 0;
 }
 
-.event-container h3.event_headline {
-    font-size: 40px;
-    text-align: center;
-    border-bottom: 1px solid #262626;
+.event-container h2 {
+	margin: 5rem 0;
+	border-bottom: 1px solid;
 }
 
 .event-container .oneEvent {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    display: flex;
-    border-radius: 8px;
-    margin: 32px 0;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+		rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	display: flex;
+	border-radius: 8px;
+	margin: 32px 0;
 }
 
 .oneEvent .event-left {
-    background-color: #965fcc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    padding: 8px 48px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 9px 0 0 8px;
-    max-width: 150px;
+	background-color: var(--purple-clr);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	padding: 8px 48px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 9px 0 0 8px;
+	max-width: 150px;
 }
 
 .oneEvent .event-left .month {
-    font-size: 16px;
-    font-weight: normal;
+	font-size: 16px;
+	font-weight: normal;
 }
 
 .oneEvent .event-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 24px;
-    width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 24px;
+	width: 100%;
 }
 
 .oneEvent .event-right h3.event-title {
-    font-size: 24px;
-    margin: 14px 0 10px 0;
-    color: #262626;
-    text-transform: uppercase;
+	font-size: 24px;
+	margin: 14px 0 10px 0;
+	color: #262626;
+	text-transform: uppercase;
 }
 
 .oneEvent .event-right .event-timing {
-    background: #777;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 127px;
-    padding: 8px;
-    border-radius: 16px;
-    margin: 14px 0;
-    font-size: 14px;
-    color: #fff;
+	background: #777;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 127px;
+	padding: 8px;
+	border-radius: 16px;
+	margin: 14px 0;
+	font-size: 14px;
+	color: #fff;
 }
 
-
 .oneEvent .event-right .event-place {
-    text-align: center;
+	text-align: center;
 }
 
 /* Button */
 @keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
+	0% {
+		opacity: 0;
+		transform: translateY(30px);
+	}
 
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }
 
 /* mascott event right half */
 @media screen and (max-width: 447px) {
-    #mascot {
-        display: none;
-    }
-
+	#mascot {
+		display: none;
+	}
 }
 
 /* media queries for throught whole page */
 @media screen and (max-width: 670px) {
+	/* Homepage */
+	.hero {
+		height: 55vh;
+	}
 
-    /* Homepage */
-    .hero {
-        height: 55vh;
-    }
+	/* homepage */
 
-/* homepage */
+	.aboutUs {
+		padding: 100px 45px;
+	}
 
-    .aboutUs {
-        padding: 100px 45px;
-    }
+	.icons {
+		flex-direction: row;
+		padding-left: 0;
+	}
 
-    .icons {
-        flex-direction: row;
-        padding-left: 0;
-    }
+	#social-media-container {
+		flex-direction: column;
+	}
 
-    #social-media-container {
-        flex-direction: column;
-    }
+	.twitter-timeline {
+		width: 350px !important;
+	}
 
-    .twitter-timeline {
-        width: 350px !important;
-    }
+	.events {
+		justify-content: center;
+		padding: 100px 45px;
+	}
 
-    .events {
-        justify-content: center;
-        padding: 100px 45px;
-    }
+	#mascot {
+		display: none;
+	}
 
-    #mascot {
-        display: none;
-    }
+	#eventTag {
+		padding: 10px;
+		margin: auto;
+		font-size: 16px;
+	}
 
-    #eventTag {
-        padding: 10px;
-        margin: auto;
-        font-size: 16px;
-    }
+	#smile {
+		width: 275px;
+	}
 
-    #smile {
-        width: 275px;
-    }
+	#aboutTag {
+		font-size: 16px;
+	}
 
-    #aboutTag {
-        font-size: 16px;
-    }
+	.about-container {
+		flex-direction: column;
+	}
 
-    .about-container {
-        flex-direction: column;
-    }
+	#mascot2 {
+		max-width: 325px;
+		max-height: 325px;
+		padding-left: 3vh;
+	}
 
-    #mascot2 {
-        max-width: 325px;
-        max-height: 325px;
-        padding-left: 3vh;
-    }
-
-    #contactSend {
-        width: 100% !important;
-    }
+	#contactSend {
+		width: 100% !important;
+	}
 }
 
 /* events  */
 @media screen and (max-width: 550px) {
-    .oneEvent {
-        flex-direction: column;
-    }
+	.oneEvent {
+		flex-direction: column;
+	}
 
-    .oneEvent .event-left {
-        padding: 0;
-        border-radius: 8px 8px 0 0;
-        max-width: 100%;
-    }
+	.oneEvent .event-left {
+		padding: 0;
+		border-radius: 8px 8px 0 0;
+		max-width: 100%;
+	}
 
-    .oneEvent .event-left .event-date .date,
-    .oneEvent .event-left .event-date.month {
-        display: inline-block;
-        font-size: 24px;
-    }
+	.oneEvent .event-left .event-date .date,
+	.oneEvent .event-left .event-date.month {
+		display: inline-block;
+		font-size: 24px;
+	}
 
-    .oneEvent .event-left .event-date {
-        padding: 10px 0;
-    }
+	.oneEvent .event-left .event-date {
+		padding: 10px 0;
+	}
 }
