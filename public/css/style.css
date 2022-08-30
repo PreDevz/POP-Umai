@@ -170,6 +170,8 @@ h2 {
 	display: flex;
 }
 
+/* Cookies Section  */
+
 .cookies {
 	display: grid;
 	background-color: white;
@@ -198,6 +200,19 @@ h2 {
 	max-width: 300px;
 	max-height: 300px;
 	margin: auto;
+}
+
+.cookie-btn {
+	background-color: rgb(240, 240, 240);
+	border: none;
+	color: #262626;
+	margin: 1.2rem 0;
+}
+
+.cookie-btn:hover {
+	background-color: white;
+	border: 1px solid #262626;
+	color: #262626;
 }
 
 /* follow us styling for container */
@@ -469,8 +484,14 @@ p {
 
 /* Cookie carousel Section  */
 
-.cookiePage {
+.cookie-page {
 	position: relative;
+}
+.cookies-sub {
+	text-align: center;
+	margin: 1rem;
+	padding: 0 2rem 2rem 3rem;
+	gap: 1rem;
 }
 
 .carouselExampleIndicators {
@@ -490,6 +511,7 @@ p {
 	height: 70px;
 	justify-self: center;
 	align-self: center;
+	z-index: 10;
 }
 
 .carousel-control-next,
