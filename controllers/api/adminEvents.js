@@ -83,7 +83,7 @@ router.post("/", auth, async (req, res) => {
     // revive Admin session 
     req.session.save(() => {
         
-      req.session.user_id = adminData.id;
+      // req.session.user_id = adminData.id;
       req.session.logged_in = true;
       
       res
@@ -164,7 +164,7 @@ router.put("/:id", auth, async (req, res) => {
     // revive Admin session 
     req.session.save(() => {
     
-      req.session.user_id = adminData.id;
+      // req.session.user_id = adminData.id;
       req.session.logged_in = true;
       
       res
@@ -222,7 +222,7 @@ router.delete("/:id", auth, async (req, res) => {
     // revive Admin session 
     req.session.save(() => {
     
-      req.session.user_id = adminData.id;
+      // req.session.user_id = adminData.id;
       req.session.logged_in = true;
       
       res
