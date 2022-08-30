@@ -392,7 +392,6 @@ footer i {
 
 .oneEvent .event-left {
     background-color: #965fcc;
-    min-width: 82px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -401,6 +400,7 @@ footer i {
     font-weight: bold;
     text-align: center;
     border-radius: 9px 0 0 8px;
+    max-width: 150px;
 }
 
 .oneEvent .event-left .month {
@@ -413,6 +413,7 @@ footer i {
     flex-direction: column;
     justify-content: center;
     padding: 0 24px;
+    width: 100%;
 }
 
 .oneEvent .event-right h3.event-title {
@@ -427,7 +428,7 @@ footer i {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
+    width: 127px;
     padding: 8px;
     border-radius: 16px;
     margin: 14px 0;
@@ -435,10 +436,6 @@ footer i {
     color: #fff;
 }
 
-.oneEvent .event-right .event-timing {
-    height: 20px;
-    padding-right: 8px;
-}
 
 .oneEvent .event-right .event-place {
     text-align: center;
@@ -537,6 +534,7 @@ footer i {
     .oneEvent .event-left {
         padding: 0;
         border-radius: 8px 8px 0 0;
+        max-width: 100%;
     }
 
     .oneEvent .event-left .event-date .date,
