@@ -423,14 +423,28 @@ p {
 /* Events Page Section */
 
 .event-container {
-	max-width: 800px;
 	margin: 0 auto;
-	padding: 3rem 0;
+	padding: 1rem 0;
+}
+
+.event-section {
+	padding: 1.5rem;
 }
 
 .event-container h2 {
-	margin: 5rem 0;
-	border-bottom: 1px solid;
+	margin: 3rem 0;
+}
+
+.event-upcomming {
+	background-color: white;
+}
+
+.event-prev {
+	background-color: var(--shaded-gray);
+}
+
+.event-prev .oneEvent {
+	background-color: white;
 }
 
 .event-container .oneEvent {

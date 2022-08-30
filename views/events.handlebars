@@ -1,22 +1,27 @@
 <div class="event-container">
+
     {{!-- upcomming events --}}
-    <div>
-        <h2 class="event_headline">Upcoming Events</h2>
-        {{#each events as |event|}}
-            {{#if is_upcoming}}
-                {{> eventCard}}
-            {{/if}}
-        {{/each}}
+    <div class="event-section event-upcomming">
+        <div class="container">
+            <h2 class="event_headline">Upcoming Events</h2>
+            {{#each events as |event|}}
+                {{#if is_upcoming}}
+                    {{> eventCard}}
+                {{/if}}
+            {{/each}}
+        </div>
     </div>
 
     {{!-- previous events --}}
-    <div>
-        <h2 class="event_headline">Previous Events</h2>
-        {{#each events as |event|}}
-            {{#if is_upcoming}}
-            {{else}}
-                {{> eventCard}}
-            {{/if}}
-        {{/each}}
+    <div class="event-section event-prev">
+        <div class="container">
+            <h2 class="event_headline ">Previous Events</h2>
+            {{#each events as |event|}}
+                {{#if is_upcoming}}
+                {{else}}
+                    {{> eventCard}}
+                {{/if}}
+            {{/each}}
+        </div>
     </div>
 </div>
