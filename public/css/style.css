@@ -105,7 +105,7 @@ h2 {
 	z-index: 1;
 	font-style: normal;
 	color: var(--purple-clr);
-	font-size: 8vmin;
+	font-size: 3.9rem;
 	letter-spacing: 0.03em;
 	line-height: 1;
 	margin-bottom: 40px;
@@ -433,6 +433,7 @@ p {
 
 .event-container h2 {
 	margin: 3rem 0;
+	font-size: 3.9rem;
 }
 
 .event-upcomming {
@@ -611,7 +612,8 @@ p {
 	}
 }
 
-/* events  */
+/* events phone  */
+
 @media screen and (max-width: 550px) {
 	.oneEvent {
 		flex-direction: column;
@@ -626,10 +628,49 @@ p {
 	.oneEvent .event-left .event-date .date,
 	.oneEvent .event-left .event-date.month {
 		display: inline-block;
-		font-size: 24px;
+		font-size: 20px;
 	}
 
 	.oneEvent .event-left .event-date {
 		padding: 10px 0;
+	}
+
+	.event-title {
+		font-size: 1.5rem;
+		margin: 1.3rem 0;
+		/* word-wrap: break-word; */
+		text-align: center;
+	}
+
+	.event-right {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.event-description {
+		text-align: center;
+	}
+
+	.event-bottom-half {
+		gap: 1rem;
+	}
+
+	.event-right .event-bottom-half .event-timing {
+		background: #777;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100px;
+		padding: 6px;
+		border-radius: 11px;
+		margin: 14px 0;
+		font-size: 15px;
+		text-align: center;
+	}
+
+	.event-ven-place {
+		width: 50%;
 	}
 }
