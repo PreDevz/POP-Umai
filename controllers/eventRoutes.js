@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
         'events',
         {
       events,
-      loggedIn: req.session.loggedIn,
+      logged_in: req.session.logged_in,
       })
   } catch (err) {
 
