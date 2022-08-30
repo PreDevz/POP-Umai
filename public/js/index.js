@@ -15,13 +15,13 @@ window.onload = () => {
         .addEventListener('submit', function (event) {
             event.preventDefault();
             const question = document.getElementById('option').value
-            console.log(question)
+            // console.log(question)
             const from_name = document.getElementById('from_name').value
-            console.log(from_name)
+            // console.log(from_name)
             const to_name = document.getElementById('contactEmail').value
-            console.log(to_name)
+            // console.log(to_name)
             const message = document.getElementById('message').value
-            console.log(message)
+            // console.log(message)
 
             if (this.from_name.value === "" || this.to_name.value === "" || this.message.value === "") {
                 inputEmpty()
