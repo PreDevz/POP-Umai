@@ -1,16 +1,16 @@
 // Will seed imported Contents
-const sequelize = require('../config/connection');
+const sequelize = require("../config/connection");
 
 // Import Models 
-const Event = require('../models/Event');
-const Admin = require('../models/Admin');
+const Event = require("../models/Event");
+const Admin = require("../models/Admin");
 
 // Import Seeds 
-const eventSeed = require('./eventSeed.json');
-const adminSeed = require('./adminSeed');
+const eventSeed = require("./eventSeed.json");
+const adminSeed = require("./adminSeed");
 
 // import helpers 
-const helper = require('../utils/helper');
+const helper = require("../utils/helper");
   
 // Add seeds data in database 
 const seedDatabase = async () => {
@@ -26,7 +26,7 @@ const seedDatabase = async () => {
   await Admin.bulkCreate(adminSeed, {
     individualHooks: true,
     returning: true,
-  })
+  });
 
   process.exit(0);
 

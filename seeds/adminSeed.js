@@ -1,6 +1,6 @@
 
 // import .env 
-require('dotenv').config();
+require("dotenv").config();
 
 // exporting admin info with .env vars
 module.exports = [
@@ -9,4 +9,4 @@ module.exports = [
     "email": process.env.ADMIN_EMAIL,
     "password": process.env.ADMIN_PASSWORD
   }
-]
+];

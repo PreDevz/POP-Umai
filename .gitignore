@@ -105,6 +105,3 @@ dist
 
 # MacOS
 .DS_Store
-
-#Admin Data
-seeds/adminSeed.json

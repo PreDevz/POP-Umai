@@ -1,0 +1,24 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        // warns user when quotes are single 
+        "quotes": [
+            "warn",
+            "double"
+        ],
+        // code must end with semi colon 
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
+}
