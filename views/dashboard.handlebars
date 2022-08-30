@@ -43,10 +43,57 @@
 
     <div class="edit-event-container">
       <h3>Which event do you want to edit?</h3>
+
       <select class="questions-input">
-        <option value="1">Business Inquiries</option>
-        <option value="2">General Questions</option>
+        {{!-- {{#each name as |names|}} --}}
+        {{> adminEvents}}
+        {{!-- {{/each}} --}}
       </select>
+
+      {{!-- These text fields will come pre-populated with all the information from the database (depending on selected
+      event) --}}
+      <div id="selected-event-container">
+        <h3>Event Name</h3>
+        <input type="text" name="edit-event-name" id="edit-event-name">
+
+        <h3>Event Date(s)</h3>
+        <input type="text" name="edit-event-dates" id="edit-event-dates">
+
+        <h3>Event Time</h3>
+        <input type="text" name="edit-event-time" id="edit-event-time">
+
+        <h3>Venue</h3>
+        <input type="text" name="edit-event-venue" id="edit-event-venue">
+
+        <h3>Location</h3>
+        <input type="text" name="edit-event-location" id="edit-event-location">
+
+        <h3>Description</h3>
+        <textarea type="text" name="edit-event-description" id="edit-event-description"></textarea>
+
+        <button id="edit-event-btn">
+          <a id="edit-event-btn-a" href="#">FINISH EDITING EVENT</a>
+        </button>
+
+        <button id="delete-event-btn">
+          <a id="delete-event-btn-a" href="#">DELETE EVENT</a>
+        </button>
+
+        <div id="confirm-delete-container">
+          <h3>Warning!</h3>
+          <p>Are you sure you want to delete this event? This action can not be undone.</p>
+
+          <button id="cancel-delete-btn">
+            <a id="cancel-delete-btn-a" href="#">CANCEL</a>
+          </button>
+
+          <button id="delete-confirm-btn">
+            <a id="delete-confirm-btn-a" href="#">DELETE EVENT</a>
+          </button>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
