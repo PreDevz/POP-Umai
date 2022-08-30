@@ -10,8 +10,11 @@ const Event = require("../../models/event");
 router.get("/:id", auth, async (req, res) => {
 
   try {
+
     // get user's input ID 
     const pramId = req.params.id;
+
+    // search datbase to get one event
     const eventData = await Event.findOne({
       where:
         { id: pramId }
@@ -27,23 +30,19 @@ router.get("/:id", auth, async (req, res) => {
       
       return;
     }
-
-    // once event matches user's input, send back that event data 
-    res
-      .status(200)
-      .json(eventData);
     
     // revive Admin session 
     req.session.save(() => {
         
-      req.session.user_id = adminData.id;
+      // req.session.user_id = adminData.id;
       req.session.logged_in = true;
       
-      res
-        .json({
-           message: "Admin still logged in"
-        });
-      });
+    });
+    
+    // once event matches user's input, send back that event data 
+    res
+    .status(200)
+    .json(eventData);
     
   } catch (err) {
 
@@ -84,13 +83,17 @@ router.post("/", auth, async (req, res) => {
     // revive Admin session 
     req.session.save(() => {
         
-      req.session.user_id = adminData.id;
+      // req.session.user_id = adminData.id;
       req.session.logged_in = true;
       
-      res
-        .json({
-           message: "Admin still logged in"
-        });
+    });
+    
+    // send back created event 
+    res
+      .status(200)
+      .json({
+        message: "Successfully Created!",
+        event: event
       });
 
   } catch (err) {
@@ -153,25 +156,27 @@ router.put("/:id", auth, async (req, res) => {
       
       return;
     }
-
-    // if there is a event, send back 200 and the event that's updated
-    res
-      .status(200)
-      .json({
-        event
-      });
     
     // revive Admin session 
     req.session.save(() => {
     
-      req.session.user_id = adminData.id;
+      // req.session.user_id = adminData.id;
       req.session.logged_in = true;
       
-      res
-        .json({
-            message: "Admin still logged in"
-        });
-      });
+      // res
+      //   .json({
+      //       message: "Still logged in"
+      //   });
+
+    });
+    
+    // if there is a event, send back 200 and the event that's updated
+    res
+    .status(200)
+    .json({
+      message: "Successfully Updated!",
+      event: event
+    });
 
   } catch (err) {
 
@@ -194,7 +199,7 @@ router.delete("/:id", auth, async (req, res) => {
     const eventId = req.params.id;
 
     // delete event if ID matches event ID in databse 
-    const deletedEvent = Event.destroy({
+    const deletedEvent = await Event.destroy({
       where: {
         id: eventId
       }
@@ -206,28 +211,30 @@ router.delete("/:id", auth, async (req, res) => {
       res
         .status(404)
         .json({
-          message: "No Event that matches that ID"
+          message: "No Event to delete that matches that ID"
         });
       
       return;
     }
-
-    res
-      .status(200)
-      .json(
-        deletedEvent
-    );
     
     // revive Admin session 
     req.session.save(() => {
     
-      req.session.user_id = adminData.id;
+      // req.session.user_id = adminData.id;
       req.session.logged_in = true;
       
-      res
-        .json({
-            message: "Admin still logged in"
-        });
+      // res
+      //   .json({
+      //       message: "Still logged in"
+      //   });
+    });
+
+    // Once deleted, send back OK message 
+    res
+    .status(200)
+    .json({
+      message: "Successfully Deleted!",
+      deleted: deletedEvent
     });
     
   } catch (err) {
