@@ -386,6 +386,16 @@ footer i {
 	font-size: 15px;
 }
 
+/* removing default styling to p tag */
+p {
+    margin-bottom: 0;
+}
+
+/* submit button padding */
+#submitBtn {
+    padding: 10px;
+}
+
 /* second mascott styling */
 #mascot2 {
 	max-width: 400px;
