@@ -82,11 +82,11 @@
 }
 
 h2 {
-    font-family: 'Alfa Slab One', cursive;
+    /* font-family: 'Alfa Slab One', cursive; */
     z-index: 1;
     font-style: normal;
     color: #965fcc;
-    font-size: 8vmin;
+    font-size: 9vmin;
     letter-spacing: 0.03em;
     line-height: 1;
     margin-bottom: 40px;
@@ -326,7 +326,7 @@ footer i {
 
 /* About Me Page */
 #aboutTitle {
-    font-size: 35px;
+    font-size: 9vmin;
     font-family: 'Alfa Slab One', cursive;
     color: #965fcc;
     text-align: center;

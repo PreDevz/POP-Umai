@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Retroking";
+  src: url("../assets/fonts/Retroking\ Rough.ttf");
+}
+
+h2, header {
+  font-family: "Retroking", 'Alfa Slab One', cursive !important;
+}
