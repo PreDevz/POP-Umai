@@ -3,15 +3,20 @@
     <div>
         <h3 class="event_headline">Upcoming Events</h3>
         {{#each events as |event|}}
-        {{> eventCard}}
+            {{#if is_upcoming}}
+                {{> eventCard}}
+            {{/if}}
         {{/each}}
     </div>
 
     {{!-- previous events --}}
-    {{!-- <div>
+    <div>
         <h3 class="event_headline">Previous Events</h3>
         {{#each events as |event|}}
-        {{> eventCard}}
+            {{#if is_upcoming}}
+            {{else}}
+                {{> eventCard}}
+            {{/if}}
         {{/each}}
-    </div> --}}
+    </div>
 </div>
