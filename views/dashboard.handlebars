@@ -1,0 +1,66 @@
+<main>
+  <header id="admin-title">ADMIN DASHBOARD</header>
+
+  <section id="admin-event-container">
+    <h2 class="admin-subtitle">Events</h2>
+    <div class="admin-btn-container">
+
+      <div class="text-box">
+        <a href="#" class="btn btn-white btn-animate" id="create-event">CREATE NEW EVENT</a>
+      </div>
+
+      <div class="text-box">
+        <a href="#" class="btn btn-white btn-animate" id="edit-event">EDIT AN EXISTING EVENT</a>
+      </div>
+
+    </div>
+
+    <div class="create-container">
+      <h3>Event Name</h3>
+      <input type="text" name="create-event-name" id="create-event-name" placeholder="Anime Expo 2025!">
+
+      <h3>Event Date(s)</h3>
+      <input type="text" name="create-event-dates" id="create-event-dates" placeholder="12/1/25 - 12/3/25">
+
+      <h3>Event Time</h3>
+      <input type="text" name="create-event-time" id="create-event-time" placeholder="10am - 6pm">
+
+      <h3>Venue</h3>
+      <input type="text" name="create-event-venue" id="create-event-venue" placeholder="LA Convention Center">
+
+      <h3>Location</h3>
+      <input type="text" name="create-event-location" id="create-event-location" placeholder="Los Angeles, CA">
+
+      <h3>Description</h3>
+      <textarea type="text" name="create-event-description" id="create-event-description"
+        placeholder="We will be serving some amazing anime-themed cookies! Stop by and grab yours before they're sold out!"></textarea>
+
+      <button id="create-event-btn">
+        <a id="create-event-btn-a" href="#">CREATE EVENT</a>
+      </button>
+
+    </div>
+
+    <div class="edit-event-container">
+      <h3>Which event do you want to edit?</h3>
+      <select class="questions-input">
+        <option value="1">Business Inquiries</option>
+        <option value="2">General Questions</option>
+      </select>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="admin-subtitle">Reviews</h2>
+    <div id="review-review-container">
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="admin-subtitle">Partners</h2>
+  </section>
+
+  <!-- Need to modify review model to add a "isDisplayed" boolean value to each review. This will allow her to look at reviews and choose which ones get displayed -->
+
+</main>
