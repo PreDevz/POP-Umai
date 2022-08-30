@@ -119,19 +119,11 @@ h2 {
 }
 
 .events {
-    display: grid;
+    display: flex;
     background-color: rgb(240, 240, 240);
     padding: 45px;
-}
-
-.left-half {
-    grid-column: 1;
-    align-self: center;
-}
-
-.right-half {
-    grid-column: 2;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 #eventTag {
@@ -151,7 +143,10 @@ h2 {
 .followUs {
     text-align: center;
     justify-content: center;
-    padding: 100px;
+    padding: 100px 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .followUs ul {
@@ -163,10 +158,11 @@ h2 {
 .icons {
     list-style: none;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1.5em;
+    margin-top: 20px;
 }
 
 .fa-brands {
@@ -287,6 +283,17 @@ h2 {
     transition: all 0.3s ease;
     background-color: #965fcc;
     border-radius: 10px;
+    width: 50% !important;
+    border: none;
+    color: #fff;
+    align-self: center;
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     outline: none;
     border: none;
 }
@@ -302,6 +309,27 @@ h2 {
 
 .inquiries form #contactSend {
     width: 100%;
+}
+
+#social-media-container {
+    display: flex;
+}
+
+/* Footer */
+.footer-icon-container {
+    margin-top: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+}
+
+.me-4 {
+    margin: 0 !important;
+}
+
+footer i {
+    font-size: 25px;
 }
 
 /* About Me Page */
@@ -330,15 +358,6 @@ h2 {
     justify-content: right;
 }
 
-.about-left {
-    grid-column: 1;
-    align-self: center;
-}
-
-.about-right {
-    grid-column: 2;
-    justify-content: right;
-}
 
 .about-container {
     background-color: rgb(240, 240, 240);
@@ -444,36 +463,50 @@ h2 {
         display: none;
     }
 
-    .right-half {
-        grid-column: 0;
-    }
 }
+@media screen and (max-width: 670px) {
+
+    /* Homepage */
+    .hero {
+        height: 55vh;
+    }
 
 /* homepage */
-@media screen and (max-width: 670px) {
-    .events {
-        padding: 20px;
+
+    .aboutUs {
+        padding: 100px 45px;
     }
 
-    #eventTag {
-        max-width: 250px;
-        padding: 10px;
-        margin: auto;
-        font-size: 15px;
+    .icons {
+        flex-direction: row;
+        padding-left: 0;
+    }
+
+    #social-media-container {
+        flex-direction: column;
+    }
+
+    .twitter-timeline {
+        width: 350px !important;
+    }
+
+    .events {
+        justify-content: center;
+        padding: 100px 45px;
     }
 
     #mascot {
-        max-width: 250px;
-        min-width: 90px;
-        margin: auto
+        display: none;
     }
 
-    .right-half {
-        margin-top: 100px;
+    #eventTag {
+        padding: 10px;
+        margin: auto;
+        font-size: 16px;
     }
 
     #smile {
-        width: 230px;
+        width: 275px;
     }
 
     #aboutTag {
@@ -488,6 +521,10 @@ h2 {
         max-width: 325px;
         max-height: 325px;
         padding-left: 3vh;
+    }
+
+    #contactSend {
+        width: 100% !important;
     }
 }
 

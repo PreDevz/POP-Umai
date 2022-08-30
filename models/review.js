@@ -1,6 +1,6 @@
 // Model for reviews to the website will go here
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Review extends Model {}
 
@@ -36,7 +36,7 @@ Review.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'review',
+    modelName: "review",
   }
 );
 
