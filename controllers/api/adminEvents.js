@@ -1,13 +1,13 @@
 // Admin Dashboard events routes
 
-const auth = require('../../utils/auth');
-const router = require('express').Router();
+const auth = require("../../utils/auth");
+const router = require("express").Router();
 
 // import Event Model 
-const Event = require('../../models/event');
+const Event = require("../../models/event");
 
 // Find Event by ID
-router.get('/:id', auth, async (req, res) => {
+router.get("/:id", auth, async (req, res) => {
 
   try {
     // get user's input ID 
@@ -22,8 +22,8 @@ router.get('/:id', auth, async (req, res) => {
       res
         .status(404)
         .json({
-          message: 'No event found with that ID'
-        })
+          message: "No event found with that ID"
+        });
       
       return;
     }
@@ -31,7 +31,7 @@ router.get('/:id', auth, async (req, res) => {
     // once event matches user's input, send back that event data 
     res
       .status(200)
-      .json(eventData)
+      .json(eventData);
     
     // revive Admin session 
     req.session.save(() => {
@@ -41,9 +41,9 @@ router.get('/:id', auth, async (req, res) => {
       
       res
         .json({
-           message: `Admin still logged in`
+           message: "Admin still logged in"
         });
-      })
+      });
     
   } catch (err) {
 
@@ -52,12 +52,12 @@ router.get('/:id', auth, async (req, res) => {
       .status(500)
       .json({
       message: "Server Error"
-    })
+    });
   }
-})
+});
 
 // Add Event 
-router.post('/', auth, async (req, res) => {
+router.post("/", auth, async (req, res) => {
   
   try {
     
@@ -89,9 +89,9 @@ router.post('/', auth, async (req, res) => {
       
       res
         .json({
-           message: `Admin still logged in`
+           message: "Admin still logged in"
         });
-      })
+      });
 
   } catch (err) {
 
@@ -102,10 +102,10 @@ router.post('/', auth, async (req, res) => {
       .status(500)
       .json(err);
   }
-})
+});
 
 // Update Event by ID
-router.put('/:id', auth, async (req, res) => {
+router.put("/:id", auth, async (req, res) => {
 
   try {
 
@@ -139,7 +139,7 @@ router.put('/:id', auth, async (req, res) => {
           id: eventId,
         }
       }
-    )
+    );
 
     // if event doesn't exist in database 
     if (!event[0]) {
@@ -149,7 +149,7 @@ router.put('/:id', auth, async (req, res) => {
         .status(404)
         .json({
           message: "No event that matches that ID"
-        })
+        });
       
       return;
     }
@@ -159,7 +159,7 @@ router.put('/:id', auth, async (req, res) => {
       .status(200)
       .json({
         event
-      })
+      });
     
     // revive Admin session 
     req.session.save(() => {
@@ -169,9 +169,9 @@ router.put('/:id', auth, async (req, res) => {
       
       res
         .json({
-            message: `Admin still logged in`
+            message: "Admin still logged in"
         });
-      })
+      });
 
   } catch (err) {
 
@@ -180,13 +180,13 @@ router.put('/:id', auth, async (req, res) => {
       .status(500)
       .json({
         message: "Server Error..."
-      }) 
+      }); 
 
   }
-})
+});
 
 // Delete Event by ID 
-router.delete('/:id', auth, async (req, res) => {
+router.delete("/:id", auth, async (req, res) => {
 
   try {
 
@@ -198,7 +198,7 @@ router.delete('/:id', auth, async (req, res) => {
       where: {
         id: eventId
       }
-    })
+    });
 
     // check if there even is an ID that matches Event in database 
     if (!deletedEvent) {
@@ -207,7 +207,7 @@ router.delete('/:id', auth, async (req, res) => {
         .status(404)
         .json({
           message: "No Event that matches that ID"
-        })
+        });
       
       return;
     }
@@ -216,7 +216,7 @@ router.delete('/:id', auth, async (req, res) => {
       .status(200)
       .json(
         deletedEvent
-    )
+    );
     
     // revive Admin session 
     req.session.save(() => {
@@ -226,9 +226,9 @@ router.delete('/:id', auth, async (req, res) => {
       
       res
         .json({
-            message: `Admin still logged in`
+            message: "Admin still logged in"
         });
-    })
+    });
     
   } catch (err) {
 
@@ -237,8 +237,8 @@ router.delete('/:id', auth, async (req, res) => {
       .status(500)
       .json({
         message: "Opps, couldn't delete event, Server Error..."
-      })
+      });
   }
-})
+});
 
 module.exports = router;
