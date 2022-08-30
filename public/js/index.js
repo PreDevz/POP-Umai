@@ -58,3 +58,22 @@ function inputEmpty() {
         button: "Try Again"
     })
 }
+
+
+// Dashboard Page JS
+
+//Containers
+const createContainer = document.querySelector(".create-container");
+const editContainer = document.querySelector(".edit-event-container");
+
+//Buttons
+const createNewButton = document.querySelector("#create-event");
+const editEventButton = document.querySelector("#edit-event");
+
+createNewButton.addEventListener("click", () => {
+    createContainer.style.display = "flex"
+});
+
+editEventButton.addEventListener("click", () => {
+    editContainer.style.display = "flex"
+});
