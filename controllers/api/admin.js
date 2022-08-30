@@ -31,7 +31,7 @@ router.post("/login", async (req, res) => {
       res
         .status(404)
         .json({
-          message: "uh oh... Incorret Email or Password!"
+          message: "uh oh... incorrect Email or Password!"
         });
       
       return;
@@ -47,7 +47,7 @@ router.post("/login", async (req, res) => {
       res
         .status(400)
         .json({
-          message: "Wrong Password!"
+          message: "incorrect Password!"
         });
       
       return;
