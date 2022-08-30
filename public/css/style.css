@@ -463,15 +463,37 @@ p {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 0 24px;
+	padding: 0rem 1.5rem;
 	width: 100%;
 }
 
-.oneEvent .event-right h3.event-title {
-	font-size: 24px;
-	margin: 14px 0 10px 0;
+.event-title {
+	font-size: 1.8rem;
+	margin: 1rem 0;
 	color: var(--dark-clr);
 	text-transform: uppercase;
+	width: 85%;
+}
+
+.event-description {
+	border-bottom: 1px solid var(--dark-clr);
+	margin-bottom: 0.5rem;
+	padding: 0.5rem;
+	width: 90%;
+}
+
+.event-bottom-half {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin: 0.5rem 0;
+}
+
+.event-ven-place {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem auto;
 }
 
 .oneEvent .event-right .event-timing {
