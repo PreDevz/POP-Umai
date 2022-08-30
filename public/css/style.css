@@ -454,6 +454,14 @@ p {
 	display: flex;
 	border-radius: 8px;
 	margin: 32px 0;
+	transition: all 0.8s ease;
+}
+
+.event-container .oneEvent:hover {
+	cursor: pointer;
+	transform: translate(-3px, -5px);
+	box-shadow: rgba(22, 22, 41, 0.25) 3px 16px 27px -5px,
+		rgba(0, 0, 0, 0.585) 3px 10px 16px -8px;
 }
 
 .oneEvent .event-left {
@@ -462,11 +470,12 @@ p {
 	align-items: center;
 	justify-content: center;
 	color: #fff;
-	padding: 8px 48px;
+	padding: 8px 1.4rem;
 	font-weight: bold;
+	font-size: 1.2rem;
 	text-align: center;
 	border-radius: 9px 0 0 8px;
-	max-width: 150px;
+	width: 150px;
 }
 
 .oneEvent .event-left .month {
@@ -615,6 +624,11 @@ p {
 /* events phone  */
 
 @media screen and (max-width: 550px) {
+	.event-container h2 {
+		margin: 3rem 0;
+		font-size: 3rem;
+	}
+
 	.oneEvent {
 		flex-direction: column;
 	}
@@ -622,7 +636,7 @@ p {
 	.oneEvent .event-left {
 		padding: 0;
 		border-radius: 8px 8px 0 0;
-		max-width: 100%;
+		width: 100%;
 	}
 
 	.oneEvent .event-left .event-date .date,
