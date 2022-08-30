@@ -56,7 +56,7 @@ router.get("/:id", auth, async (req, res) => {
 });
 
 // Add Event 
-router.post("/", auth, async (req, res) => {
+router.post("/", async (req, res) => {
   
   try {
     
@@ -86,10 +86,14 @@ router.post("/", auth, async (req, res) => {
       // req.session.user_id = adminData.id;
       req.session.logged_in = true;
       
-      res
-        .json({
-           message: "Admin still logged in"
-        });
+    });
+    
+    // send back created event 
+    res
+      .status(200)
+      .json({
+        message: "Successfully Created!",
+        event: event
       });
 
   } catch (err) {
