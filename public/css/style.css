@@ -382,13 +382,53 @@ h2 {
     color: #262626;
 }
 
+
+/* Cookie Page */
 #cookieTitle {
     font-size: 35px;
     font-family: 'Alfa Slab One', cursive;
     color: #965fcc;
     text-align: center;
     padding: 35px;
+}
 
+
+.carousel {
+        position: relative;
+        background: #00000017;
+} 
+
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    filter: invert(100%);
+    width: 70px;
+    height: 70px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    align-items: flex-end;
+    
+} 
+
+/* h5 {
+    font-size: 25px;
+    color: #262626;
+    text-align: center;
+    background-color: rgb(240, 240, 240);    
+} */
+
+.carousel-inner {
+    position: relative;
+    width: 40%;
+    overflow: hidden;
+    margin: auto;
+}
+
+
+.carousel-caption {
+    bottom: 0;
+    background-color: rgba(5, 0, 0, 0.185)
 }
 
 
@@ -455,5 +495,20 @@ h2 {
         max-height: 325px;
         padding-left: 3vh;
     }
+
+    h5 {
+        font-size: 15px;
+    }
+
+    .carousel-caption {
+        bottom: 0;
+        background-color: rgba(5, 0, 0, 0.185);
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        align-items: center;  
+} 
+
 }
 
