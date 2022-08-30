@@ -108,7 +108,7 @@ router.post("/", async (req, res) => {
 });
 
 // Update Event by ID
-router.put("/:id", auth, async (req, res) => {
+router.put("/:id", async (req, res) => {
 
   try {
 
@@ -156,14 +156,6 @@ router.put("/:id", auth, async (req, res) => {
       
       return;
     }
-
-    // if there is a event, send back 200 and the event that's updated
-    res
-      .status(200)
-      .json({
-        message: "Successfully Updated!",
-        event: event
-      });
     
     // revive Admin session 
     req.session.save(() => {
@@ -171,11 +163,20 @@ router.put("/:id", auth, async (req, res) => {
       // req.session.user_id = adminData.id;
       req.session.logged_in = true;
       
-      res
-        .json({
-            message: "Still logged in"
-        });
-      });
+      // res
+      //   .json({
+      //       message: "Still logged in"
+      //   });
+
+    });
+    
+    // if there is a event, send back 200 and the event that's updated
+    res
+    .status(200)
+    .json({
+      message: "Successfully Updated!",
+      event: event
+    });
 
   } catch (err) {
 
