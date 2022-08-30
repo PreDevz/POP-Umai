@@ -23,7 +23,7 @@ window.onload = () => {
             const message = document.getElementById('message').value
             // console.log(message)
 
-            if (question.value == "" || from_name.value == "" || to_name.value == "" || this.message.value == "") {
+            if (this.from_name.value === "" || this.to_name.value === "" || this.message.value === "") {
                 inputEmpty()
                 return
             }
