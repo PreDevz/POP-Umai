@@ -10,8 +10,11 @@ const Event = require("../../models/event");
 router.get("/:id", auth, async (req, res) => {
 
   try {
+
     // get user's input ID 
     const pramId = req.params.id;
+
+    // search datbase to get one event
     const eventData = await Event.findOne({
       where:
         { id: pramId }
@@ -27,23 +30,19 @@ router.get("/:id", auth, async (req, res) => {
       
       return;
     }
-
-    // once event matches user's input, send back that event data 
-    res
-      .status(200)
-      .json(eventData);
     
     // revive Admin session 
     req.session.save(() => {
         
-      req.session.user_id = adminData.id;
+      // req.session.user_id = adminData.id;
       req.session.logged_in = true;
       
-      res
-        .json({
-           message: "Admin still logged in"
-        });
-      });
+    });
+    
+    // once event matches user's input, send back that event data 
+    res
+    .status(200)
+    .json(eventData);
     
   } catch (err) {
 
@@ -158,7 +157,8 @@ router.put("/:id", auth, async (req, res) => {
     res
       .status(200)
       .json({
-        event
+        message: "Successfully Updated!",
+        event: event
       });
     
     // revive Admin session 
@@ -169,7 +169,7 @@ router.put("/:id", auth, async (req, res) => {
       
       res
         .json({
-            message: "Admin still logged in"
+            message: "Still logged in"
         });
       });
 
@@ -194,7 +194,7 @@ router.delete("/:id", auth, async (req, res) => {
     const eventId = req.params.id;
 
     // delete event if ID matches event ID in databse 
-    const deletedEvent = Event.destroy({
+    const deletedEvent = await Event.destroy({
       where: {
         id: eventId
       }
@@ -206,7 +206,7 @@ router.delete("/:id", auth, async (req, res) => {
       res
         .status(404)
         .json({
-          message: "No Event that matches that ID"
+          message: "No Event to delete that matches that ID"
         });
       
       return;
@@ -214,9 +214,10 @@ router.delete("/:id", auth, async (req, res) => {
 
     res
       .status(200)
-      .json(
-        deletedEvent
-    );
+      .json({
+        message: "Successfully Deleted!",
+        deleted: deletedEvent
+      });
     
     // revive Admin session 
     req.session.save(() => {
@@ -226,7 +227,7 @@ router.delete("/:id", auth, async (req, res) => {
       
       res
         .json({
-            message: "Admin still logged in"
+            message: "Still logged in"
         });
     });
     
