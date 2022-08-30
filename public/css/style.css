@@ -1,7 +1,9 @@
 /* Importing a font from Google Fonts. */
+
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 /* root colors  */
+
 :root {
 	--purple-clr: #965fcc;
 	--blue-clr: #1db2e8;
@@ -55,7 +57,7 @@
 	font-size: 18px;
 	color: whitesmoke;
 	-webkit-text-stroke-width: 0.7px;
-	-webkit-text-stroke-color: #262626;
+	-webkit-text-stroke-color: var(--dark-clr);
 	text-decoration: none;
 	font-weight: bold;
 }
@@ -124,7 +126,7 @@ h2 {
 #aboutBio {
 	font-family: 'Alfa Slab One', cursive;
 	font-size: 25px;
-	color: #262626;
+	color: var(--dark-clr);
 	text-align: center;
 	justify-content: center;
 }
@@ -141,7 +143,7 @@ h2 {
 
 .events {
 	display: flex;
-	background-color: rgb(240, 240, 240);
+	background-color: var(--shaded-gray);
 	padding: 45px;
 	align-items: center;
 	justify-content: space-evenly;
@@ -262,7 +264,7 @@ h2 {
 
 /* form inquiries */
 .inquiries {
-	background-color: rgb(240, 240, 240);
+	background-color: var(--shaded-gray);
 	padding: 4rem 2.8rem 2.8rem 2.8rem;
 }
 
@@ -284,7 +286,7 @@ h2 {
 .questions-input {
 	padding: 0.5rem;
 	border-radius: 8px;
-	border: 1px solid rgb(240, 240, 240);
+	border: 1px solid var(--shaded-gray);
 	outline: none;
 }
 
@@ -333,7 +335,7 @@ h2 {
 
 /* form button on hover styling */
 #contactSend:hover {
-	background-color: #1db2e8;
+	background-color: var(--blue-clr);
 }
 
 /* form width */
@@ -388,12 +390,12 @@ footer i {
 
 /* removing default styling to p tag */
 p {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 /* submit button padding */
 #submitBtn {
-    padding: 10px;
+	padding: 10px;
 }
 
 /* second mascott styling */
@@ -406,7 +408,7 @@ p {
 
 /* about container styling */
 .about-container {
-	background-color: rgb(240, 240, 240);
+	background-color: var(--shaded-gray);
 	padding: 45px;
 	display: flex;
 }
@@ -415,7 +417,7 @@ p {
 .our-story-title {
 	font-family: 'Alfa Slab One', cursive;
 	font-size: 25px;
-	color: #262626;
+	color: var(--dark-clr);
 }
 
 /* Events Page Section */
@@ -468,7 +470,7 @@ p {
 .oneEvent .event-right h3.event-title {
 	font-size: 24px;
 	margin: 14px 0 10px 0;
-	color: #262626;
+	color: var(--dark-clr);
 	text-transform: uppercase;
 }
 
