@@ -122,19 +122,28 @@ Screenshots to come!
 If you have any questions, please contact any of us below: 
 
 ### Gilberto Escobedo
-Github: []()
-Email: 
+Github: [n7-gil](https://github.com/n7-gil)
+
+Email: gilbertoaescobedo@gmail.com
+
 
 ### Christian McIlvenny
-Github: []()
-Email: 
+Github: [TDGNate](https://github.com/TDGNate)
+
+Email: itsnzte@gmail.com
+
 
 ### Cesar Infante
-Github: []()
-Email: 
+Github: [Cesar-Infante](https://github.com/Cesar-Infante)
+
+Email: cesar261110@gmail.com
+
 
 ### Anthony Quinones
 Github: [TonyQ032](https://github.com/TonyQ032) 
-Email: AnthonyQ032@gmail.com
 
+Email: anthonyq032@gmail.com
+
+
+-------------------------
 Copyright © 2022 Pop Umai - All Rights Reserved
