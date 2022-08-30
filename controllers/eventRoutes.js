@@ -1,24 +1,33 @@
 // Events Page 
 
-const router = require('express').Router();
-const Event = require('../models/Event');
+const router = require("express").Router();
+const Event = require("../models/event");
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
 
   try {
 
     // retrieve all events from database
     const eventsData = await Event.findAll()
+      .catch((err) => {
+        res
+          .json(err);
+      });
 
-    // rendering the homepage with data
-    res
-      .render
-      (
-        'events',
+    // loop through each event to serialize it 
+    const events = eventsData.map((event) => {
+      event.get(
+        { plain: true }
+      );
+    });
+
+    // rendering the Events page with all Events
+    res.render(
+        "events",
         {
-      eventsData,
-      loggedIn: req.session.loggedIn,
-      })
+      events,
+      logged_in: req.session.logged_in,
+      });
   } catch (err) {
 
     // catching server errors 

@@ -1,15 +1,20 @@
 // Admin Dashboard events routes
 
-const auth = require('../../utils/auth');
-const router = require('express').Router();
-const Event = require('../../models/event');
+const auth = require("../../utils/auth");
+const router = require("express").Router();
+
+// import Event Model 
+const Event = require("../../models/event");
 
 // Find Event by ID
-router.get('/:id', async (req, res) => {
+router.get("/:id", auth, async (req, res) => {
 
   try {
+
     // get user's input ID 
     const pramId = req.params.id;
+
+    // search datbase to get one event
     const eventData = await Event.findOne({
       where:
         { id: pramId }
@@ -20,16 +25,24 @@ router.get('/:id', async (req, res) => {
       res
         .status(404)
         .json({
-          message: 'No event found with that ID'
-        })
+          message: "No event found with that ID"
+        });
       
       return;
     }
-
+    
+    // revive Admin session 
+    req.session.save(() => {
+        
+      // req.session.user_id = adminData.id;
+      req.session.logged_in = true;
+      
+    });
+    
     // once event matches user's input, send back that event data 
     res
-      .status(200)
-      .json(eventData)
+    .status(200)
+    .json(eventData);
     
   } catch (err) {
 
@@ -38,12 +51,12 @@ router.get('/:id', async (req, res) => {
       .status(500)
       .json({
       message: "Server Error"
-    })
+    });
   }
-})
+});
 
 // Add Event 
-router.post('/', async (req, res) => {
+router.post("/", auth, async (req, res) => {
   
   try {
     
@@ -67,12 +80,21 @@ router.post('/', async (req, res) => {
       is_upcoming: upcoming
     });
 
-    // new session 
+    // revive Admin session 
     req.session.save(() => {
-      req.session.loggedIn = true;
-
-      res.status(200).json(event);
+        
+      // req.session.user_id = adminData.id;
+      req.session.logged_in = true;
+      
     });
+    
+    // send back created event 
+    res
+      .status(200)
+      .json({
+        message: "Successfully Created!",
+        event: event
+      });
 
   } catch (err) {
 
@@ -83,10 +105,10 @@ router.post('/', async (req, res) => {
       .status(500)
       .json(err);
   }
-})
+});
 
-// Ppdate Event by ID
-router.put('/:id', async (req, res) => {
+// Update Event by ID
+router.put("/:id", auth, async (req, res) => {
 
   try {
 
@@ -120,7 +142,7 @@ router.put('/:id', async (req, res) => {
           id: eventId,
         }
       }
-    )
+    );
 
     // if event doesn't exist in database 
     if (!event[0]) {
@@ -130,17 +152,31 @@ router.put('/:id', async (req, res) => {
         .status(404)
         .json({
           message: "No event that matches that ID"
-        })
+        });
       
       return;
     }
+    
+    // revive Admin session 
+    req.session.save(() => {
+    
+      // req.session.user_id = adminData.id;
+      req.session.logged_in = true;
+      
+      // res
+      //   .json({
+      //       message: "Still logged in"
+      //   });
 
+    });
+    
     // if there is a event, send back 200 and the event that's updated
     res
-      .status(200)
-      .json({
-        event
-      })
+    .status(200)
+    .json({
+      message: "Successfully Updated!",
+      event: event
+    });
 
   } catch (err) {
 
@@ -149,13 +185,13 @@ router.put('/:id', async (req, res) => {
       .status(500)
       .json({
         message: "Server Error..."
-      }) 
+      }); 
 
   }
-})
+});
 
 // Delete Event by ID 
-router.delete('/:id', async (req, res) => {
+router.delete("/:id", auth, async (req, res) => {
 
   try {
 
@@ -163,11 +199,11 @@ router.delete('/:id', async (req, res) => {
     const eventId = req.params.id;
 
     // delete event if ID matches event ID in databse 
-    const deletedEvent = Event.destroy({
+    const deletedEvent = await Event.destroy({
       where: {
         id: eventId
       }
-    })
+    });
 
     // check if there even is an ID that matches Event in database 
     if (!deletedEvent) {
@@ -175,17 +211,32 @@ router.delete('/:id', async (req, res) => {
       res
         .status(404)
         .json({
-          message: "No Event that matches that ID"
-        })
+          message: "No Event to delete that matches that ID"
+        });
       
       return;
     }
+    
+    // revive Admin session 
+    req.session.save(() => {
+    
+      // req.session.user_id = adminData.id;
+      req.session.logged_in = true;
+      
+      // res
+      //   .json({
+      //       message: "Still logged in"
+      //   });
+    });
 
+    // Once deleted, send back OK message 
     res
-      .status(200)
-      .json(
-        deletedEvent
-      )
+    .status(200)
+    .json({
+      message: "Successfully Deleted!",
+      deleted: deletedEvent
+    });
+    
   } catch (err) {
 
     // catching server errors 
@@ -193,8 +244,8 @@ router.delete('/:id', async (req, res) => {
       .status(500)
       .json({
         message: "Opps, couldn't delete event, Server Error..."
-      })
+      });
   }
-})
+});
 
 module.exports = router;

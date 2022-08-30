@@ -1,26 +1,12 @@
-// Administration Page
+// Admin Asset Routes 
 
-const auth = require('../utils/auth');
-const router = require('express').Router();
-const session = require('express-session');
-const { Admin } = require('../models/admin.js');
+const router = require("express").Router();
 
-// Admin login 
-router.get('/', async (req, res) => {
-  
-  try {
+// import Admin Model 
+const Admin = require("../../models/admin");
 
-    // rendering the homepage 
-    res.render('login')
-  } catch (err) {
-
-    // catching server errors 
-    res.status(500).json(err);
-  }
-});
-
-// admin login check 
-router.post('/', async (req, res) => {
+// Login Admin
+router.post("/login", async (req, res) => {
 
   // Ex POST req: 
   // {
@@ -32,20 +18,36 @@ router.post('/', async (req, res) => {
   try {
 
     // check the database for user that matches email 
+    const adminEmail = req.body.email;
+
     const adminData = await Admin.findOne({
       where:
-        { email: req.body.email }
+        { email: adminEmail }
     });
 
+    // check if this Admin is in the database 
+    if (!adminData) {
+
+      res
+        .status(404)
+        .json({
+          message: "uh oh... incorrect Email or Password!"
+        });
+      
+      return;
+    }
+
     // check database for password if matches
-    const isValidPassword = await adminData.checkPassword(req.body.password);
+    const pass = req.body.password;
+
+    const isValidPassword = await adminData.checkPassword(pass);
 
     // if it doesn't match send back 400 status code
     if (!isValidPassword) {
       res
         .status(400)
         .json({
-          message: 'Wrong Email or Password'
+          message: "incorrect Password!"
         });
       
       return;
@@ -57,11 +59,19 @@ router.post('/', async (req, res) => {
       req.session.user_id = adminData.id;
       req.session.logged_in = true;
       
+      const { id, name, email } = adminData;
+
       res
         .json({
-           message: `logged in! Welcome ${adminData.name}`
+          admin: {
+            id,
+            name,
+            email
+          },
+           message: `Hello ${adminData.name}, you're logged in!`
         });
     });
+    
   } catch (err) {
 
     // catching server errors 
@@ -69,40 +79,23 @@ router.post('/', async (req, res) => {
       .status(500)
       .json({
       message: "Can't login, Server Error", error: err
-    })
+    });
   }
 
-})
-
-// Admin dashboard 
-router.get('/dashboard', auth, async (req, res) => {
-  try {
-
-    // rendering the homepage 
-    res.render('dashboard')
-  } catch (err) {
-
-    // catching server errors 
-    res
-      .status(500)
-      .json({
-        message: err
-      });
-  }
 });
 
-// Logout 
-router.post('/logout', async (req, res) => {
+// Logout Admin
+router.post("/logout", async (req, res) => {
 
   // checked if their logged in 
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
 
     // if there is a session, destory it 
     req.session.destroy(() => {
       res
         .status(200)
         .json({
-          message: "Session destroyed!"
+          message: "Session destroyed, User logged out!"
         })
         .end();
     });

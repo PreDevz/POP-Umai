@@ -5,7 +5,7 @@ const Auth = (req, res, next) => {
   if (!req.session.logged_in) {
 
   // redirect them to login page 
-    res.redirect('/admin');
+    res.redirect("/dashboard/login");
   } else {
     next();
   }
