@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -290,12 +289,12 @@ h2 {
     justify-content: center;
 }
 
-#formBtn {
+#formBtn, #create-event-btn-a {
     color: #fff;
     text-decoration: none;
 }
 
-#contactSend:hover {
+#contactSend:hover, #create-event-btn:hover {
     background-color: #1db2e8;
 }
 
@@ -325,7 +324,7 @@ footer i {
 }
 
 /* About Me Page */
-#aboutTitle {
+#aboutTitle, #admin-title {
     font-size: 35px;
     font-family: 'Alfa Slab One', cursive;
     color: #965fcc;
@@ -363,6 +362,63 @@ footer i {
     color: #262626;
 }
 
+/* Dashboard page */
+h3 {
+    padding: 0;
+    margin: 0;
+}
+
+#admin-event-container {
+    background-color: rgb(240, 240, 240);
+}
+
+.admin-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.admin-subtitle {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 35px;
+    padding: 35px;
+    color: #262626;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.create-container, .edit-event-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 45px;
+    gap: 15px;
+}
+
+.create-container input, .create-container textarea {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid rgb(240, 240, 240);
+    outline: none;
+    width: 70%;
+}
+
+.create-container textarea {
+    resize: none;
+    min-height: 140px;;
+}
+
+#create-event-btn {
+    transition: all 0.3s ease;
+    background-color: #965fcc;
+    border-radius: 10px;
+    width: 50% !important;
+    border: none;
+    padding: 0.5rem;
+}
 
 @keyframes moveInBottom {
     0% {
