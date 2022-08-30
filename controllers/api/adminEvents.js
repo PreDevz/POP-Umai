@@ -191,7 +191,7 @@ router.put("/:id", async (req, res) => {
 });
 
 // Delete Event by ID 
-router.delete("/:id", auth, async (req, res) => {
+router.delete("/:id", async (req, res) => {
 
   try {
 
@@ -216,13 +216,6 @@ router.delete("/:id", auth, async (req, res) => {
       
       return;
     }
-
-    res
-      .status(200)
-      .json({
-        message: "Successfully Deleted!",
-        deleted: deletedEvent
-      });
     
     // revive Admin session 
     req.session.save(() => {
@@ -230,10 +223,18 @@ router.delete("/:id", auth, async (req, res) => {
       // req.session.user_id = adminData.id;
       req.session.logged_in = true;
       
-      res
-        .json({
-            message: "Still logged in"
-        });
+      // res
+      //   .json({
+      //       message: "Still logged in"
+      //   });
+    });
+
+    // Once deleted, send back OK message 
+    res
+    .status(200)
+    .json({
+      message: "Successfully Deleted!",
+      deleted: deletedEvent
     });
     
   } catch (err) {
