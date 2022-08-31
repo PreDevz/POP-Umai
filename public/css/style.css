@@ -247,7 +247,12 @@ h2 {
 	color: #965fcc;
 }
 
-/* footer icons styling  */
+/* Footer Section  */
+
+footer {
+	background-color: rgb(240, 240, 240) !important;
+}
+
 .footerIcons {
 	text-decoration: none;
 	float: none;
@@ -565,6 +570,7 @@ p {
 
 	.right-cookie {
 		width: 100%;
+		padding: 0;
 	}
 
 	.left-cookie {
