@@ -796,6 +796,7 @@ p {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		width: 100%;
 	}
 
 	.twitter-timeline {
@@ -950,6 +951,23 @@ p {
 
 	h2 {
 		font-size: 2.3rem;
+	}
+
+	/* Navbar Section  */
+
+	#logo-main {
+		width: 140px;
+	}
+
+	/* About Us Section  */
+
+	.aboutUs {
+		padding: 2.8rem 0.8rem;
+	}
+
+	#aboutBio {
+		font-size: 1.3rem;
+		margin-bottom: 0.8rem;
 	}
 
 	/* Events Section  */
