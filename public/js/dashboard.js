@@ -60,13 +60,11 @@ const editOptions = document.getElementsByClassName("edit-event-option");
 
 console.log(editOptions)
 
+// Activates when an item is selected from the dropdown list
 editDropdown.addEventListener("change", () => {
   //Selected id number
   const idValue = editDropdown.value;
   console.log(idValue);
-
-  //Selected text
-  console.log(editDropdown.options[editDropdown.selectedIndex].text);
 
   //Reveals form below
   editEventContainer.style.display = "flex";
@@ -88,5 +86,12 @@ editDropdown.addEventListener("change", () => {
 
     .then((data) => {
       console.log(data);
+
+      editEventName.value = data.name;
+      editEventDates.value = data.event_date;
+      editEventTime.value = data.event_time;
+      editEventVenue.value = data.venue;
+      editEventLocation.value = data.location;
+      editEventDescription.value = data.description;
     })
 })
