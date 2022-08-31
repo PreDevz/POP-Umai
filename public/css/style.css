@@ -20,9 +20,14 @@
 	scroll-behavior: smooth;
 }
 
+body {
+	width: 100%;
+}
+
 /* Globals */
 .container {
-	max-width: 1080px;
+	max-width: 1160px;
+	/* justify-content: center; */
 }
 
 /* navbar styling */
@@ -145,6 +150,11 @@ h2 {
 
 /* Events Section  */
 
+.grey-sece {
+	width: 100%;
+	background-color: var(--shaded-gray);
+}
+
 .events {
 	display: flex;
 	background-color: var(--shaded-gray);
@@ -198,10 +208,13 @@ h2 {
 }
 
 .right-cookie {
-	width: 50%;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding: 0.5rem 2rem;
+	margin-right: 0 !important;
 }
 
 #cookieTag {
@@ -213,9 +226,9 @@ h2 {
 }
 
 #homecookie {
-	width: 75%;
+	width: 60%;
 	min-width: 320px;
-	border-radius: 8px;
+	border-radius: 16px;
 	justify-self: center;
 	align-self: center;
 }
@@ -351,7 +364,7 @@ footer {
 
 /* form subtitle */
 #sub-title {
-	font-size: 1.3rem;
+	font-size: 1.7rem;
 	text-align: center;
 }
 
@@ -412,9 +425,11 @@ footer {
 	text-decoration: none;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
 	background-color: var(--shaded-gray);
-  }
+}
 
 /* form button on hover styling */
 #contactSend:hover {
@@ -745,6 +760,11 @@ p {
 
 /* media queries for throught whole page */
 @media screen and (max-width: 670px) {
+	/* globals  */
+	h2 {
+		font-size: 3rem;
+	}
+
 	/* Homepage */
 	.hero {
 		height: 55vh;
@@ -754,17 +774,26 @@ p {
 		padding: 100px 45px;
 	}
 
-	.icons {
+	.followUs .icons {
+		display: flex;
 		flex-direction: row;
 		padding-left: 0;
+		margin: 3rem 2rem;
+	}
+
+	.followUs i {
+		margin: 0 0.8rem;
 	}
 
 	#social-media-container {
 		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: 100%;
 	}
 
 	.twitter-timeline {
-		width: 350px !important;
+		max-width: 350px !important;
 	}
 
 	.events {
@@ -830,12 +859,33 @@ p {
 	#contactSend {
 		width: 100% !important;
 	}
+
+	#sub-title {
+		font-size: 1.4rem;
+	}
 }
 
 /* events phone  */
 
 @media screen and (max-width: 550px) {
 	h2 {
+		font-size: 2.8rem;
+	}
+
+	.followUs {
+		padding: 2.8rem 0.6rem;
+	}
+
+	#social-media-container {
+		width: 90%;
+	}
+
+	.followUs .icons {
+		margin: 1.8rem 0.3rem;
+		gap: 0.5rem;
+	}
+
+	.followUs .icons i {
 		font-size: 2.8rem;
 	}
 
@@ -901,5 +951,82 @@ p {
 
 	.event-ven-place {
 		width: 50%;
+	}
+}
+
+/* Galaxy Fold  */
+
+@media screen and (max-width: 300px) {
+	/* Globals  */
+
+	h2 {
+		font-size: 2.3rem;
+	}
+
+	/* Navbar Section  */
+
+	#logo-main {
+		width: 140px;
+	}
+
+	/* About Us Section  */
+
+	.aboutUs {
+		padding: 2.8rem 0.8rem;
+	}
+
+	#aboutBio {
+		font-size: 1.3rem;
+		margin-bottom: 0.8rem;
+	}
+
+	/* Events Section  */
+
+	.events .left-half .btn {
+		width: 165px;
+		padding: 0.7rem 0.9rem;
+		font-size: 0.8rem;
+	}
+
+	/* Cookie Section  */
+
+	.cookies .container .btn {
+		width: 165px;
+		padding: 0.7rem 0.9rem;
+		font-size: 0.8rem;
+	}
+
+	/* follow Us Section  */
+
+	.followUs {
+		padding: 2.8rem 0;
+		display: flex;
+		/* flex-direction: column; */
+		justify-content: center;
+		align-items: center;
+		max-width: 100%;
+	}
+
+	#social-media-container {
+		max-width: 80%;
+		align-self: center;
+		padding: 0.5rem;
+		overflow: hidden;
+	}
+
+	.followUs .icons i {
+		font-size: 2.4rem;
+		margin: 0rem 0.3rem;
+	}
+
+	.followUs .icons {
+		margin: 1.4rem 0.8rem;
+		gap: 0.8rem;
+	}
+
+	/* Inquiries Section  */
+
+	.inquiries {
+		padding: 2.8rem 0.5rem;
 	}
 }

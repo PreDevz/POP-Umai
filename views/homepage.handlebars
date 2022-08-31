@@ -9,6 +9,7 @@ renamed, repurposed, deleted, etc --}}
 
 <main>
   <section class="aboutUs">
+    <div class="container">
     <h2>About Us</h2>
     <p id="aboutBio">What is POP Umai?</p>
     <p id="aboutTag">
@@ -16,22 +17,24 @@ renamed, repurposed, deleted, etc --}}
       up a brick and mortar location in the future. Our mission is to recreate the fun dining experience of a Japanese
       anime cafe for the anime community in Southern California.
     </p>
+    </div>
   </section>
 
-  <section class="events">
-    <div class="left-half">
-      <h2>Events</h2>
-      <p id="eventTag">Love anime and food? Then you'll love us! Stop by one of our local pop-up cafes and taste some
-        of
-        our anime-inspired meals and desserts. Current anime theme is Demon Slayer</p>
-      <div class="text-box">
-        <a href="/events" class="btn btn-white btn-animate">View Events</a>
+  <section class="grey-sece">
+    <section class="events container">
+      <div class="left-half">
+        <h2>Events</h2>
+        <p id="eventTag">Love anime and food? Then you'll love us! Stop by one of our local pop-up cafes and taste some
+          of
+          our anime-inspired meals and desserts. Current anime theme is Demon Slayer</p>
+        <div class="text-box">
+          <a href="/events" class="btn btn-white btn-animate">View Events</a>
+        </div>
       </div>
-    </div>
-    <div class="right-half reveal">
-      <img id="mascot" src="/assets/images/commission without bg.png" alt="popMascot">
-    </div>
-
+      <div class="right-half reveal">
+        <img id="mascot" src="/assets/images/commission without bg.png" alt="popMascot">
+      </div>
+    </section>
   </section>
 
   <section class="cookies">
@@ -54,7 +57,7 @@ renamed, repurposed, deleted, etc --}}
 
         </div>
         <div class="left-cookie">
-          <img id="homecookie" src="/assets/images/cookiess.png" alt="homeCookie">
+          <img class="reveal" id="homecookie" src="/assets/images/cookiess.png" alt="homeCookie">
         </div>
     </div>
   </section>
@@ -62,7 +65,7 @@ renamed, repurposed, deleted, etc --}}
   <section class="followUs">
     <h2>Follow Us</h2>
 
-    <div id="social-media-container">
+    <div class="reveal" id="social-media-container">
 
       {{>twitter}}
 
