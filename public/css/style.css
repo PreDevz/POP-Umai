@@ -20,6 +20,10 @@
 	scroll-behavior: smooth;
 }
 
+body {
+	width: 100%;
+}
+
 /* Globals */
 .container {
 	max-width: 1160px;
@@ -785,11 +789,11 @@ p {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		width: 100%;
+		max-width: 100%;
 	}
 
 	.twitter-timeline {
-		width: 350px !important;
+		max-width: 350px !important;
 	}
 
 	.events {
@@ -865,6 +869,23 @@ p {
 
 @media screen and (max-width: 550px) {
 	h2 {
+		font-size: 2.8rem;
+	}
+
+	.followUs {
+		padding: 2.8rem 0.6rem;
+	}
+
+	#social-media-container {
+		width: 90%;
+	}
+
+	.followUs .icons {
+		margin: 0.3rem;
+		gap: 0.5rem;
+	}
+
+	.followUs .icons i {
 		font-size: 2.8rem;
 	}
 
@@ -983,19 +1004,18 @@ p {
 		/* flex-direction: column; */
 		justify-content: center;
 		align-items: center;
-		max-width: 100vw;
+		max-width: 100%;
 	}
 
 	#social-media-container {
-		max-width: 100%;
-		justify-self: start;
+		max-width: 80%;
 		align-self: center;
-		/* margin-right: 1.3rem; */
 		padding: 0.5rem;
+		overflow: hidden;
 	}
 
-	.followUs i {
-		font-size: 2rem;
+	.followUs .icons i {
+		font-size: 2.4rem;
 		margin: 0 0.3rem;
 	}
 
