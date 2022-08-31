@@ -2,8 +2,8 @@
 const sequelize = require("../config/connection");
 
 // Import Models 
-const Event = require("./models/Event");
-const Admin = require("./models/Admin");
+const Event = require("models/event.js");
+const Admin = require("models/Admin.js");
 
 // Import Seeds 
 const eventSeed = require("./eventSeed.json");
