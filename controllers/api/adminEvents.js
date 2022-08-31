@@ -10,10 +10,10 @@ router.get("/", async (req, res) => {
 
   try {
     const eventData = await Event.findAll().catch((err) => {
-      res.json(err)
+      res.json(err);
     });
 
-    res.send(eventData)
+    res.send(eventData);
   }
 
   catch {
@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
     });
   }
 
-})
+});
 
 // Find Event by ID
 router.get("/:id", auth, async (req, res) => {
@@ -74,7 +74,7 @@ router.get("/:id", auth, async (req, res) => {
 });
 
 // Add Event 
-router.post("/", auth, async (req, res) => {
+router.post("/", async (req, res) => {
   
   try {
     

@@ -110,7 +110,7 @@ editEventButton.addEventListener("click", () => {
 //Create new event submit button
 const submitNewEventButton = document.querySelector("#create-event-btn");
 
-submitNewEventButton.addEventListener("click", () => {
+submitNewEventButton.addEventListener("click", async () => {
   // CREATE NEW EVENT TEXT FIELDS
   const createEventName = document.querySelector("#create-event-name").value;
   const createEventDates = document.querySelector("#create-event-dates").value;
@@ -123,9 +123,9 @@ submitNewEventButton.addEventListener("click", () => {
 
 
   //REFACTOR INTO FETCH
-  fetch("/api/admin-event", {
+  await fetch("/api/admin-event", {
     method: "POST",
-    headers: {"Content-Type": "application/json"},
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       name: createEventName,
       description: createEventDescription,
@@ -135,7 +135,7 @@ submitNewEventButton.addEventListener("click", () => {
       location: createEventLocation,
       is_upcoming: true
     })
-  })
+  }).catch(err => err ? console.log(err) : console.log("good"));
 
 
-})
+});
