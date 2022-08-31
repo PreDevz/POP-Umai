@@ -5,7 +5,8 @@ const router = require("express").Router();
 const Event = require("../models/event");
 
 // Admin Dashboard 
-router.get("/", auth, async (req, res) => {
+router.get("/", async (req, res) => {
+//router.get("/", auth, async (req, res) => {
 
   try {
 

@@ -105,3 +105,37 @@ editEventButton.addEventListener("click", () => {
   editContainer.style.display = "flex";
   editEventContainer.style.display = "flex";
 });
+
+
+//Create new event submit button
+const submitNewEventButton = document.querySelector("#create-event-btn");
+
+submitNewEventButton.addEventListener("click", () => {
+  // CREATE NEW EVENT TEXT FIELDS
+  const createEventName = document.querySelector("#create-event-name").value;
+  const createEventDates = document.querySelector("#create-event-dates").value;
+  const createEventTime = document.querySelector("#create-event-time").value;
+  const createEventVenue = document.querySelector("#create-event-venue").value;
+  const createEventLocation = document.querySelector("#create-event-location").value;
+  const createEventDescription = document.querySelector("#create-event-description").value;
+
+  console.log(createEventName, createEventDates, createEventTime, createEventVenue, createEventLocation, createEventDescription);
+
+
+  //REFACTOR INTO FETCH
+  fetch("/api/admin-event", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      name: createEventName,
+      description: createEventDescription,
+      event_date: createEventDates,
+      event_time: createEventTime,
+      venue: createEventVenue,
+      location: createEventLocation,
+      is_upcoming: true
+    })
+  })
+
+
+})
