@@ -1,17 +1,31 @@
 @font-face {
-  font-family: "Retroking";
+  font-family: "Retroking Rough";
   src: url("../assets/fonts/Retroking\ Rough.ttf") format("truetype");
 }
 
 @font-face {
+  font-family: "Retroking";
+  src: url("../assets/fonts/Retroking.ttf");
+}
+
+@font-face {
   font-family: "Berlin Sans";
+  src: url("../assets/fonts/Berlin\ Sans\ FB\ Regular.ttf");
+}
+
+@font-face {
+  font-family: "Berlin Sans Bold";
   src: url("../assets/fonts/BRLNSDB.TTF");
 }
 
 h2, h4, header, #aboutBio {
-  font-family: "Retroking", 'Alfa Slab One', cursive !important;
+  font-family: "Retroking Rough", 'Alfa Slab One', cursive !important;
 }
 
 p, a {
   font-family: "Berlin Sans", sans-serif !important;
+}
+
+.nav-item {
+  font-family: "Berlin Sans Bold", sans-serif !important;
 }
