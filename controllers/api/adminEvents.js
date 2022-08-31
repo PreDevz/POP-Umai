@@ -126,7 +126,7 @@ router.post("/", async (req, res) => {
 });
 
 // Update Event by ID
-router.put("/:id", auth, async (req, res) => {
+router.put("/:id", async (req, res) => {
 
   try {
 

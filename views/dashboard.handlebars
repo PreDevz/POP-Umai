@@ -72,13 +72,15 @@
         <h3>Description</h3>
         <textarea type="text" name="edit-event-description" id="edit-event-description"></textarea>
 
-        <button id="edit-event-btn">
-          <a id="edit-event-btn-a" href="#">FINISH EDITING EVENT</a>
-        </button>
+        <h3>Is event over?</h3>
+        <select name="is-over" id="is-event-over">
+          <option id="is-over-yes" value="false">Yes</option>
+          <option id="is-over-no" value="true">No</option>
+        </select>
 
-        <button id="delete-event-btn">
-          <a id="delete-event-btn-a" href="#">DELETE EVENT</a>
-        </button>
+        <button id="edit-event-btn">FINISH EDITING EVENT</button>
+
+        <button id="delete-event-btn">DELETE EVENT</button>
 
         <div id="confirm-delete-container">
           <h3>Warning!</h3>

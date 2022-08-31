@@ -1,4 +1,5 @@
 // Dashboard Page JS
+console.log("Hello");
 
 //Containers
 const createContainer = document.querySelector(".create-container");
@@ -56,9 +57,17 @@ submitNewEventButton.addEventListener("click", async () => {
 
 //Dropdown list
 const editDropdown = document.querySelector(".questions-input");
-const editOptions = document.getElementsByClassName("edit-event-option");
 
-console.log(editOptions)
+// Text fields
+const editEventName = document.querySelector("#edit-event-name");
+const editEventDates = document.querySelector("#edit-event-dates");
+const editEventTime = document.querySelector("#edit-event-time");
+const editEventVenue = document.querySelector("#edit-event-venue");
+const editEventLocation = document.querySelector("#edit-event-location");
+const editEventDescription = document.querySelector("#edit-event-description");
+const editEventOver = document.querySelector("#is-event-over");
+
+let eventIdNum;
 
 // Activates when an item is selected from the dropdown list
 editDropdown.addEventListener("change", () => {
@@ -68,14 +77,6 @@ editDropdown.addEventListener("change", () => {
 
   //Reveals form below
   editEventContainer.style.display = "flex";
-
-  // Text fields
-  const editEventName = document.querySelector("#edit-event-name");
-  const editEventDates = document.querySelector("#edit-event-dates");
-  const editEventTime = document.querySelector("#edit-event-time");
-  const editEventVenue = document.querySelector("#edit-event-venue");
-  const editEventLocation = document.querySelector("#edit-event-location");
-  const editEventDescription = document.querySelector("#edit-event-description");
 
   // NEXT UP. NEED TO GET VALUES OF EACH EVENT (USING THEIR DATA VALUE)
   //GET REQUEST USING ID RETURNED
@@ -87,11 +88,31 @@ editDropdown.addEventListener("change", () => {
     .then((data) => {
       console.log(data);
 
+      eventIdNum = data.id;
       editEventName.value = data.name;
       editEventDates.value = data.event_date;
       editEventTime.value = data.event_time;
       editEventVenue.value = data.venue;
       editEventLocation.value = data.location;
       editEventDescription.value = data.description;
+      editEventOver.value = data.is_upcoming;
     })
+})
+
+const finishEditingEvent = document.querySelector("#edit-event-btn");
+
+finishEditingEvent.addEventListener("click", async () => {
+  await fetch(`/api/admin-event/${eventIdNum}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      name: editEventName.value,
+      description: editEventDescription.value,
+      event_date: editEventDates.value,
+      event_time: editEventTime.value,
+      venue: editEventLocation.value,
+      location: editEventDescription.value,
+      is_upcoming: editEventOver.value
+    })
+  }).catch(err => err ? console.log(err) : console.log("good"));
 })
