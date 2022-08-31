@@ -93,6 +93,7 @@ router.post("/logout", async (req, res) => {
     // if there is a session, destory it 
     req.session.destroy(() => {
       res
+        .render("homepage")
         .status(200)
         .json({
           message: "Session destroyed, User logged out!"

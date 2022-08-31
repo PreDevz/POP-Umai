@@ -229,29 +229,6 @@ h2 {
 	align-self: center;
 }
 
-.cookie-btn {
-	background-color: rgb(240, 240, 240);
-	border: none;
-	color: #262626;
-	margin: 1.2rem 0;
-}
-
-.cookie-btn:hover {
-	display: inline;
-	background-color: white;
-	/* border: 1px solid #262626; */
-	color: #262626;
-}
-
-.cookie-btn::before {
-	display: block;
-	content: attr(title);
-	font-weight: bold;
-	height: 0;
-	overflow: hidden;
-	visibility: hidden;
-}
-
 /* follow us styling for container */
 .followUs {
 	text-align: center;
@@ -334,6 +311,12 @@ footer {
 .btn-white {
 	background-color: #fff;
 	color: #777;
+	margin: 1.2rem 0;
+}
+
+.btn-grey {
+	background-color: var(--shaded-gray);
+	color: var(--dark-clr);
 	margin: 1.2rem 0;
 }
 
@@ -436,6 +419,12 @@ footer {
 #formBtn {
 	color: #fff;
 	text-decoration: none;
+}
+
+input,
+textarea,
+select {
+	background-color: var(--shaded-gray);
 }
 
 /* form button on hover styling */
@@ -989,17 +978,20 @@ p {
 	/* follow Us Section  */
 
 	.followUs {
-		padding: 2.8rem 0rem;
+		padding: 2.8rem 0;
 		display: flex;
 		/* flex-direction: column; */
 		justify-content: center;
 		align-items: center;
+		max-width: 100vw;
 	}
 
 	#social-media-container {
-		width: 100%;
-		justify-self: center;
+		max-width: 100%;
+		justify-self: start;
 		align-self: center;
+		/* margin-right: 1.3rem; */
+		padding: 0.5rem;
 	}
 
 	.followUs i {
