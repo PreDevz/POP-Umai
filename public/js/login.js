@@ -1,31 +1,44 @@
 // Will be used for admin login function
 
-require("dotenv").config();
-
-// Cache The DOM
-
-// Email 
-const emailInput = document.getElementById('loginEmail')
-// Password 
-const passwordInput = document.getElementById('loginPass')
-// Login Button 
-const loginBtn = document.getElementById('loginBtn')
-
+// Login Function 
 async function login() {
+
+  // Getting User's Input
+
+  // Username 
+  const username = "Rocio Escobedo";
+  // Email 
+  const emailInput = document.getElementById("loginEmail").value;
+  // Password 
+  const passwordInput = document.getElementById("loginPass").value;
+  // Login Button 
+  const loginBtn = document.getElementById("loginBtn");
+
+  // Calling POST req 
   await fetch("/api/admin/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      name: process.env.ADMIN_NAME,
+      name: username,
       email: emailInput,
       password: passwordInput
     })
   })
+    // Then reload page, and redirect them to dashboard 
     .then(() => {
-      location.replace('/dashboard')
+      location.reload();
+      window.location.replace("/dashboard");
     })
+    // check for errors 
     .catch(
       (err) => {
-        err ? console.log(err) : console.log("good")
+        if (err) {
+          console.log(err);
+        } else {
+          console.log("Worked!");
+        }
       });
 }
+
+// When user clicks button, execute login function 
+loginBtn.addEventListener("click", login);
