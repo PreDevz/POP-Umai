@@ -33,6 +33,10 @@
 	width: 180px;
 }
 
+.navbar-toggler-icon:focus {
+	outline: none;
+}
+
 .mainNav {
 	width: 100%;
 	text-align: center;
@@ -345,6 +349,11 @@ footer {
 .inquiries {
 	background-color: rgb(255, 255, 255);
 	padding: 4rem 2.8rem 2.8rem 2.8rem;
+}
+
+#message {
+	resize: none;
+	min-height: 3rem;
 }
 
 /* form subtitle */
