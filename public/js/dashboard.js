@@ -47,7 +47,7 @@ submitNewEventButton.addEventListener("click", async () => {
       location: createEventLocation,
       is_upcoming: true
     })
-  }).catch(err => err ? console.log(err) : console.log("good"));
+  }).catch(err => err ? console.log(err) : console.log("Success!"));
 
   // Hides field
   //createContainer.style.display = "none";
@@ -99,6 +99,8 @@ editDropdown.addEventListener("change", () => {
     })
 })
 
+
+// Update Events
 const finishEditingEvent = document.querySelector("#edit-event-btn");
 
 finishEditingEvent.addEventListener("click", async () => {
@@ -114,5 +116,15 @@ finishEditingEvent.addEventListener("click", async () => {
       location: editEventDescription.value,
       is_upcoming: editEventOver.value
     })
-  }).catch(err => err ? console.log(err) : console.log("good"));
+  }).catch(err => err ? console.log(err) : console.log("Success!"));
+})
+
+// Delete Events
+const deleteButton = document.querySelector("#delete-confirm-btn");
+
+deleteButton.addEventListener("click", async () => {
+  await fetch(`/api/admin-event/${eventIdNum}`, {
+    method: "DELETE",
+  })
+  .catch(err => err ? console.log(err) : console.log("Success!"));
 })

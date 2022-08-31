@@ -209,7 +209,7 @@ router.put("/:id", async (req, res) => {
 });
 
 // Delete Event by ID 
-router.delete("/:id", auth, async (req, res) => {
+router.delete("/:id", async (req, res) => {
 
   try {
 
