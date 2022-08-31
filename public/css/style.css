@@ -942,3 +942,39 @@ p {
 		width: 50%;
 	}
 }
+
+@media screen and (max-width: 300px) {
+	/* Globals  */
+
+	h2 {
+		font-size: 2.3rem;
+	}
+
+	/* follow Us Section  */
+
+	.followUs {
+		padding: 2.4rem 0rem;
+		display: flex;
+		/* flex-direction: column; */
+		justify-content: center;
+		align-items: center;
+	}
+
+	#social-media-container {
+		width: 100%;
+		justify-self: center;
+		align-self: center;
+	}
+
+	.followUs i {
+		font-size: 2rem;
+		margin: 0 0.3rem;
+	}
+
+	.followUs .icons {
+		margin: 0.8rem;
+		gap: 0.8rem;
+	}
+
+	/* Inquiries Section  */
+}
