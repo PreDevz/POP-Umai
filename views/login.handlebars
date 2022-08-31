@@ -1,6 +1,82 @@
-<h2>Login Page</h2>
-<hr>
-<h3>uh oh...</h3>
-<p>Nate, ur not loggin in homie</p>
-<hr>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sit vitae magni repellendus, accusamus incidunt vero odit officiis ex tempora quasi, dolores error eaque! Ratione non provident nulla facilis rerum.</p>
+{{!-- Login Page  --}}
+
+<section class='text-center text-lg-start' style='padding: 1rem;'>
+	<h2>Login Page</h2>
+
+  {{!-- Direct Page styles  --}}
+	<style>
+		.rounded-t-5 { 
+       border-top-left-radius: 0.5rem;
+       border-top-right-radius: 0.5rem; 
+       } 
+       @media (min-width: 992px) { 
+
+        .rounded-tr-lg-0 {
+		      border-top-right-radius: 0; 
+        } 
+
+        .rounded-bl-lg-5 { 
+         border-bottom-left-radius:	0.5rem; 
+       } 
+
+    }
+	</style>
+
+  {{!-- Full Form Card  --}}
+	<div class='card mb-3'>
+		<div class='row g-0 d-flex align-items-center'>
+			<div class='col-lg-4 d-none d-lg-flex'>
+
+        {{!-- Right Image  --}}
+				<img
+					src='/assets/images/padlock.jpg'
+					alt='lock'
+					class='w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5'
+				/>
+			</div>
+			<div class='col-lg-8'>
+				<div class='card-body py-5 px-md-5'>
+
+					<form>
+
+						<!-- Email input -->
+						<div class='form-outline mb-4'>
+							<input 
+              type='email' 
+              id='loginEmail' 
+              class='form-control' />
+
+							<label class='form-label' for='form2Example1'>Email address</label>
+						</div>
+
+						<!-- Password input -->
+						<div class='form-outline mb-4'>
+							<input 
+              type='password' 
+              id='loginPass' 
+              class='form-control' />
+              
+							<label class='form-label' for='form2Example2'>Password</label>
+						</div>
+
+							<div class='col'>
+
+								<!-- Simple link -->
+								<a href='#!'>Forgot password?</a>
+							</div>
+						</div>
+
+						<!-- Submit button -->
+						<button 
+            id="loginBtn"
+            type='button'
+             class='btn btn-primary btn-block mb-4'>
+             Sign in
+             </button>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
