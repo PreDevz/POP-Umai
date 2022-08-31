@@ -1,5 +1,4 @@
 // Dashboard Page JS
-console.log("Hello");
 
 //Containers
 const createContainer = document.querySelector(".create-container");
@@ -148,4 +147,16 @@ deleteButton.addEventListener("click", () => {
         break;
     }
   })
+})
+
+// Logout button
+const logoutButton = document.querySelector("#log-out-button");
+
+logoutButton.addEventListener("click", async () => {
+  await fetch("/api/admin/logout", {
+    method: "POST",
+    body: {}
+  }).then(() => {
+    location.reload()
+  }).catch(err => err ? console.log(err) : console.log("Success!"));
 })

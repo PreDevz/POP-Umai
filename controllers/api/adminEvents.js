@@ -74,7 +74,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // Add Event 
-router.post("/", async (req, res) => {
+router.post("/", auth, async (req, res) => {
   
   try {
     
@@ -126,7 +126,7 @@ router.post("/", async (req, res) => {
 });
 
 // Update Event by ID
-router.put("/:id", async (req, res) => {
+router.put("/:id", auth, async (req, res) => {
 
   try {
 
@@ -209,7 +209,7 @@ router.put("/:id", async (req, res) => {
 });
 
 // Delete Event by ID 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", auth, async (req, res) => {
 
   try {
 
