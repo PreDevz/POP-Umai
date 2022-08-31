@@ -165,27 +165,29 @@ h2 {
 	margin: auto;
 }
 
-.homeCookie-container {
-	padding: 45px;
-	display: flex;
-}
-
 /* Cookies Section  */
 
-.cookies {
-	display: grid;
+.cookies .container {
+	display: flex;
+	flex-direction: row-reverse;
 	background-color: white;
-	padding: 45px;
+	justify-content: center;
+	align-items: center;
+	padding: 3.5rem;
 }
 
 .left-cookie {
-	grid-column: 1;
-	align-self: center;
+	display: flex;
+	width: 50%;
+	justify-content: center;
+	align-items: center;
 }
 
 .right-cookie {
-	grid-column: 2;
+	width: 50%;
 	justify-content: center;
+	align-items: center;
+	padding: 0.5rem 2rem;
 }
 
 #cookieTag {
@@ -197,9 +199,10 @@ h2 {
 }
 
 #homecookie {
-	max-width: 300px;
-	max-height: 300px;
-	margin: auto;
+	width: 75%;
+	border-radius: 8px;
+	justify-self: center;
+	align-self: center;
 }
 
 .cookie-btn {
@@ -211,7 +214,7 @@ h2 {
 
 .cookie-btn:hover {
 	background-color: white;
-	border: 1px solid #262626;
+	/* border: 0px solid #262626; */
 	color: #262626;
 }
 
@@ -253,7 +256,6 @@ h2 {
 .text-box {
 	display: flex;
 	justify-content: center;
-	padding: 20px;
 }
 
 /* main button effects */
@@ -282,6 +284,7 @@ h2 {
 .btn-white {
 	background-color: #fff;
 	color: #777;
+	margin: 1.2rem 0;
 }
 
 /* after clicking button styling */
