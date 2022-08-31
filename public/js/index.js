@@ -91,15 +91,17 @@ window.addEventListener("scroll", reveal);
 //Containers
 const createContainer = document.querySelector(".create-container");
 const editContainer = document.querySelector(".edit-event-container");
+const editEventContainer = document.querySelector("#selected-event-container");
 
 //Buttons
 const createNewButton = document.querySelector("#create-event");
 const editEventButton = document.querySelector("#edit-event");
 
 createNewButton.addEventListener("click", () => {
-  createContainer.style.display = "flex"
+  createContainer.style.display = "flex";
 });
 
 editEventButton.addEventListener("click", () => {
-  editContainer.style.display = "flex"
+  editContainer.style.display = "flex";
+  editEventContainer.style.display = "flex";
 });
