@@ -182,7 +182,7 @@ h2 {
 	justify-content: center;
 	align-items: center;
 	padding: 3.5rem;
-	gap: 1.5rem;
+	gap: 2rem;
 }
 
 .left-cookie {
@@ -190,6 +190,7 @@ h2 {
 	width: 50%;
 	justify-content: center;
 	align-items: center;
+	padding: 1.2rem;
 }
 
 .right-cookie {
@@ -224,7 +225,7 @@ h2 {
 
 .cookie-btn:hover {
 	background-color: white;
-	/* border: 0px solid #262626; */
+	border: 1px solid #262626;
 	color: #262626;
 }
 
@@ -245,14 +246,23 @@ h2 {
 	padding: 0px;
 }
 
-.icons {
+.followUs .icons {
 	list-style: none;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	gap: 1.5em;
-	margin-top: 20px;
+	margin-left: 1.4rem;
+	color: var(--purple-clr);
+}
+
+.followUs .icons i {
+	transition: all 700ms ease;
+}
+
+.followUs .icons i:hover {
+	color: var(--blue-clr) !important;
 }
 
 .fa-brands {
