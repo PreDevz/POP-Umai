@@ -419,6 +419,10 @@ footer {
 	text-decoration: none;
 }
 
+input, textarea, select {
+	background-color: var(--shaded-gray);
+  }
+
 /* form button on hover styling */
 #contactSend:hover {
 	background-color: var(--blue-clr);
