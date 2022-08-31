@@ -652,18 +652,27 @@ p {
 		font-size: 1rem;
 	}
 
+	.cookies-sub {
+		padding: 0;
+	}
+
 	h5 {
 		font-size: 15px;
 	}
 
+	/* Carousel Section  */
+
 	.carousel-caption {
 		bottom: 0;
 		background-color: rgba(5, 0, 0, 0.185);
+		padding: 0.3rem;
 	}
 
-	.carousel-control-next,
-	.carousel-control-prev {
-		align-items: center;
+	.carousel-inner {
+		position: relative;
+		width: 70%;
+		overflow: hidden;
+		margin: auto;
 	}
 
 	#contactSend {
