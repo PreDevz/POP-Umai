@@ -6,6 +6,24 @@ const router = require("express").Router();
 // import Event Model 
 const Event = require("../../models/event");
 
+router.get("/", async (req, res) => {
+
+  try {
+    const eventData = await Event.findAll().catch((err) => {
+      res.json(err)
+    });
+
+    res.send(eventData)
+  }
+
+  catch {
+    res.status(500).json({
+      message: "Server error, cannot get events..."
+    });
+  }
+
+})
+
 // Find Event by ID
 router.get("/:id", auth, async (req, res) => {
 
