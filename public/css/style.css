@@ -22,7 +22,8 @@
 
 /* Globals */
 .container {
-	max-width: 1080px;
+	max-width: 1160px;
+	/* justify-content: center; */
 }
 
 /* navbar styling */
@@ -145,6 +146,11 @@ h2 {
 
 /* Events Section  */
 
+.grey-sece {
+	width: 100%;
+	background-color: var(--shaded-gray);
+}
+
 .events {
 	display: flex;
 	background-color: var(--shaded-gray);
@@ -198,10 +204,13 @@ h2 {
 }
 
 .right-cookie {
-	width: 50%;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding: 0.5rem 2rem;
+	margin-right: 0 !important;
 }
 
 #cookieTag {
@@ -213,9 +222,9 @@ h2 {
 }
 
 #homecookie {
-	width: 75%;
+	width: 60%;
 	min-width: 320px;
-	border-radius: 8px;
+	border-radius: 16px;
 	justify-self: center;
 	align-self: center;
 }
@@ -228,9 +237,19 @@ h2 {
 }
 
 .cookie-btn:hover {
+	display: inline;
 	background-color: white;
-	border: 1px solid #262626;
+	/* border: 1px solid #262626; */
 	color: #262626;
+}
+
+.cookie-btn::before {
+	display: block;
+	content: attr(title);
+	font-weight: bold;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
 }
 
 /* follow us styling for container */
