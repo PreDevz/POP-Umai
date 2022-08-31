@@ -5,17 +5,19 @@
 
 @font-face {
   font-family: "Retroking";
-  src: url("../assets/fonts/Retroking.ttf");
+  src: url("../assets/fonts/Retroking.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Berlin Sans";
-  src: url("../assets/fonts/Berlin\ Sans\ FB\ Regular.ttf");
+  src: url("../assets/fonts/Berlin\ Sans\ FB\ Regular.ttf") format("truetype");
+  font-weight: normal;
 }
 
 @font-face {
-  font-family: "Berlin Sans Bold";
-  src: url("../assets/fonts/BRLNSDB.TTF");
+  font-family: "Berlin Sans";
+  src: url("../assets/fonts/BRLNSDB.TTF") format("truetype");
+  font-weight: bold;
 }
 
 h2, h4, header, #aboutBio {
@@ -27,5 +29,6 @@ p, a {
 }
 
 .nav-item {
-  font-family: "Berlin Sans Bold", sans-serif !important;
+  font-family: "Berlin Sans", sans-serif !important;
+  font-weight: bold;
 }
