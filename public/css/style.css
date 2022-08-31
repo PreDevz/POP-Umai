@@ -220,19 +220,6 @@ h2 {
 	align-self: center;
 }
 
-.cookie-btn {
-	background-color: rgb(240, 240, 240);
-	border: none;
-	color: #262626;
-	margin: 1.2rem 0;
-}
-
-.cookie-btn:hover {
-	background-color: white;
-	border: 1px solid #262626;
-	color: #262626;
-}
-
 /* follow us styling for container */
 .followUs {
 	text-align: center;
@@ -315,6 +302,12 @@ footer {
 .btn-white {
 	background-color: #fff;
 	color: #777;
+	margin: 1.2rem 0;
+}
+
+.btn-grey {
+	background-color: var(--shaded-gray);
+	color: var(--dark-clr);
 	margin: 1.2rem 0;
 }
 
