@@ -33,6 +33,10 @@
 	width: 180px;
 }
 
+.navbar-toggler-icon:focus {
+	outline: none;
+}
+
 .mainNav {
 	width: 100%;
 	text-align: center;
@@ -149,6 +153,16 @@ h2 {
 	justify-content: space-evenly;
 }
 
+.left-half {
+	grid-column: 1;
+	align-self: center;
+}
+
+.right-half {
+	grid-column: 2;
+	justify-content: center;
+}
+
 #eventTag {
 	font-size: 20px;
 	max-width: 600px;
@@ -163,8 +177,63 @@ h2 {
 	margin: auto;
 }
 
-/* Follow Us Section  */
+/* Cookies Section  */
 
+.cookies .container {
+	display: flex;
+	flex-direction: row-reverse;
+	background-color: white;
+	justify-content: center;
+	align-items: center;
+	padding: 3.5rem;
+	gap: 2rem;
+}
+
+.left-cookie {
+	display: flex;
+	width: 50%;
+	justify-content: center;
+	align-items: center;
+	padding: 1.2rem;
+}
+
+.right-cookie {
+	width: 50%;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem 2rem;
+}
+
+#cookieTag {
+	font-size: 20px;
+	max-width: 600px;
+	justify-content: center;
+	text-align: center;
+	margin: auto;
+}
+
+#homecookie {
+	width: 75%;
+	min-width: 320px;
+	border-radius: 8px;
+	justify-self: center;
+	align-self: center;
+}
+
+.cookie-btn {
+	background-color: rgb(240, 240, 240);
+	border: none;
+	color: #262626;
+	margin: 1.2rem 0;
+}
+
+.cookie-btn:hover {
+	background-color: white;
+	border: 1px solid #262626;
+	color: #262626;
+}
+
+/* follow us styling for container */
 .followUs {
 	text-align: center;
 	justify-content: center;
@@ -172,6 +241,7 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: rgb(240, 240, 240);
 }
 
 .followUs ul {
@@ -180,14 +250,23 @@ h2 {
 	padding: 0px;
 }
 
-.icons {
+.followUs .icons {
 	list-style: none;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	gap: 1.5em;
-	margin-top: 20px;
+	margin-left: 1.4rem;
+	color: var(--purple-clr);
+}
+
+.followUs .icons i {
+	transition: all 700ms ease;
+}
+
+.followUs .icons i:hover {
+	color: var(--blue-clr) !important;
 }
 
 .fa-brands {
@@ -195,6 +274,10 @@ h2 {
 }
 
 /* Footer Section  */
+
+footer {
+	background-color: rgb(240, 240, 240) !important;
+}
 
 .footerIcons {
 	text-decoration: none;
@@ -205,7 +288,6 @@ h2 {
 .text-box {
 	display: flex;
 	justify-content: center;
-	padding: 20px;
 }
 
 .btn:link,
@@ -233,6 +315,7 @@ h2 {
 .btn-white {
 	background-color: #fff;
 	color: #777;
+	margin: 1.2rem 0;
 }
 
 /* after clicking button styling */
@@ -264,8 +347,13 @@ h2 {
 
 /* form inquiries */
 .inquiries {
-	background-color: var(--shaded-gray);
+	background-color: rgb(255, 255, 255);
 	padding: 4rem 2.8rem 2.8rem 2.8rem;
+}
+
+#message {
+	resize: none;
+	min-height: 3rem;
 }
 
 /* form subtitle */
@@ -323,8 +411,6 @@ h2 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	outline: none;
-	border: none;
 }
 
 /* form button styling */
@@ -539,19 +625,84 @@ p {
 
 /* Making the elements appear on the page. */
 .reveal {
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 1s all ease;
+	position: relative;
+	transform: translateY(150px);
+	opacity: 0;
+	transition: 1s all ease;
 }
 
 /* Making the elements appear on the page. */
 .reveal.active {
-    transform: translateY(0);
-    opacity: 1;
+	transform: translateY(0);
+	opacity: 1;
 }
 
-/* Button */
+/* keyfram for button */
+/* Cookie Page */
+#cookieTitle {
+	font-size: 35px;
+	font-family: 'Alfa Slab One', cursive;
+	color: #965fcc;
+	text-align: center;
+	padding: 35px;
+}
+
+/* Cookie carousel Section  */
+
+.cookie-page {
+	position: relative;
+}
+.cookies-sub {
+	text-align: center;
+	margin: 1rem;
+	padding: 0 2rem 2rem 3rem;
+	gap: 1rem;
+}
+
+.carouselExampleIndicators {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.carousel {
+	background: #00000017;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	filter: invert(100%);
+	width: 70px;
+	height: 70px;
+	justify-self: center;
+	align-self: center;
+	z-index: 10;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+	position: absolute;
+}
+
+/* h5 {
+    font-size: 25px;
+    color: #262626;
+    text-align: center;
+    background-color: rgb(240, 240, 240);    
+} */
+
+.carousel-inner {
+	position: relative;
+	width: 40%;
+	overflow: hidden;
+	margin: auto;
+}
+
+.carousel-caption {
+	bottom: 0;
+	background-color: rgba(5, 0, 0, 0.185);
+}
+
 @keyframes moveInBottom {
 	0% {
 		opacity: 0;
@@ -564,7 +715,31 @@ p {
 	}
 }
 
-/* mascott event right half */
+/* Cookies Section Mobile  */
+
+@media screen and (max-width: 970px) {
+	.cookies .container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.right-cookie {
+		width: 100%;
+		padding: 0;
+	}
+
+	.left-cookie {
+		width: 100%;
+	}
+
+	#homecookie {
+		width: 50%;
+		min-width: 250px;
+	}
+}
+
+/* media queries for mascott*/
+
 @media screen and (max-width: 447px) {
 	#mascot {
 		display: none;
@@ -577,8 +752,6 @@ p {
 	.hero {
 		height: 55vh;
 	}
-
-	/* homepage */
 
 	.aboutUs {
 		padding: 100px 45px;
@@ -630,6 +803,33 @@ p {
 		padding-left: 3vh;
 	}
 
+	#cookieTag {
+		font-size: 1rem;
+	}
+
+	.cookies-sub {
+		padding: 0;
+	}
+
+	h5 {
+		font-size: 15px;
+	}
+
+	/* Carousel Section  */
+
+	.carousel-caption {
+		bottom: 0;
+		background-color: rgba(5, 0, 0, 0.185);
+		padding: 0.3rem;
+	}
+
+	.carousel-inner {
+		position: relative;
+		width: 70%;
+		overflow: hidden;
+		margin: auto;
+	}
+
 	#contactSend {
 		width: 100% !important;
 	}
@@ -638,9 +838,13 @@ p {
 /* events phone  */
 
 @media screen and (max-width: 550px) {
+	h2 {
+		font-size: 2.8rem;
+	}
+
 	.event-container h2 {
 		margin: 3rem 0;
-		font-size: 3rem;
+		font-size: 2.8rem;
 	}
 
 	.oneEvent {
