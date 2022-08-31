@@ -15,11 +15,8 @@ router.get("/", async (req, res) => {
       });
 
     // loop through each event to serialize it 
-    const events = eventsData.map((event) => {
-      event.get(
-        { plain: true }
-      );
-    });
+    // using event.toJSON() worked over event.get({ plain: true }  
+    const events = eventsData.map((event) => event.toJSON());
 
     // rendering the Events page with all Events
     res.render(

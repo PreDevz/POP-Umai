@@ -1,7 +1,18 @@
 /* Importing a font from Google Fonts. */
+
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
-/* A CSS reset. It is used to make sure that all browsers are using the same default styling. */
+/* root colors  */
+
+:root {
+	--purple-clr: #965fcc;
+	--blue-clr: #1db2e8;
+	--dark-clr: #262626;
+	--shaded-gray: rgb(240, 240, 240);
+}
+
+/* A CSS reset */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -9,14 +20,19 @@
 	scroll-behavior: smooth;
 }
 
-/* Setting the width of the logo to 180px. */
+/* Globals */
+.container {
+	max-width: 1080px;
+}
+
+/* navbar styling */
+
 #logo-main {
 	display: block;
 	margin: 10px auto;
 	width: 180px;
 }
 
-/* Setting the mainNav attributes */
 .mainNav {
 	width: 100%;
 	text-align: center;
@@ -28,7 +44,6 @@
 	gap: 2px 12px;
 }
 
-/* setting navbar li styling */
 .mainNav li {
 	display: inline-block;
 	float: none;
@@ -36,40 +51,36 @@
 	/* box-shadow: 0 2px 0px 0px rgb(0 0 0 / 25%); */
 }
 
-/* mainNav a href attributes */
 .mainNav a {
 	display: inline-block;
 	font-family: 'Alfa Slab One', cursive;
 	font-size: 18px;
 	color: whitesmoke;
 	-webkit-text-stroke-width: 0.7px;
-	-webkit-text-stroke-color: #262626;
+	-webkit-text-stroke-color: var(--dark-clr);
 	text-decoration: none;
 	font-weight: bold;
 }
 
-/* mainNav a href hover afftect */
 .mainNav a:hover {
 	-webkit-text-stroke-width: 0.7px;
-	-webkit-text-stroke-color: #965fcc;
+	-webkit-text-stroke-color: var(--purple-clr);
 }
 
-/* mainNav when focused on attributes */
 .mainNav:focus {
-	color: #965fcc;
+	color: var(--purple-clr);
 }
 
-/* navbar styling */
 .navbar {
 	background-color: white;
 }
 
-/* logo z=index */
 #Logo {
 	z-index: 1;
 }
 
-/* hero section styling */
+/* Hero Section */
+
 .hero {
 	display: flex;
 	justify-content: center;
@@ -84,26 +95,25 @@
 	background: url(/assets/svg/hero.svg) no-repeat center center scroll;
 }
 
-/* Logo head in hero */
 #smile {
 	max-width: 400px;
 	vertical-align: middle;
 }
 
-/* h2 styling */
 h2 {
 	font-family: 'Alfa Slab One', cursive;
 	z-index: 1;
 	font-style: normal;
-	color: #965fcc;
-	font-size: 8vmin;
+	color: var(--purple-clr);
+	font-size: 3.9rem;
 	letter-spacing: 0.03em;
 	line-height: 1;
 	margin-bottom: 40px;
 	text-align: center;
 }
 
-/* aboutUs section styling */
+/* About Us Section */
+
 .aboutUs {
 	/* background-color: rgba(203, 200, 200, 0.889); */
 	padding: 100px;
@@ -113,16 +123,14 @@ h2 {
 	background: url(/assets/svg/aboutMe.svg) no-repeat center 65%;
 }
 
-/* aboutUs bio styling */
 #aboutBio {
 	font-family: 'Alfa Slab One', cursive;
 	font-size: 25px;
-	color: #262626;
+	color: var(--dark-clr);
 	text-align: center;
 	justify-content: center;
 }
 
-/* aboutUs tag styling */
 #aboutTag {
 	font-size: 20px;
 	max-width: 600px;
@@ -131,10 +139,11 @@ h2 {
 	margin: auto;
 }
 
-/* events styling */
+/* Events Section  */
+
 .events {
 	display: flex;
-	background-color: rgb(240, 240, 240);
+	background-color: var(--shaded-gray);
 	padding: 45px;
 	align-items: center;
 	justify-content: space-evenly;
@@ -158,7 +167,6 @@ h2 {
 	margin: auto;
 }
 
-/* events mascot attributes */
 #mascot {
 	max-width: 500px;
 	max-height: 500px;
@@ -231,7 +239,12 @@ h2 {
 	background-color: rgb(240, 240, 240);
 }
 
-/* follow us icons styling */
+.followUs ul {
+	display: flex;
+	justify-content: center;
+	padding: 0px;
+}
+
 .icons {
 	list-style: none;
 	display: flex;
@@ -242,9 +255,8 @@ h2 {
 	margin-top: 20px;
 }
 
-/* icons color */
 .fa-brands {
-	color: #965fcc;
+	color: var(--purple-clr);
 }
 
 /* Footer Section  */
@@ -259,13 +271,11 @@ footer {
 	list-style: none;
 }
 
-/* text box styling */
 .text-box {
 	display: flex;
 	justify-content: center;
 }
 
-/* main button effects */
 .btn:link,
 .btn:visited {
 	text-transform: uppercase;
@@ -321,14 +331,9 @@ footer {
 	animation-fill-mode: backwards;
 }
 
-/* container */
-.container {
-	max-width: 1080px;
-}
-
 /* form inquiries */
 .inquiries {
-	background-color: white;
+	background-color: rgb(255, 255, 255);
 	padding: 4rem 2.8rem 2.8rem 2.8rem;
 }
 
@@ -350,7 +355,7 @@ footer {
 .questions-input {
 	padding: 0.5rem;
 	border-radius: 8px;
-	border: 1px solid rgb(240, 240, 240);
+	border: 1px solid var(--shaded-gray);
 	outline: none;
 }
 
@@ -373,7 +378,7 @@ footer {
 /* send button styling */
 #contactSend {
 	transition: all 0.3s ease;
-	background-color: #965fcc;
+	background-color: var(--purple-clr);
 	border-radius: 10px;
 	width: 50% !important;
 	border: none;
@@ -397,7 +402,7 @@ footer {
 
 /* form button on hover styling */
 #contactSend:hover {
-	background-color: #1db2e8;
+	background-color: var(--blue-clr);
 }
 
 /* form width */
@@ -433,7 +438,7 @@ footer i {
 #aboutTitle {
 	font-size: 35px;
 	font-family: 'Alfa Slab One', cursive;
-	color: #965fcc;
+	color: var(--purple-clr);
 	text-align: center;
 	padding: 35px;
 }
@@ -470,7 +475,7 @@ p {
 
 /* about container styling */
 .about-container {
-	background-color: rgb(240, 240, 240);
+	background-color: var(--shaded-gray);
 	padding: 45px;
 	display: flex;
 }
@@ -479,7 +484,138 @@ p {
 .our-story-title {
 	font-family: 'Alfa Slab One', cursive;
 	font-size: 25px;
-	color: #262626;
+	color: var(--dark-clr);
+}
+
+/* Events Page Section */
+
+.event-container {
+	margin: 0 auto;
+	padding: 1rem 0;
+}
+
+.event-section {
+	padding: 1.5rem;
+}
+
+.event-container h2 {
+	margin: 3rem 0;
+	font-size: 3.9rem;
+}
+
+.event-upcomming {
+	background-color: white;
+}
+
+.event-prev {
+	background-color: var(--shaded-gray);
+}
+
+.event-prev .oneEvent {
+	background-color: white;
+}
+
+.event-container .oneEvent {
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+		rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	display: flex;
+	border-radius: 8px;
+	margin: 32px 0;
+	transition: all 0.8s ease;
+}
+
+.event-container .oneEvent:hover {
+	cursor: pointer;
+	transform: translate(-3px, -5px);
+	box-shadow: rgba(22, 22, 41, 0.25) 3px 16px 27px -5px,
+		rgba(0, 0, 0, 0.585) 3px 10px 16px -8px;
+}
+
+.oneEvent .event-left {
+	background-color: var(--purple-clr);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	padding: 8px 1.4rem;
+	font-weight: bold;
+	font-size: 1.2rem;
+	text-align: center;
+	border-radius: 9px 0 0 8px;
+	width: 150px;
+}
+
+.oneEvent .event-left .month {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.oneEvent .event-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0rem 1.5rem;
+	width: 100%;
+}
+
+.event-title {
+	font-size: 1.8rem;
+	margin: 1rem 0;
+	color: var(--dark-clr);
+	text-transform: uppercase;
+	width: 85%;
+}
+
+.event-description {
+	border-bottom: 1px solid var(--dark-clr);
+	margin-bottom: 0.5rem;
+	padding: 0.5rem;
+	width: 90%;
+}
+
+.event-bottom-half {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin: 0.5rem 0;
+}
+
+.event-ven-place {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem auto;
+}
+
+.oneEvent .event-right .event-timing {
+	background: #777;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 127px;
+	padding: 8px;
+	border-radius: 16px;
+	margin: 14px 0;
+	font-size: 14px;
+	color: #fff;
+}
+
+.oneEvent .event-right .event-place {
+	text-align: center;
+}
+
+/* Making the elements appear on the page. */
+.reveal {
+	position: relative;
+	transform: translateY(150px);
+	opacity: 0;
+	transition: 1s all ease;
+}
+
+/* Making the elements appear on the page. */
+.reveal.active {
+	transform: translateY(0);
+	opacity: 1;
 }
 
 /* keyfram for button */
@@ -677,5 +813,77 @@ p {
 
 	#contactSend {
 		width: 100% !important;
+	}
+}
+
+/* events phone  */
+
+@media screen and (max-width: 550px) {
+	h2 {
+		font-size: 2.8rem;
+	}
+
+	.event-container h2 {
+		margin: 3rem 0;
+		font-size: 2.8rem;
+	}
+
+	.oneEvent {
+		flex-direction: column;
+	}
+
+	.oneEvent .event-left {
+		padding: 0;
+		border-radius: 8px 8px 0 0;
+		width: 100%;
+	}
+
+	.oneEvent .event-left .event-date .date,
+	.oneEvent .event-left .event-date.month {
+		display: inline-block;
+		font-size: 20px;
+	}
+
+	.oneEvent .event-left .event-date {
+		padding: 10px 0;
+	}
+
+	.event-title {
+		font-size: 1.5rem;
+		margin: 1.3rem 0;
+		/* word-wrap: break-word; */
+		text-align: center;
+	}
+
+	.event-right {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.event-description {
+		text-align: center;
+	}
+
+	.event-bottom-half {
+		gap: 1rem;
+	}
+
+	.event-right .event-bottom-half .event-timing {
+		background: #777;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100px;
+		padding: 6px;
+		border-radius: 11px;
+		margin: 14px 0;
+		font-size: 15px;
+		text-align: center;
+	}
+
+	.event-ven-place {
+		width: 50%;
 	}
 }
