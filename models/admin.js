@@ -1,13 +1,13 @@
 // Will be used for admin creation/login
-const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const bcrypt = require("bcrypt");
+const sequelize = require("../config/connection");
 
 class Admin extends Model {
   // Commented out for testing purposes at the moment
-  // checkPassword(loginPw) {
-  //   return bcrypt.compareSync(loginPw, this.password);
-  // }
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
 }
 
 Admin.init(
@@ -53,7 +53,7 @@ Admin.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'admin',
+    modelName: "admin",
   }
 );
 
