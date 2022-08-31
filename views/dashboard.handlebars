@@ -45,9 +45,9 @@
       <h3>Which event do you want to edit?</h3>
 
       <select class="questions-input">
-        {{!-- {{#each name as |names|}} --}}
-        {{> adminEvents}}
-        {{!-- {{/each}} --}}
+        {{#each events as |event|}}
+          {{> adminEvents}}
+        {{/each}}
       </select>
 
       {{!-- These text fields will come pre-populated with all the information from the database (depending on selected
