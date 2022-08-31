@@ -25,7 +25,7 @@ router.get("/", async (req, res) => {
 });
 
 // Find Event by ID
-router.get("/:id", auth, async (req, res) => {
+router.get("/:id", async (req, res) => {
 
   try {
 

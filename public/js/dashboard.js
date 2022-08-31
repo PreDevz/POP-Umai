@@ -61,7 +61,12 @@ const editOptions = document.getElementsByClassName("edit-event-option");
 console.log(editOptions)
 
 editDropdown.addEventListener("change", () => {
-  console.log(editDropdown.value);
+  //Selected id number
+  const idValue = editDropdown.value;
+  console.log(idValue);
+
+  //Selected text
+  console.log(editDropdown.options[editDropdown.selectedIndex].text);
 
   //Reveals form below
   editEventContainer.style.display = "flex";
@@ -73,4 +78,15 @@ editDropdown.addEventListener("change", () => {
   const editEventVenue = document.querySelector("#edit-event-venue");
   const editEventLocation = document.querySelector("#edit-event-location");
   const editEventDescription = document.querySelector("#edit-event-description");
+
+  // NEXT UP. NEED TO GET VALUES OF EACH EVENT (USING THEIR DATA VALUE)
+  //GET REQUEST USING ID RETURNED
+  fetch(`/api/admin-event/${idValue}`)
+    .then((response) => {
+      return response.json();
+    })
+
+    .then((data) => {
+      console.log(data);
+    })
 })
