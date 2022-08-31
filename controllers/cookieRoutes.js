@@ -1,4 +1,4 @@
-// Cookies Page 
+// Cookies Page
 
 const router = require("express").Router();
 
