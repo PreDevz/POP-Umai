@@ -377,7 +377,7 @@ footer {
 
 /* form subtitle */
 #sub-title {
-	font-size: 1.3rem;
+	font-size: 1.7rem;
 	text-align: center;
 }
 
@@ -767,6 +767,11 @@ p {
 
 /* media queries for throught whole page */
 @media screen and (max-width: 670px) {
+	/* globals  */
+	h2 {
+		font-size: 3rem;
+	}
+
 	/* Homepage */
 	.hero {
 		height: 55vh;
@@ -776,13 +781,21 @@ p {
 		padding: 100px 45px;
 	}
 
-	.icons {
+	.followUs .icons {
+		display: flex;
 		flex-direction: row;
 		padding-left: 0;
+		margin: 3rem 2rem;
+	}
+
+	.followUs i {
+		margin: 0 0.8rem;
 	}
 
 	#social-media-container {
 		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.twitter-timeline {
@@ -851,6 +864,10 @@ p {
 
 	#contactSend {
 		width: 100% !important;
+	}
+
+	#sub-title {
+		font-size: 1.4rem;
 	}
 }
 
