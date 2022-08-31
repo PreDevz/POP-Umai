@@ -114,8 +114,8 @@ finishEditingEvent.addEventListener("click", async () => {
       description: editEventDescription.value,
       event_date: editEventDates.value,
       event_time: editEventTime.value,
-      venue: editEventLocation.value,
-      location: editEventDescription.value,
+      venue: editEventVenue.value,
+      location: editEventLocation.value,
       is_upcoming: editEventOver.value
     })
   }).catch(err => err ? console.log(err) : console.log("Success!"));
