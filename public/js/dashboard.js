@@ -52,6 +52,8 @@ submitNewEventButton.addEventListener("click", async () => {
   // Hides field
   //createContainer.style.display = "none";
 
+  swal("Event created!", "You have successfully created an event!", "success")
+
 });
 
 
@@ -117,14 +119,33 @@ finishEditingEvent.addEventListener("click", async () => {
       is_upcoming: editEventOver.value
     })
   }).catch(err => err ? console.log(err) : console.log("Success!"));
+
+  swal("Event updated!", "You have successfully updated the event!", "success");
 })
 
 // Delete Events
-const deleteButton = document.querySelector("#delete-confirm-btn");
+const deleteButton = document.querySelector("#delete-event-btn");
 
-deleteButton.addEventListener("click", async () => {
-  await fetch(`/api/admin-event/${eventIdNum}`, {
-    method: "DELETE",
+deleteButton.addEventListener("click", () => {
+  swal(`WARNING:
+  Are you sure you want to delete this event? This action can not be undone.`, {
+    buttons: {
+      cancel: "Cancel",
+      delete: {
+        text: "Delete",
+        value: "delete"
+      }
+    },
   })
-  .catch(err => err ? console.log(err) : console.log("Success!"));
+  .then((value) => {
+    switch (value) {
+      case "delete":
+        swal("Event deleted!", "You have successfully deleted the event!", "success");
+        fetch(`/api/admin-event/${eventIdNum}`, {
+          method: "DELETE"
+        })
+        .catch(err => err ? console.log(err) : console.log("Success!"))
+        break;
+    }
+  })
 })
