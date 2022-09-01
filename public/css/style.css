@@ -6,6 +6,10 @@
 	width: 180px;
 }
 
+#logo-main:hover {
+	cursor: pointer !important;
+}
+
 .navbar-toggler-icon:focus {
 	outline: none;
 }
@@ -466,23 +470,62 @@ p {
 
 /* second mascott styling */
 #mascot2 {
-	max-width: 400px;
-	max-height: 400px;
-	margin: auto;
-	justify-content: right;
+	max-width: 325px;
+	align-self: center;
+	justify-self: center;
 }
 
 /* about container styling */
 .about-container {
 	background-color: var(--shaded-gray);
-	padding: 45px;
+	padding: 3rem;
 	display: flex;
+}
+
+.about-container .container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+}
+
+/* small query for about me page  */
+@media screen and (max-width: 875px) {
+	.about-container {
+		padding: 1rem;
+	}
+
+	.about-container .container {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+.about-container .container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+}
+
+/* small query for about me page  */
+@media screen and (max-width: 875px) {
+	.about-container {
+		padding: 1rem;
+	}
+
+	.about-container .container {
+		flex-direction: column;
+		text-align: center;
+	}
 }
 
 /* about us story styling */
 .our-story-title {
 	font-family: "Alfa Slab One", cursive;
-	font-size: 25px;
+	font-size: 1.5rem;
 	color: var(--dark-clr);
 }
 
@@ -832,6 +875,79 @@ p {
 		font-size: 1.4rem;
 	}
 }
+
+/* Dashboard page */
+h3 {
+	padding: 0;
+	margin: 0;
+}
+
+#admin-event-container {
+	background-color: rgb(240, 240, 240);
+}
+
+.admin-btn-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 10px;
+}
+
+.admin-subtitle {
+	font-family: 'Alfa Slab One', cursive;
+	font-size: 35px;
+	padding: 35px;
+	color: #262626;
+	text-align: center;
+	justify-content: center;
+	margin: 0;
+}
+
+.create-container, .edit-event-container {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0 0 45px;
+	gap: 15px;
+}
+
+#selected-event-container {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	width: 100%;
+}
+
+.create-container input, .create-container textarea, .edit-event-container input, .edit-event-container textarea {
+	padding: 0.5rem;
+	border-radius: 8px;
+	border: 1px solid rgb(240, 240, 240);
+	outline: none;
+	width: 70%;
+}
+
+.create-container textarea, .edit-event-container textarea {
+	resize: none;
+	min-height: 140px;;
+}
+
+#create-event-btn, #edit-event-btn-a {
+	transition: all 0.3s ease;
+	background-color: #965fcc;
+	border-radius: 10px;
+	width: 50% !important;
+	border: none;
+	padding: 0.5rem;
+}
+
+#delete-confirm-btn {
+	background-color: red;
+}
+
+
 
 /* events phone  */
 

@@ -32,17 +32,17 @@ body {
 }
 
 /* width of bar  */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
 	width: 10px;
-}
+} */
 
 /* Track */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
 	background: var(--yellow-clr);
 	border-radius: 8px;
-}
+} */
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
 	background: var(--purple-clr);
-}
+} */

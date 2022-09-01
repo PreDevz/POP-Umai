@@ -1,5 +1,9 @@
 // Will be used for admin login function
 
+  // Login Button 
+const loginBtn = document.getElementById("loginBtn");
+console.log(loginBtn);
+
 // Login Function 
 async function login() {
 
@@ -11,8 +15,6 @@ async function login() {
   const emailInput = document.getElementById("loginEmail").value;
   // Password 
   const passwordInput = document.getElementById("loginPass").value;
-  // Login Button 
-  const loginBtn = document.getElementById("loginBtn");
 
   // Calling POST req 
   await fetch("/api/admin/login", {
