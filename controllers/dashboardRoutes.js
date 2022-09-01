@@ -6,6 +6,7 @@ const Event = require("../models/event");
 
 // Admin Dashboard 
 router.get("/", auth, async (req, res) => {
+//router.get("/", auth, async (req, res) => {
 
   try {
 
@@ -17,17 +18,14 @@ router.get("/", auth, async (req, res) => {
       });
 
     // loop through each event to serialize it 
-    const events = eventsData.map((event) => {
-      event.get(
-        { plain: true }
-      );
-    });
+    const events = eventsData.map((event) => event.toJSON());
 
     // rendering the Dashboard page with all Events
     res.render(
       "dashboard",
       {
-        events
+        events,
+        logged_in: req.session.logged_in,
       });
   } catch (err) {
 
