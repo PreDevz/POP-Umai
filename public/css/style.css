@@ -34,7 +34,7 @@
 
 .mainNav a {
 	display: inline-block;
-	font-family: "Alfa Slab One", cursive;
+	font-family: "Alfa Slab One", cursive !important;
 	font-size: 18px;
 	color: whitesmoke;
 	-webkit-text-stroke-width: 0.7px;

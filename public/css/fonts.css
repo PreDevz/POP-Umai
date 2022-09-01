@@ -20,15 +20,10 @@
   font-weight: bold;
 }
 
-h2, h4, header, #aboutBio {
+/* h2, h4, header, #aboutBio {
   font-family: "Retroking Rough", 'Alfa Slab One', cursive !important;
-}
+} */
 
-p, a {
+p, a, div{
   font-family: "Berlin Sans", sans-serif !important;
-}
-
-.nav-item {
-  font-family: "Berlin Sans", sans-serif !important;
-  font-weight: bold;
 }
