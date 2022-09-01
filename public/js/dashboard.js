@@ -11,7 +11,7 @@ const editEventButton = document.querySelector("#edit-event");
 
 createNewButton.addEventListener("click", () => {
   createContainer.style.display = "flex";
-  editContainer.style.display = "none;"
+  editContainer.style.display = "none"
 });
 
 editEventButton.addEventListener("click", () => {

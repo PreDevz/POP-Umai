@@ -10,12 +10,11 @@ h3 {
 
 /* Buttons */
 #admin-event-container button {
-  padding: 5px 20px;
+  padding: 5px 40px;
   border-radius: 1rem;
   transition: all 0.3s ease;
   background-color: var(--purple-clr);
   border-radius: 10px;
-  width: 20%;
   border: none;
   color: #fff;
   align-self: center;
