@@ -94,7 +94,7 @@ h3 {
 	min-height: 140px;;
 }
 
-.create-container input, .create-container textarea, .questions-input, .edit-event-option, #selected-event-container input, #selected-event-container textarea, #is-event-over {
+.create-container input, #select-event-input, .create-container textarea, .edit-event-option, #selected-event-container input, #selected-event-container textarea, #is-event-over {
   background-color: #fff ;
 }
 
