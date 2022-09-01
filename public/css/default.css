@@ -1,0 +1,48 @@
+/* Importing a font from Google Fonts. */
+
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+
+/* root colors  */
+
+:root {
+	--purple-clr: #965fcc;
+	--blue-clr: #1db2e8;
+	--yellow-clr: #ffec8e;
+	--dark-clr: #262626;
+	--shaded-gray: rgb(240, 240, 240);
+}
+
+/* A CSS reset */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+/* Globals */
+
+body {
+	width: 100%;
+}
+
+.container {
+	max-width: 1160px;
+}
+
+/* width of bar  */
+/* ::-webkit-scrollbar {
+	width: 10px;
+} */
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+	background: var(--yellow-clr);
+	border-radius: 8px;
+} */
+
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+	background: var(--purple-clr);
+} */

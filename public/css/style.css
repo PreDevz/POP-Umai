@@ -1,35 +1,3 @@
-/* Importing a font from Google Fonts. */
-
-@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
-
-/* root colors  */
-
-:root {
-	--purple-clr: #965fcc;
-	--blue-clr: #1db2e8;
-	--dark-clr: #262626;
-	--shaded-gray: rgb(240, 240, 240);
-}
-
-/* A CSS reset */
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
-}
-
-body {
-	width: 100%;
-}
-
-/* Globals */
-.container {
-	max-width: 1160px;
-	/* justify-content: center; */
-}
-
 /* navbar styling */
 
 #logo-main {
@@ -512,6 +480,26 @@ p {
 	background-color: var(--shaded-gray);
 	padding: 3rem;
 	display: flex;
+}
+
+.about-container .container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+}
+
+/* small query for about me page  */
+@media screen and (max-width: 875px) {
+	.about-container {
+		padding: 1rem;
+	}
+
+	.about-container .container {
+		flex-direction: column;
+		text-align: center;
+	}
 }
 
 .about-container .container {
