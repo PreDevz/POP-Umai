@@ -38,6 +38,10 @@ body {
 	width: 180px;
 }
 
+#logo-main:hover {
+	cursor: pointer !important;
+}
+
 .navbar-toggler-icon:focus {
 	outline: none;
 }

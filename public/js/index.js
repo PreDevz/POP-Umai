@@ -6,6 +6,16 @@
 
 const btn = document.getElementById("contactSend");
 
+// Click Nav Logo to go back home
+document
+  .getElementById("logo-main")
+  .addEventListener("click", () => {
+    window
+      .document
+      .location
+      .href="/";
+}); 
+
 
 /* This is grabbing the forms input fields and making sure the value are not null, if they are null they will get an error message 
 to try again. if the fields arent null, the emailjs will send the form with serviceID, templateID, and the forms content,
