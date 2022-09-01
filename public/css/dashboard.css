@@ -1,0 +1,71 @@
+/* Dashboard page */
+h3 {
+	padding: 0;
+	margin: 0;
+}
+
+#admin-event-container {
+	background-color: rgb(240, 240, 240);
+}
+
+.admin-btn-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 10px;
+}
+
+.admin-subtitle {
+	font-family: 'Alfa Slab One', cursive;
+	font-size: 35px;
+	padding: 35px;
+	color: #262626;
+	text-align: center;
+	justify-content: center;
+	margin: 0;
+}
+
+.create-container, .edit-event-container {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0 0 45px;
+	gap: 15px;
+}
+
+#selected-event-container {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	width: 100%;
+}
+
+.create-container input, .create-container textarea, .edit-event-container input, .edit-event-container textarea {
+	padding: 0.5rem;
+	border-radius: 8px;
+	border: 1px solid rgb(240, 240, 240);
+	outline: none;
+	width: 70%;
+}
+
+.create-container textarea, .edit-event-container textarea {
+	resize: none;
+	min-height: 140px;;
+}
+
+#create-event-btn, #edit-event-btn-a {
+	transition: all 0.3s ease;
+	background-color: #965fcc;
+	border-radius: 10px;
+	width: 50% !important;
+	border: none;
+	padding: 0.5rem;
+}
+
+#delete-confirm-btn {
+	background-color: red;
+}
+
