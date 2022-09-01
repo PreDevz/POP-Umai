@@ -1,6 +1,6 @@
 /* Importing a font from Google Fonts. */
 
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 
 /* root colors  */
 
@@ -38,6 +38,10 @@ body {
 	width: 180px;
 }
 
+#logo-main:hover {
+	cursor: pointer !important;
+}
+
 .navbar-toggler-icon:focus {
 	outline: none;
 }
@@ -62,7 +66,7 @@ body {
 
 .mainNav a {
 	display: inline-block;
-	font-family: 'Alfa Slab One', cursive;
+	font-family: "Alfa Slab One", cursive;
 	font-size: 18px;
 	color: whitesmoke;
 	-webkit-text-stroke-width: 0.7px;
@@ -110,7 +114,7 @@ body {
 }
 
 h2 {
-	font-family: 'Alfa Slab One', cursive;
+	font-family: "Alfa Slab One", cursive;
 	z-index: 1;
 	font-style: normal;
 	color: var(--purple-clr);
@@ -133,7 +137,7 @@ h2 {
 }
 
 #aboutBio {
-	font-family: 'Alfa Slab One', cursive;
+	font-family: "Alfa Slab One", cursive;
 	font-size: 25px;
 	color: var(--dark-clr);
 	text-align: center;
@@ -326,7 +330,7 @@ footer {
 
 /* after clicking button styling */
 .btn::after {
-	content: '';
+	content: "";
 	height: 100%;
 	width: 100%;
 	border-radius: 100px;
@@ -468,7 +472,7 @@ footer i {
 /* About Me Page */
 #aboutTitle {
 	font-size: 35px;
-	font-family: 'Alfa Slab One', cursive;
+	font-family: "Alfa Slab One", cursive;
 	color: var(--purple-clr);
 	text-align: center;
 	padding: 35px;
@@ -513,7 +517,7 @@ p {
 
 /* about us story styling */
 .our-story-title {
-	font-family: 'Alfa Slab One', cursive;
+	font-family: "Alfa Slab One", cursive;
 	font-size: 25px;
 	color: var(--dark-clr);
 }
@@ -653,7 +657,7 @@ p {
 /* Cookie Page */
 #cookieTitle {
 	font-size: 35px;
-	font-family: 'Alfa Slab One', cursive;
+	font-family: "Alfa Slab One", cursive;
 	color: #965fcc;
 	text-align: center;
 	padding: 35px;
