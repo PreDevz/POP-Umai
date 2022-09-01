@@ -51,7 +51,7 @@ submitNewEventButton.addEventListener("click", async () => {
   // Hides field
   //createContainer.style.display = "none";
 
-  swal("Event created!", "You have successfully created an event!", "success")
+  swal("Event created!", "You have successfully created an event!", "success");
 
 });
 
@@ -97,8 +97,8 @@ editDropdown.addEventListener("change", () => {
       editEventLocation.value = data.location;
       editEventDescription.value = data.description;
       editEventOver.value = data.is_upcoming;
-    })
-})
+    });
+});
 
 
 // Update Events
@@ -120,7 +120,7 @@ finishEditingEvent.addEventListener("click", async () => {
   }).catch(err => err ? console.log(err) : console.log("Success!"));
 
   swal("Event updated!", "You have successfully updated the event!", "success");
-})
+});
 
 // Delete Events
 const deleteButton = document.querySelector("#delete-event-btn");
@@ -143,11 +143,11 @@ deleteButton.addEventListener("click", () => {
         fetch(`/api/admin-event/${eventIdNum}`, {
           method: "DELETE"
         })
-        .catch(err => err ? console.log(err) : console.log("Success!"))
+        .catch(err => err ? console.log(err) : console.log("Success!"));
         break;
     }
-  })
-})
+  });
+});
 
 // Logout button
 const logoutButton = document.querySelector("#log-out-button");
@@ -157,6 +157,6 @@ logoutButton.addEventListener("click", async () => {
     method: "POST",
     body: {}
   }).then(() => {
-    location.reload()
+    location.reload();
   }).catch(err => err ? console.log(err) : console.log("Success!"));
-})
+});
