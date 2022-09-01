@@ -69,3 +69,6 @@ h3 {
 	background-color: red;
 }
 
+.create-container input, .create-container textarea, .questions-input, .edit-event-option, #selected-event-container input, #selected-event-container textarea {
+  background-color: #fff ;
+}
