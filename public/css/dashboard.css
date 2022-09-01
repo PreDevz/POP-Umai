@@ -1,7 +1,24 @@
 /* Dashboard page */
+#admin-title {
+  margin: 1rem;
+}
+
 h3 {
 	padding: 0;
 	margin: 0;
+}
+
+/* Buttons */
+#admin-event-container button {
+  padding: 5px 20px;
+  border-radius: 1rem;
+}
+
+#logout-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 #admin-event-container {
@@ -9,9 +26,11 @@ h3 {
 }
 
 .admin-btn-container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 3vw;
+  justify-content: center;
+  align-items: center;
 	padding-bottom: 10px;
 }
 
@@ -43,26 +62,17 @@ h3 {
 	width: 100%;
 }
 
-.create-container input, .create-container textarea, .edit-event-container input, .edit-event-container textarea {
+.create-container input, .create-container textarea, .edit-event-container input, .edit-event-container textarea, #select-event-input {
 	padding: 0.5rem;
 	border-radius: 8px;
 	border: 1px solid rgb(240, 240, 240);
 	outline: none;
-	width: 70%;
+  width: 70%;
 }
 
 .create-container textarea, .edit-event-container textarea {
 	resize: none;
 	min-height: 140px;;
-}
-
-#create-event-btn, #edit-event-btn-a {
-	transition: all 0.3s ease;
-	background-color: #965fcc;
-	border-radius: 10px;
-	width: 50% !important;
-	border: none;
-	padding: 0.5rem;
 }
 
 #delete-confirm-btn {
@@ -71,4 +81,19 @@ h3 {
 
 .create-container input, .create-container textarea, .questions-input, .edit-event-option, #selected-event-container input, #selected-event-container textarea {
   background-color: #fff ;
+}
+
+@media screen and (max-width: 670px) {
+  .admin-btn-container {
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .admin-btn-container div a {
+    margin: 10px !important;
+  }
+
+  .create-container input, .create-container textarea, .edit-event-container input, .edit-event-container textarea, #select-event-input {
+    width: 85%;
+  }
 }
