@@ -1,0 +1,105 @@
+<main>
+  <h2 id="admin-title">ADMIN DASHBOARD</h2>
+
+  <section id="admin-event-container">
+    <h3 class="admin-subtitle">Events</h3>
+    <div class="admin-btn-container">
+
+      <div class="text-box">
+        <a class="btn btn-white btn-animate" id="create-event">CREATE NEW EVENT</a>
+      </div>
+
+      <div class="text-box">
+        <a class="btn btn-white btn-animate" id="edit-event">EDIT AN EXISTING EVENT</a>
+      </div>
+
+    </div>
+
+    <div class="create-container">
+      <h3>Event Name</h3>
+      <input type="text" name="create-event-name" id="create-event-name" placeholder="Anime Expo 2025!">
+
+      <h3>Event Date(s)</h3>
+      <input type="text" name="create-event-dates" id="create-event-dates" placeholder="12/1/25 - 12/3/25">
+
+      <h3>Event Time</h3>
+      <input type="text" name="create-event-time" id="create-event-time" placeholder="10am - 6pm">
+
+      <h3>Venue</h3>
+      <input type="text" name="create-event-venue" id="create-event-venue" placeholder="LA Convention Center">
+
+      <h3>Location</h3>
+      <input type="text" name="create-event-location" id="create-event-location" placeholder="Los Angeles, CA">
+
+      <h3>Description</h3>
+      <textarea type="text" name="create-event-description" id="create-event-description"
+        placeholder="We will be serving some amazing anime-themed cookies! Stop by and grab yours before they're sold out!"></textarea>
+
+      <button id="create-event-btn">CREATE EVENT
+        {{!-- <a id="create-event-btn-a" href="#">CREATE EVENT</a> --}}
+      </button>
+
+    </div>
+
+    <div class="edit-event-container">
+      <h3>Which event do you want to edit?</h3>
+
+      <select class="questions-input">
+        <option class="edit-event-option" disabled selected value> -- Select an event -- </option>
+        {{#each events as |event|}}
+          {{> adminEvents}}
+        {{/each}}
+      </select>
+
+      {{!-- These text fields will come pre-populated with all the information from the database (depending on selected
+      event) --}}
+      <div id="selected-event-container">
+        <h3>Event Name</h3>
+        <input type="text" name="edit-event-name" id="edit-event-name">
+
+        <h3>Event Date(s)</h3>
+        <input type="text" name="edit-event-dates" id="edit-event-dates">
+
+        <h3>Event Time</h3>
+        <input type="text" name="edit-event-time" id="edit-event-time">
+
+        <h3>Venue</h3>
+        <input type="text" name="edit-event-venue" id="edit-event-venue">
+
+        <h3>Location</h3>
+        <input type="text" name="edit-event-location" id="edit-event-location">
+
+        <h3>Description</h3>
+        <textarea type="text" name="edit-event-description" id="edit-event-description"></textarea>
+
+        <h3>Is event over?</h3>
+        <select name="is-over" id="is-event-over">
+          <option id="is-over-yes" value="false">Yes</option>
+          <option id="is-over-no" value="true">No</option>
+        </select>
+
+        <button id="edit-event-btn">FINISH EDITING EVENT</button>
+
+        <button id="delete-event-btn">DELETE EVENT</button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <button id="log-out-button">LOG OUT</button>
+
+  {{!-- <section>
+    <h2 class="admin-subtitle">Reviews</h2>
+    <div id="review-review-container">
+
+    </div>
+  </section> --}}
+
+  {{!-- <section>
+    <h2 class="admin-subtitle">Partners</h2>
+  </section> --}}
+
+  <!-- Need to modify review model to add a "isDisplayed" boolean value to each review. This will allow her to look at reviews and choose which ones get displayed -->
+
+</main>
