@@ -1,8 +1,8 @@
 # POP-Umai
-A full-stack, deployed website for the company Pop Umai!
+A full-stack, deployed website for the company __Pop Umai__!
 
 ## Description
-The purpose of this project was to collaboratively build a real-world, full-stack web application that demonstrates everything we have learned over the last several months in our bootcamp. For a full list of the various libraries, packages, and technologies utilized utilized for this project, please refer to the [Technologies](#technologies) section below.
+The purpose of this project was to collaboratively build a real-world, full-stack web application that demonstrates everything we have learned over the last several months in our bootcamp. For a full list of the various libraries, packages, and technologies utilized for this project, please refer to the [Technologies](#technologies) section below.
 
 For this project we decided to partner up with a local business owner in order to build a website for her company, Pop Umai. Because of this, we had multiple meetings with the client and had to take into consideration her ideas and desires for the website. We would then take her ideas and turn them into reality, implementing them on the website.
 
@@ -41,12 +41,12 @@ ADMIN_PASSWORD=<admin_password>
 6. Execute `mysql -u root -p` in your console/terminal.
 7. Once succesfully logged in, execute `source db/schema.sql` to create database. Exit when finished.
 8. In your console/terminal, execute `npm run seed` to seed your newly created database.
-9. You are now ready to turn on the server by running `npm start`.
+9. You are now ready to turn on the server by running `npm start` or `npm run watch` for nodemon (to view changes live).
 
 
 ### Accessing the Administrator Dashboard
 
-The administrator dashboard is hidden and inaccesible by default and can only be accessed by following these instructions (after following the previous installation instructions).
+The administrator dashboard is hidden and inaccessible by default and can only be accessed by following these instructions (after following the previous installation instructions).
 
 *Note: Administrator dashboard can only be accessed on locally-run version of the website. The deployed version is ready for use for our client so she has her own admin login set up already.*
 
@@ -55,6 +55,8 @@ The administrator dashboard is hidden and inaccesible by default and can only be
 3. You will be redirected to a login page if you are not already logged in. 
 4. Enter in the admin credentials you created in your `.env` file.
 5. Upon successful login, you will be redirected to the admin dashboard where the user can make changes to specific parts of the website.
+
+*Note: After logging in, a session is set to expire within 30 minutes, which afterwards will automatically logout the admin. You can adjust the time(milliseconds) in the root `server.js`*
 
 -------------------------
 
@@ -71,7 +73,7 @@ Below is a list of all the technologies we utilized in order to build this websi
 * [MySQL2](https://www.npmjs.com/package/mysql2)
 * [Sequelize](https://www.npmjs.com/package/sequelize)
 
-### Other Technologies
+### Other Technologies (CDNs)
 * [Bootstrap](https://getbootstrap.com)
 * [EmailJs](https://www.emailjs.com)
 * [Sweet Alert](https://sweetalert.js.org)
