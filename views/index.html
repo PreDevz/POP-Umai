@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../public/assets/images/OC_eye smile.png">
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="../public/css/style.css">
+  <title>Pop Umai</title>
+</head>
+
+<body>
+  <header role="banner">
+    <img id="logo-main" src="../public/assets/images/logo-art (2).png" alt="main logo">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav mainNav">
+          <a class="nav-item" href="/">Home</a>
+          <a class="nav-item" href="/events">Events</a>
+          <a class="nav-item" href="/gallery">Gallery</a>
+          <a class="nav-item" href="/about">About</a>
+          <a class="nav-item" href="/#form">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+
+
+
+    <header id="admin-title">ADMIN DASHBOARD</header>
+
+    <section id="admin-event-container">
+      <h2 class="admin-subtitle">Events</h2>
+      <div class="admin-btn-container">
+
+        <div class="text-box">
+          <a href="#" class="btn btn-white btn-animate" id="create-event">CREATE NEW EVENT</a>
+        </div>
+
+        <div class="text-box">
+          <a href="#" class="btn btn-white btn-animate" id="edit-event">EDIT AN EXISTING EVENT</a>
+        </div>
+
+      </div>
+
+      <div class="create-container">
+        <h3>Event Name</h3>
+        <input type="text" name="create-event-name" id="create-event-name" placeholder="Anime Expo 2025!">
+
+        <h3>Event Date(s)</h3>
+        <input type="text" name="create-event-dates" id="create-event-dates" placeholder="12/1/25 - 12/3/25">
+
+        <h3>Event Time</h3>
+        <input type="text" name="create-event-time" id="create-event-time" placeholder="10am - 6pm">
+
+        <h3>Venue</h3>
+        <input type="text" name="create-event-venue" id="create-event-venue" placeholder="LA Convention Center">
+
+        <h3>Location</h3>
+        <input type="text" name="create-event-location" id="create-event-location" placeholder="Los Angeles, CA">
+
+        <h3>Description</h3>
+        <textarea type="text" name="create-event-description" id="create-event-description"
+          placeholder="We will be serving some amazing anime-themed cookies! Stop by and grab yours before they're sold out!"></textarea>
+
+        <button id="create-event-btn">
+          <a id="create-event-btn-a" href="#">CREATE EVENT</a>
+        </button>
+
+      </div>
+
+      <div class="edit-event-container">
+        <h3>Which event do you want to edit?</h3>
+        <select class="questions-input">
+          <option value="1">Business Inquiries</option>
+          <option value="2">General Questions</option>
+        </select>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="admin-subtitle">Reviews</h2>
+      <div id="review-review-container">
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="admin-subtitle">Partners</h2>
+    </section>
+
+    <!-- Need to modify review model to add a "isDisplayed" boolean value to each review. This will allow her to look at reviews and choose which ones get displayed -->
+
+
+
+
+  </main>
+
+  <footer class="text-center text-dark" style="background-color: white">
+    <!-- Grid container -->
+    <div class="container">
+      <!-- Section: Links -->
+      <section class="mt-5">
+        <!-- Grid row-->
+        <div class="row text-center d-flex justify-content-center pt-5">
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="/" class="text-dark">Home</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="/events" class="text-dark">Events</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="/gallery" class="text-dark">Gallery</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="/about" class="text-dark">About</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="/#form" class="text-dark">Contact</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+      <!-- Section: Social -->
+      <section class="text-center mb-5 footer-icon-container">
+        <a href="https://www.facebook.com/PopUmaiCafe" class="text-dark me-4 footerIcons" target="_blank"
+          rel="noopener noreferrer">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.twitter.com/pop_umai" class="text-dark me-4 footerIcons" target="_blank"
+          rel="noopener noreferrer">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/pop_umai/?hl=en" class="text-dark me-4 footerIcons" target="_blank"
+          rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@pop_umai" class="text-dark me-4 footerIcons" target="_blank"
+          rel="noopener noreferrer">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </section>
+
+      <!-- Section: Social -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: white">
+      Copyright © 2022 Pop Umai - All Rights Reserved
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+  </main>
+
+  <!-- Social Media Icons -->
+  <script src="https://kit.fontawesome.com/66e9768e1c.js" crossorigin="anonymous"></script>
+  emailjs
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  Sweet Alert
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="js/login.js"></script>
+  <script src="../public/js/index.js"></script>
+</body>
+
+</html>
