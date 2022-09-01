@@ -115,7 +115,17 @@ Below are the **objective** project grading requirements as well as a response a
 
 ## Screenshots
 
-Screenshots to come!
+Below are various screenshots of the website:
+
+<img src="./assets/readme/hero.png"  width=70% height=70%>
+
+<img src="./assets/readme/homepage.png"  width=70% height=70%>
+
+<img src="./assets/readme/events.png"  width=70% height=70%>
+
+<img src="./assets/readme/admin.png"  width=70% height=70%>
+
+<img src="./assets/readme/mobile.png"  width=50% height=50%>
 
 -------------------------
 
