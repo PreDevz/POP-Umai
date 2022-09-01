@@ -25,6 +25,14 @@ h3 {
   background-color: var(--blue-clr);
 }
 
+#delete-event-btn {
+	background-color: red !important;
+}
+
+#delete-event-btn:hover {
+  background-color: #9e0000 !important;
+}
+
 #logout-container {
   display: flex;
   align-items: center;
@@ -84,14 +92,6 @@ h3 {
 .create-container textarea, .edit-event-container textarea {
 	resize: none;
 	min-height: 140px;;
-}
-
-#delete-event-btn {
-	background-color: red !important;
-}
-
-#delete-event-btn:hover {
-  background-color: #9e0000 !important;
 }
 
 .create-container input, .create-container textarea, .questions-input, .edit-event-option, #selected-event-container input, #selected-event-container textarea, #is-event-over {
