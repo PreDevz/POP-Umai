@@ -12,6 +12,18 @@ h3 {
 #admin-event-container button {
   padding: 5px 20px;
   border-radius: 1rem;
+  transition: all 0.3s ease;
+  background-color: var(--purple-clr);
+  border-radius: 10px;
+  width: 20%;
+  border: none;
+  color: #fff;
+  align-self: center;
+  text-align: center;
+}
+
+#admin-event-container button:hover {
+  background-color: var(--blue-clr);
 }
 
 #logout-container {
@@ -62,7 +74,7 @@ h3 {
 	width: 100%;
 }
 
-.create-container input, .create-container textarea, .edit-event-container input, .edit-event-container textarea, #select-event-input {
+.create-container input, .create-container textarea, .edit-event-container input, .edit-event-container textarea, #select-event-input, #is-event-over {
 	padding: 0.5rem;
 	border-radius: 8px;
 	border: 1px solid rgb(240, 240, 240);
@@ -75,12 +87,21 @@ h3 {
 	min-height: 140px;;
 }
 
-#delete-confirm-btn {
-	background-color: red;
+#delete-event-btn {
+	background-color: red !important;
 }
 
-.create-container input, .create-container textarea, .questions-input, .edit-event-option, #selected-event-container input, #selected-event-container textarea {
+#delete-event-btn:hover {
+  background-color: #9e0000 !important;
+}
+
+.create-container input, .create-container textarea, .questions-input, .edit-event-option, #selected-event-container input, #selected-event-container textarea, #is-event-over {
   background-color: #fff ;
+}
+
+#is-event-over {
+  width: 30%;
+  margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 670px) {
