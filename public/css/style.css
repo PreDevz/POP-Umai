@@ -515,7 +515,7 @@ p {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	gap: 2rem;
+	gap: 3rem;
 }
 
 /* small query for about me page  */
@@ -533,7 +533,7 @@ p {
 /* about us story styling */
 .our-story-title {
 	font-family: "Alfa Slab One", cursive;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	color: var(--dark-clr);
 }
 
