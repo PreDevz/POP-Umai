@@ -97,13 +97,12 @@ Below are the **objective** project grading requirements as well as a response a
   * Admin login, as well as creating new events on the admin dashboard page are done using `POST` requests.
 
 * Use at least one new library, package, or technology that we haven’t discussed. ✅
-  * Connect-Session-Sequelize
   * EmailJs
   * Sweet Alert
 
 * Have a folder structure that meets the MVC paradigm. ✅
 
-* Include authentication (express-session and cookies).
+* Include authentication (express-session and cookies). ✅
   * Login page on `/dashboard/login`, will only allow access to dashboard page if the admin credentials match to the hashed information in the database.
 
 * Protect API keys and sensitive information with environment variables. ✅
@@ -116,7 +115,17 @@ Below are the **objective** project grading requirements as well as a response a
 
 ## Screenshots
 
-Screenshots to come!
+Below are various screenshots of the website:
+
+<img src="./assets/readme/hero.png"  width=70% height=70%>
+
+<img src="./assets/readme/homepage.png"  width=70% height=70%>
+
+<img src="./assets/readme/events.png"  width=70% height=70%>
+
+<img src="./assets/readme/admin.png"  width=70% height=70%>
+
+<img src="./assets/readme/mobile.png"  width=50% height=50%>
 
 -------------------------
 
