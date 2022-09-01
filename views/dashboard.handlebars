@@ -3,15 +3,12 @@
 
   <section id="admin-event-container">
     <h3 class="admin-subtitle">Events</h3>
+    
     <div class="admin-btn-container">
 
-      <div class="text-box">
-        <a class="btn btn-white btn-animate" id="create-event">CREATE NEW EVENT</a>
-      </div>
+      <button id="create-event">CREATE NEW EVENT</button>
 
-      <div class="text-box">
-        <a class="btn btn-white btn-animate" id="edit-event">EDIT AN EXISTING EVENT</a>
-      </div>
+      <button id="edit-event">EDIT AN EXISTING EVENT</button>
 
     </div>
 
@@ -44,7 +41,7 @@
     <div class="edit-event-container">
       <h3>Which event do you want to edit?</h3>
 
-      <select class="questions-input">
+      <select class="questions-input" id="select-event-input">
         <option class="edit-event-option" disabled selected value> -- Select an event -- </option>
         {{#each events as |event|}}
           {{> adminEvents}}
@@ -85,9 +82,13 @@
       </div>
 
     </div>
+
+    <div id="logout-container">
+      <button id="log-out-button">LOG OUT</button>
+    </div>
+
   </section>
 
-  <button id="log-out-button">LOG OUT</button>
 
   {{!-- <section>
     <h2 class="admin-subtitle">Reviews</h2>
